@@ -2,15 +2,13 @@
 title: "Course overview"
 ---
 
+**GIS in Archaeology – fall semester, 2022 (HS2022)**
+
 This course provides a basic introduction to the archaeological use of GIS, to the techniques for collecting, managing and visualising spatial data, and to the most commonly used analysis tools. Participants will learn how to utilise the currently most widely used open-source GIS system (QGIS).
 
 Students will acquire the skills required for a complete GIS workflow from data acquisition to analysis and cartographic output. Everywhere there is a strong interest in how such techniques can be used to solve major archaeological problems. This course would be of particular benefit to those who wish to be introduced to GIS to facilitate their research and/or as a basis for more advanced techniques such as spatial statistics, network analysis and computer-aided analysis of human history. The course will be held in a combination of lectures, practical exercises and tutorials in the computer room of the institute. It will be evaluated through practical components and a (theoretical/practical) exam.
 
 The course will be taught in English.
-
-## Key dates
-
-...
 
 ## Learning objectives
 
@@ -28,6 +26,14 @@ By the end of this course, you should:
 
 ![](images/joe_roe.png){width=3em}
 **[Joe Roe](https://www.iaw.unibe.ch/about_us/arp__pa_personen/ma_roe_joe/index_eng.html)** <<joseph.roe@iaw.unibe.ch>>
+
+## Learning format & evaluation
+
+New concepts and material will be introduced through pre-recorded lectures and/or readings, which students are expected to have studied before each weekly tutorial.
+Contact hours will primarily be used for practical exercises, which will together form the labwork portfolio submitted for evaluation at the end of the course.
+It is expected that you will also work on these labwork assignments outside of class hours (i.e., they are also homework).
+
+Students will be evaluated on their knowledge of course content and their ability to communicate their understanding via a) a labwork portfolio (50%) and b) an individual project (50%).
 
 ## Schedule
 
@@ -50,4 +56,4 @@ By the end of this course, you should:
   * Raster analysis (MH: Terrain data & visibility analysis)
   * Modelling movement: path & catchment analysis (MH: Time distance & Least cost path analysis & Site catchment analysis)
   * Predictive modelling (???)
-* Review / catch-up / TBC
+* Final project
