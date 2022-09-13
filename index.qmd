@@ -1,0 +1,53 @@
+---
+title: "Course overview"
+---
+
+This course provides a basic introduction to the archaeological use of GIS, to the techniques for collecting, managing and visualising spatial data, and to the most commonly used analysis tools. Participants will learn how to utilise the currently most widely used open-source GIS system (QGIS).
+
+Students will acquire the skills required for a complete GIS workflow from data acquisition to analysis and cartographic output. Everywhere there is a strong interest in how such techniques can be used to solve major archaeological problems. This course would be of particular benefit to those who wish to be introduced to GIS to facilitate their research and/or as a basis for more advanced techniques such as spatial statistics, network analysis and computer-aided analysis of human history. The course will be held in a combination of lectures, practical exercises and tutorials in the computer room of the institute. It will be evaluated through practical components and a (theoretical/practical) exam.
+
+The course will be taught in English.
+
+## Key dates
+
+...
+
+## Learning objectives
+
+The aim of this course is to provide you with basic skills in cartography, geospatial data management, and spatial analysis, as a foundation for further autonomous work in GIS in archaeology.
+
+By the end of this course, you should:
+
+* Know the foundational concepts of geospatial data and cartography
+* Be proficient in the core functions of QGIS (transferable to other GIS software)
+* Be able to produce publication-quality maps with archaeological data
+* Know how to locate, obtain and effectively manage geospatial data relevent to archaeological research
+* Be familiar with common spatial analysis methods used in archaeological research
+
+## Instructors
+
+![](images/joe_roe.png){width=3em}
+**[Joe Roe](https://www.iaw.unibe.ch/about_us/arp__pa_personen/ma_roe_joe/index_eng.html)** <<joseph.roe@iaw.unibe.ch>>
+
+## Schedule
+
+* Introduction
+  * Course overview & practical information
+  * Applications of GIS in archaeology
+  * Install & basic use of QGIS
+* CARTOGRAPHY
+  * Vector data: distribution and thematic maps (MH: Making maps)
+  * Mapping the terrain (Raster data, DEM, imagery; MH: Making nicer maps)
+  * Finishing touches (Labelling, layout & decoration)
+  * Map genres (??? design etc., choice of projection, more practice)
+* DATA MANAGEMENT
+  * Managing geospatial data (File management, file formats, geodatabases; MH: Handling spatial data)
+  * Obtaining geospatial data (sources of data; web services)
+  * Georeferencing & digitising
+  * Field data collection
+* SPATIAL ANALYSIS
+  * Interpolation & density estimation (MH: Interpolation & Densities)
+  * Raster analysis (MH: Terrain data & visibility analysis)
+  * Modelling movement: path & catchment analysis (MH: Time distance & Least cost path analysis & Site catchment analysis)
+  * Predictive modelling (???)
+* Review / catch-up / TBC

@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "This course provides a basic introduction to the archaeological use of GIS, to the techniques for collecting, managing and visualising spatial data, and to the most commonly used analysis tools. Participants will learn how to utilise the currently most widely used open-source GIS system (QGIS).\nStudents will acquire the skills required for a complete GIS workflow from data acquisition to analysis and cartographic output. Everywhere there is a strong interest in how such techniques can be used to solve major archaeological problems. This course would be of particular benefit to those who wish to be introduced to GIS to facilitate their research and/or as a basis for more advanced techniques such as spatial statistics, network analysis and computer-aided analysis of human history. The course will be held in a combination of lectures, practical exercises and tutorials in the computer room of the institute. It will be evaluated through practical components and a (theoretical/practical) exam.\nThe course will be taught in English."
+  },
+  {
+    "objectID": "about.html#disabilities",
+    "href": "about.html#disabilities",
+    "title": "About",
+    "section": "Disabilities",
+    "text": "Disabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS."
+  },
+  {
+    "objectID": "about.html#religious-observances",
+    "href": "about.html#religious-observances",
+    "title": "About",
+    "section": "Religious observances",
+    "text": "Religious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
+  },
+  {
+    "objectID": "about.html#homework",
+    "href": "about.html#homework",
+    "title": "About",
+    "section": "Homework (?%)",
+    "text": "Homework (?%)\nHomework will be assigned each ? and is due by 11:59 PM PST on the following ?. It will consist of some short answers and R code based on topics covered in lab. There will be ? assignments worth ?% each. Your learning in the class will be greatly enhanced by doing the homework which consist of applying the material you learn in each lecture to a data set."
+  },
+  {
+    "objectID": "about.html#individual-project",
+    "href": "about.html#individual-project",
+    "title": "About",
+    "section": "Individual project (?%)",
+    "text": "Individual project (?%)\nEach student will have to write a complete, publishable (<? page) paper that may, or may not, serve as a component of their thesis/dissertation. Given that some students might not have their own data, students may also use data from the instructors, public datasets or datasets included in R libraries."
+  },
+  {
+    "objectID": "about.html#peer-reviews",
+    "href": "about.html#peer-reviews",
+    "title": "About",
+    "section": "Peer reviews (?%)",
+    "text": "Peer reviews (?%)\nEach student will have to provide 2 anonymous peer-reviews of their colleagues’ papers (?% each)."
+  },
+  {
+    "objectID": "about.html#participation",
+    "href": "about.html#participation",
+    "title": "About",
+    "section": "Participation (?%)",
+    "text": "Participation (?%)\nThis is a graduate-level course and we expect a certain amount of engagement from each student, which includes attending and participating lectures and computer labs.\nStudents should discuss any potential schedule conflicts with the instructor during the first week of class."
+  },
+  {
+    "objectID": "about.html#access-accommodations",
+    "href": "about.html#access-accommodations",
+    "title": "About",
+    "section": "Access & accommodations",
+    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
+  },
+  {
+    "objectID": "about.html#technology",
+    "href": "about.html#technology",
+    "title": "About",
+    "section": "Technology",
+    "text": "Technology\nThis course will revolve around hands-on computing exercises that demonstrate the topics of interest. Therefore, students are strongly recommended to bring their own laptop to class, although students are certainly free to work with one another. For students without access to a personal laptop: Please let us know in time, and we will try to find a solution.\nAll of the software we will be using is free and platform independent, meaning students may use macOS, Linux, or Windows operating systems. In addition to a web browser, we will be using the free R software and the desktop version of the R Studio integrated development environment (IDE). We will also be using various packages not contained in the base installation of R, but we will wait and install them at the necessary time. The instructor will be available during the first week of class to help students troubleshoot any software installation problems.\nStudents will also be required to have a user account on GitHub, which we will be using for file hosting and communications via “issues”. If you do not already have an account, you can sign up for a free one here. The instructor will provide training on how to use the intended features in GitHub."
+  },
+  {
+    "objectID": "about.html#teaching-methodology",
+    "href": "about.html#teaching-methodology",
+    "title": "About",
+    "section": "Teaching methodology",
+    "text": "Teaching methodology\nThis course will introduce new material primarily through prepared slides and hands-on demonstrations. Students will be expected to work both individually and collaboratively (to the extent possible given the current conditions); course content and evaluation will emphasize the communication of ideas and the ability to think critically more so than a specific pathway or method. Other areas of this website provide an overview of the topics to be covered, including links to weekly reading assignments, lecture materials, computer labs, and homework assignments."
+  },
+  {
+    "objectID": "about.html#communication",
+    "href": "about.html#communication",
+    "title": "About",
+    "section": "Communication",
+    "text": "Communication\nThis course will involve a lot of communication between and among students and the instructor. Short questions should be addressed to us via email; we will try my best to respond to your message within 24 hours. Under more normal circumstances, detailed questions would be addressed to us in person–either after class or during a scheduled meeting. In this case, however, we will schedule one-on-one or group video calls as needed.\nIn addition to email and video, we will use the “Issues” feature in GitHub to ask questions and assist others. Specifically, questions and answers can be posted to the issues in the course repository."
+  },
+  {
+    "objectID": "about.html#evaluation",
+    "href": "about.html#evaluation",
+    "title": "About",
+    "section": "Evaluation",
+    "text": "Evaluation\nStudents will be evaluated on their knowledge of course content and their ability to communicate their understanding of the material via individual homework assignments (??%), a final project (??%), peer reviews (??%), and class participation (??%). There will be ? homework assignments, each of which will count toward ?% of the final grade. Please note, all assignments must be turned in to achieve a passing grade.\n\nHomework (?%)\nHomework will be assigned each ? and is due by 11:59 PM PST on the following ?. It will consist of some short answers and R code based on topics covered in lab. There will be ? assignments worth ?% each. Your learning in the class will be greatly enhanced by doing the homework which consist of applying the material you learn in each lecture to a data set.\n\n\nIndividual project (?%)\nEach student will have to write a complete, publishable (<? page) paper that may, or may not, serve as a component of their thesis/dissertation. Given that some students might not have their own data, students may also use data from the instructors, public datasets or datasets included in R libraries.\n\n\nPeer reviews (?%)\nEach student will have to provide 2 anonymous peer-reviews of their colleagues’ papers (?% each).\n\n\nParticipation (?%)\nThis is a graduate-level course and we expect a certain amount of engagement from each student, which includes attending and participating lectures and computer labs.\nStudents should discuss any potential schedule conflicts with the instructor during the first week of class."
+  },
+  {
+    "objectID": "about.html#academic-integrity",
+    "href": "about.html#academic-integrity",
+    "title": "About",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
+  },
+  {
+    "objectID": "about.html#mental-health",
+    "href": "about.html#mental-health",
+    "title": "About",
+    "section": "Mental health",
+    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Course overview",
+    "section": "Schedule",
+    "text": "Schedule\n\nIntroduction\n\nCourse overview & practical information\nApplications of GIS in archaeology\nInstall & basic use of QGIS\n\nCARTOGRAPHY\n\nVector data: distribution and thematic maps (MH: Making maps)\nMapping the terrain (Raster data, DEM, imagery; MH: Making nicer maps)\nFinishing touches (Labelling, layout & decoration)\nMap genres (??? design etc., choice of projection, more practice)\n\nDATA MANAGEMENT\n\nManaging geospatial data (File management, file formats, geodatabases; MH: Handling spatial data)\nObtaining geospatial data (sources of data; web services)\nGeoreferencing & digitising\nField data collection\n\nSPATIAL ANALYSIS\n\nInterpolation & density estimation (MH: Interpolation & Densities)\nRaster analysis (MH: Terrain data & visibility analysis)\nModelling movement: path & catchment analysis (MH: Time distance & Least cost path analysis & Site catchment analysis)\nPredictive modelling (???)\n\nReview / catch-up / TBC"
+  },
+  {
+    "objectID": "index.html#key-dates",
+    "href": "index.html#key-dates",
+    "title": "Course overview",
+    "section": "Key dates",
+    "text": "Key dates\n…"
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "Course overview",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nThe aim of this course is to provide you with basic skills in cartography, geospatial data management, and spatial analysis, as a foundation for further autonomous work in GIS in archaeology.\nBy the end of this course, you should:\n\nKnow the foundational concepts of geospatial data and cartography\nBe proficient in the core functions of QGIS (transferable to other GIS software)\nBe able to produce publication-quality maps with archaeological data\nKnow how to locate, obtain and effectively manage geospatial data relevent to archaeological research\nBe familiar with common spatial analysis methods used in archaeological research"
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Course overview",
+    "section": "Instructors",
+    "text": "Instructors\n Joe Roe <joseph.roe@iaw.unibe.ch>"
+  }
+]
