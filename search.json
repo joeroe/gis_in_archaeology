@@ -1,17 +1,38 @@
 [
   {
-    "objectID": "digitising.html",
-    "href": "digitising.html",
-    "title": "Georeferencing & digitising",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
     "section": "",
-    "text": "Hello world."
+    "text": "Objectives\nBy the end of this session, you should:\n\nKnow what to expect from this course\nKnow what is expected of you in terms of classroom participation, homework, and evaluation\nBe familiar with the QGIS software and its basic capabilities\n\n\n\nPrerequisites\nNone.\n\n\nPractical\n\nDraw a map of your journey here to the university today\nInstall QGIS & try to make a map!"
   },
   {
-    "objectID": "layout.html",
-    "href": "layout.html",
-    "title": "Map layout",
+    "objectID": "information.html",
+    "href": "information.html",
+    "title": "Information for students",
     "section": "",
-    "text": "Hello world."
+    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
+  },
+  {
+    "objectID": "information.html#access-accommodations",
+    "href": "information.html#access-accommodations",
+    "title": "Information for students",
+    "section": "Access & accommodations",
+    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
+  },
+  {
+    "objectID": "information.html#academic-integrity",
+    "href": "information.html#academic-integrity",
+    "title": "Information for students",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
+  },
+  {
+    "objectID": "information.html#mental-health",
+    "href": "information.html#mental-health",
+    "title": "Information for students",
+    "section": "Mental health",
+    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
   },
   {
     "objectID": "field_data.html",
@@ -21,25 +42,18 @@
     "text": "Hello world."
   },
   {
-    "objectID": "review.html",
-    "href": "review.html",
-    "title": "Review",
+    "objectID": "data_sources.html",
+    "href": "data_sources.html",
+    "title": "Obtaining geospatial data",
     "section": "",
     "text": "Hello world."
   },
   {
-    "objectID": "theme_maps.html",
-    "href": "theme_maps.html",
-    "title": "Thematic maps",
+    "objectID": "digitising.html",
+    "href": "digitising.html",
+    "title": "Georeferencing & digitising",
     "section": "",
     "text": "Hello world."
-  },
-  {
-    "objectID": "bibliography.html",
-    "href": "bibliography.html",
-    "title": "Bibliography",
-    "section": "",
-    "text": "Conolly, J., & Lake, M. (2006). Geographical Information Systems in Archaeology (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459\n\nAvailable online via Universitätsbibliothek Bern"
   },
   {
     "objectID": "index.html",
@@ -77,11 +91,25 @@
     "text": "Evaluation\nStudents will be evaluated on their knowledge of course content and their ability to communicate and apply their understanding via a practical portfolio (50%) and an individual project (50%).\n\nPractical portfolio (50%)\nWork produced in each practical session will be compiled into a portfolio assignment to be submitted at the end of the course. The practical portfolio will evaluate students’ knowledge and understanding of the course content.\n\n\nIndividual project (50%)\nThe individual project will assess students’ ability to communicate and apply the skills acquired during the course by producing a publication-quality map with archaeological data. Details to follow."
   },
   {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Introduction",
+    "objectID": "predictive_models.html",
+    "href": "predictive_models.html",
+    "title": "Predictive modelling",
     "section": "",
-    "text": "Objectives\nBy the end of this session, you should:\n\nKnow what to expect from this course\nKnow what is expected of you in terms of classroom participation, homework, and evaluation\nBe familiar with the QGIS software and its basic capabilities\n\n\n\nPrerequisites\nNone.\n\n\nPractical\n\nDraw a map of your journey here to the university today\nInstall QGIS & try to make a map!"
+    "text": "Hello world."
+  },
+  {
+    "objectID": "raster_analysis.html",
+    "href": "raster_analysis.html",
+    "title": "Raster analysis",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "design.html",
+    "href": "design.html",
+    "title": "Map design",
+    "section": "",
+    "text": "Hello world."
   },
   {
     "objectID": "interpolation.html",
@@ -91,58 +119,9 @@
     "text": "Hello world."
   },
   {
-    "objectID": "information.html",
-    "href": "information.html",
-    "title": "Information for students",
-    "section": "",
-    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
-  },
-  {
-    "objectID": "information.html#access-accommodations",
-    "href": "information.html#access-accommodations",
-    "title": "Information for students",
-    "section": "Access & accommodations",
-    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
-  },
-  {
-    "objectID": "information.html#academic-integrity",
-    "href": "information.html#academic-integrity",
-    "title": "Information for students",
-    "section": "Academic integrity",
-    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
-  },
-  {
-    "objectID": "information.html#mental-health",
-    "href": "information.html#mental-health",
-    "title": "Information for students",
-    "section": "Mental health",
-    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
-  },
-  {
-    "objectID": "movement_models.html",
-    "href": "movement_models.html",
-    "title": "Modelling movement",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "predictive_models.html",
-    "href": "predictive_models.html",
-    "title": "Predictive modelling",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "data_sources.html",
-    "href": "data_sources.html",
-    "title": "Obtaining geospatial data",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "terrain_maps.html",
-    "href": "terrain_maps.html",
-    "title": "Terrain maps",
+    "objectID": "theme_maps.html",
+    "href": "theme_maps.html",
+    "title": "Thematic maps",
     "section": "",
     "text": "Hello world."
   },
@@ -154,16 +133,37 @@
     "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\nConolly & Lake, ch. 2\n\n\n40\nTopographic maps\n—\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n—\n\n\n44\nSources of geospatial data\n—\n\n\n45\nGeoreferencing & digitising\n—\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n—\n\n\n48\nRaster analysis\n—\n\n\n49\nModelling movement\n—\n\n\n50\nPredictive modelling\n—\n\n\n51\nReview\n—"
   },
   {
-    "objectID": "design.html",
-    "href": "design.html",
-    "title": "Map design",
+    "objectID": "terrain_maps.html",
+    "href": "terrain_maps.html",
+    "title": "Terrain maps",
     "section": "",
     "text": "Hello world."
   },
   {
-    "objectID": "raster_analysis.html",
-    "href": "raster_analysis.html",
-    "title": "Raster analysis",
+    "objectID": "bibliography.html",
+    "href": "bibliography.html",
+    "title": "Bibliography",
+    "section": "",
+    "text": "Conolly, J., & Lake, M. (2006). Geographical Information Systems in Archaeology (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459\n\nAvailable online via Universitätsbibliothek Bern"
+  },
+  {
+    "objectID": "movement_models.html",
+    "href": "movement_models.html",
+    "title": "Modelling movement",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "review.html",
+    "href": "review.html",
+    "title": "Review",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "layout.html",
+    "href": "layout.html",
+    "title": "Map layout",
     "section": "",
     "text": "Hello world."
   }
