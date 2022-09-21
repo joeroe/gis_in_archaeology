@@ -1,0 +1,1 @@
+Sitemap: https://github.com/joeroe/gis_in_archaeology/sitemap.xml
