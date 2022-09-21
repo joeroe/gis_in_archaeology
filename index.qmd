@@ -27,33 +27,22 @@ By the end of this course, you should:
 ![](images/joe_roe.png){width=3em}
 **[Joe Roe](https://www.iaw.unibe.ch/about_us/arp__pa_personen/ma_roe_joe/index_eng.html)** <<joseph.roe@iaw.unibe.ch>>
 
-## Learning format & evaluation
+## Learning format
 
 New concepts and material will be introduced through pre-recorded lectures and/or readings, which students are expected to have studied before each weekly tutorial.
-Contact hours will primarily be used for practical exercises, which will together form the labwork portfolio submitted for evaluation at the end of the course.
-It is expected that you will also work on these labwork assignments outside of class hours (i.e., they are also homework).
+Contact hours will primarily be used for practical exercises, which will together form the portfolio submitted for evaluation at the end of the course.
+It is expected that you will also work on these practical assignments outside of class hours (i.e., they are also homework).
 
-Students will be evaluated on their knowledge of course content and their ability to communicate their understanding via a) a labwork portfolio (50%) and b) an individual project (50%).
+## Evaluation
 
-## Schedule
+Students will be evaluated on their knowledge of course content and their ability to communicate and apply their understanding via a practical portfolio (50%) and an individual project (50%).
 
-* Introduction
-  * Course overview & practical information
-  * Applications of GIS in archaeology
-  * Install & basic use of QGIS
-* CARTOGRAPHY
-  * Vector data: distribution and thematic maps (MH: Making maps)
-  * Mapping the terrain (Raster data, DEM, imagery; MH: Making nicer maps)
-  * Finishing touches (Labelling, layout & decoration)
-  * Map genres (??? design etc., choice of projection, more practice)
-* DATA MANAGEMENT
-  * Managing geospatial data (File management, file formats, geodatabases; MH: Handling spatial data)
-  * Obtaining geospatial data (sources of data; web services)
-  * Georeferencing & digitising
-  * Field data collection
-* SPATIAL ANALYSIS
-  * Interpolation & density estimation (MH: Interpolation & Densities)
-  * Raster analysis (MH: Terrain data & visibility analysis)
-  * Modelling movement: path & catchment analysis (MH: Time distance & Least cost path analysis & Site catchment analysis)
-  * Predictive modelling (???)
-* Final project
+### Practical portfolio (50%)
+
+Work produced in each practical session will be compiled into a portfolio assignment to be submitted at the end of the course.
+The practical portfolio will evaluate students' knowledge and understanding of the course content.
+
+### Individual project (50%)
+
+The individual project will assess students' ability to communicate and apply the skills acquired during the course by producing a publication-quality map with archaeological data. 
+Details to follow.

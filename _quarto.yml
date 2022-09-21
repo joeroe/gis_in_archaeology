@@ -3,11 +3,47 @@ project:
 
 website:
   title: "GIS in Archaeology [HS2022]"
+
+  page-navigation: true
+  repo-url: "https://github.com/joeroe/gis_in_archaeology"
+  repo-actions: [source, issue]
+
   navbar:
     left:
       - href: index.qmd
-        text: Overview
-      - about.qmd
+        text: "Overview"
+      - href: information.qmd
+        text: "Information"
+      - schedule.qmd
+      - sidebar:tutorials
+      - bibliography.qmd
+
+  sidebar:
+    - title: "Home"
+    - id: tutorials
+      title: "Tutorials"
+      style: docked
+      contents:
+        - introduction.qmd
+        - section: "Making maps"
+          contents:
+            - theme_maps.qmd
+            - terrain_maps.qmd
+            - layout.qmd
+            - design.qmd
+        - section: "Geospatial data"
+          contents:
+            - data_management.qmd
+            - data_sources.qmd
+            - digitising.qmd
+            - field_data.qmd
+        - section: "Spatial analysis"
+          contents:
+            - interpolation.qmd
+            - raster_analysis.qmd
+            - movement_models.qmd
+            - predictive_models.qmd
+        - review.qmd
 
 format:
   html:
