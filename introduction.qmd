@@ -2,4 +2,22 @@
 title: "Introduction"
 ---
 
-Hello world.
+In the first session, we will introduce ourselves, go over the practicalities and outline of the course, and then dive in and try to use QGIS to make a map.
+
+# Objectives
+
+By the end of this session, you should:
+
+1. Know what to expect from this course
+2. Know what is expected of you in terms of classroom participation, homework, and evaluation
+3. Be familiar with the QGIS software and its basic capabilities
+
+# Prerequisites
+
+None.
+
+# Practical
+
+1. Draw a map of your journey here to the university today
+2. Install QGIS & try to make a map!
+
