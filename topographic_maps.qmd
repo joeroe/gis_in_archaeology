@@ -1,5 +1,5 @@
 ---
-title: "Terrain maps"
+title: "Topographic maps"
 ---
 
 ## Prerequisites

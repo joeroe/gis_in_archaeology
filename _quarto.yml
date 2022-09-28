@@ -28,7 +28,7 @@ website:
         - section: "Making maps"
           contents:
             - theme_maps.qmd
-            - terrain_maps.qmd
+            - topographic_maps.qmd
             - layout.qmd
             - design.qmd
         - section: "Geospatial data"
