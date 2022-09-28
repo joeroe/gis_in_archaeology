@@ -1,7 +1,15 @@
 ---
-title: "Bibliography"
+title: "Bibliography & Further Reading"
 ---
 
-* Conolly, J., & Lake, M. (2006). Geographical Information Systems in Archaeology (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459
-  * [Available online](https://www.cambridge.org/core/books/geographical-information-systems-in-archaeology/6CCD088D5DF8A32567A0A2B60CACD3A5) via Universitätsbibliothek Bern
+## Online resources
 
+* [GIS in Archaeology HS 2020](https://tube.switch.ch/channels/62b80b1c), Martin Hinz's video tutorials
+* [A Gentle Introduction to GIS](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/index.html), from the QGIS documentation
+* [QGIS User Guide](https://docs.qgis.org/3.22/en/docs/user_manual/index.html)
+
+## Bibliography
+
+* Conolly, J., & Lake, M. (2006). *Geographical Information Systems in Archaeology* (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459
+  * [Available online](https://www.cambridge.org/core/books/geographical-information-systems-in-archaeology/6CCD088D5DF8A32567A0A2B60CACD3A5) via Universitätsbibliothek Bern
+* Menke, K. (2022). *[Discover QGIS 3.x](https://locatepress.com/book/dq32)* (second edition). Locate Press.
