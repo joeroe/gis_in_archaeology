@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.242">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -285,7 +285,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#mapping-point-distributions" id="toc-mapping-point-distributions" class="nav-link" data-scroll-target="#mapping-point-distributions">Mapping point distributions</a></li>
+  <li><a href="#thematic-mapping-with-points" id="toc-thematic-mapping-with-points" class="nav-link" data-scroll-target="#thematic-mapping-with-points">Thematic mapping with points</a></li>
+  <li><a href="#thematic-mapping-with-polygons" id="toc-thematic-mapping-with-polygons" class="nav-link" data-scroll-target="#thematic-mapping-with-polygons">Thematic mapping with polygons</a></li>
+  <li><a href="#thematic-mapping-with-lines" id="toc-thematic-mapping-with-lines" class="nav-link" data-scroll-target="#thematic-mapping-with-lines">Thematic mapping with lines</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/theme_maps.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -306,9 +321,106 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Hello world.</p>
+<p>In this session we will look at <strong>thematic maps</strong>. This is one of two broad types of cartographic representations (the other being <em>terrain</em> maps), encompassing any map where the main object is to communicate how a given property (the ‘theme’) varies in space, with the actual shape of the Earth being a secondary aspect (if present at all). Some common examples of thematic maps in archaeology are distribution maps (especially of sites) or density (choropleth) maps of finds. We will focus especially on <strong>point distribution maps</strong>, one of the most simple but effective genres of cartography in archaeology.</p>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this session, you should:</p>
+<ul>
+<li>Be able to describe the fundamental data models of GIS</li>
+<li>Be able to arrange and style vector geospatial data in QGIS</li>
+<li>Produce an effective archaeological distribution map</li>
+</ul>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Read <a href="https://www.cambridge.org/core/books/geographical-information-systems-in-archaeology/first-principles/ED29DE737206B64937F9E639C5364EB6">Conolly &amp; Lake, ch.&nbsp;2</a></li>
+</ul>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><a href="acheulean.csv">acheulean.csv</a>
+<ul>
+<li>A table with data on 17 Acheulean sites in Africa, including coordinates</li>
+</ul></li>
+<li>Natural Earth Data &lt;<a href="https://www.naturalearthdata.com/" class="uri">https://www.naturalearthdata.com/</a>&gt;</li>
+</ul>
+</section>
+<section id="mapping-point-distributions" class="level3">
+<h3 class="anchored" data-anchor-id="mapping-point-distributions">Mapping point distributions</h3>
+<p>We will start by simply showing where the sites are in the world.</p>
+<ol type="1">
+<li>Start a new <strong>project</strong> in QGIS.</li>
+<li>Add <code>acheulean.csv</code> into your map from the <strong>browser</strong> <em>and</em> the <strong>layer -&gt; add layer</strong> menu
+<ul>
+<li><em>Q:</em> Which one worked?</li>
+<li><em>Q:</em> Why do we need to tell QGIS what CRS this layer uses?</li>
+</ul></li>
+<li>This isn’t very useful on its own. Find relevent base layers from <strong>Natural Earth</strong> and add it to your map too.
+<ul>
+<li>For this practical, use at least one <em>raster</em> layer and at least one <em>vector</em> layer</li>
+<li><em>Q:</em> What kind of base layers are relevent here?</li>
+</ul></li>
+<li>Use the <strong>layers</strong> panel to arrange the layers of your map in a sensible order.</li>
+<li>Use the <strong>layer properties</strong> dialog to style your base layers. Remember to think about what you are trying to <em>communicate</em> with this map.
+<ul>
+<li><em>Q:</em> How does the purpose of the map affect the choice of base layer styles?</li>
+</ul></li>
+<li>Use the <strong>layer properties</strong> dialog to style your point layer
+<ul>
+<li><em>Q:</em> Apart from the location of sites, what other information might you want to show at this point?</li>
+</ul></li>
+</ol>
+<p>Use <strong>Project -&gt; Import/Export</strong> to save an image of your map for your portfolio.</p>
+</section>
+<section id="thematic-mapping-with-points" class="level3">
+<h3 class="anchored" data-anchor-id="thematic-mapping-with-points">Thematic mapping with points</h3>
+<p>Now we will pick a class of artefact to explore with our map.</p>
+<ol type="1">
+<li>Using <strong>single symbol</strong> symbology, vary the <strong>size</strong> of the points according to the number of artefacts.</li>
+<li>Using <strong>graduated</strong> symbology, vary the <strong>colour</strong> of the points according to the number of artefacts.</li>
+<li>Using <strong>categorized</strong> symbology, vary the <strong>colour</strong> of the points according to the number of artefacts.
+<ul>
+<li><em>Q:</em> Which do you think is more effective, and why?</li>
+</ul></li>
+</ol>
+<p>Save an image of a map using your preferred symbology for your portfolio.</p>
+</section>
+<section id="thematic-mapping-with-polygons" class="level3">
+<h3 class="anchored" data-anchor-id="thematic-mapping-with-polygons">Thematic mapping with polygons</h3>
+<p>Let’s add a bit more information to our base layers, showing the countries in which Acheulean sites are found.</p>
+<ol type="1">
+<li>If you haven’t already, download a <strong>country layer</strong> from Natural Earth Data and add it to your map.</li>
+<li>Adjust the <strong>symbology</strong> of the country layer appropriately.</li>
+<li>Using the <strong>select</strong> tool, select countries that contain an Acheulean site.
+<ul>
+<li><em>Q:</em> In future sessions, we will look at more automatic ways to do this. Why might doing it by hand become inefficient?</li>
+</ul></li>
+<li>In the <strong>layer</strong> panel, <strong>export</strong> the selected features as a new layer, then add it to your map.</li>
+<li>Using <strong>single symbol</strong> symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.</li>
+<li>Using <strong>inverted</strong> symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.
+<ul>
+<li><em>Q:</em> What other uses might inverted symbology have?</li>
+</ul></li>
+</ol>
+<p>Save an image of a map using your preferred symbology for your portfolio.</p>
+</section>
+<section id="thematic-mapping-with-lines" class="level3">
+<h3 class="anchored" data-anchor-id="thematic-mapping-with-lines">Thematic mapping with lines</h3>
+<p>Finally, let’s explore how we can use data to vary the appearance of lines.</p>
+<ol type="1">
+<li>If you haven’t already, download a <strong>river layer</strong> from Natural Earth Data and add it to your map.</li>
+<li>Adjust the <strong>symbology</strong> of the river layer appropriately.</li>
+<li>Use a data variable to adjust the <strong>width</strong> of the river layer. You will have to experiment to find the right <strong>variable</strong> and <strong>expression</strong>!</li>
+</ol>
+<p>Save an image of your map for your portfolio.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
