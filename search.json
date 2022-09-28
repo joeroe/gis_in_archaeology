@@ -35,13 +35,6 @@
     "text": "Hello world."
   },
   {
-    "objectID": "terrain_maps.html",
-    "href": "terrain_maps.html",
-    "title": "Terrain maps",
-    "section": "",
-    "text": "Styling vector layers as basemap (Video, Martin Hinz)\nStyling DEM as a basemap (Video, Martin Hinz)"
-  },
-  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
@@ -194,5 +187,12 @@
     "title": "Field data collection",
     "section": "",
     "text": "Hello world."
+  },
+  {
+    "objectID": "topographic_maps.html",
+    "href": "topographic_maps.html",
+    "title": "Topographic maps",
+    "section": "",
+    "text": "Styling vector layers as basemap (Video, Martin Hinz)\nStyling DEM as a basemap (Video, Martin Hinz)"
   }
 ]
