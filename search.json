@@ -46,7 +46,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\nConolly & Lake, ch. 2\n\n\n40\nTopographic maps\n—\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n—\n\n\n44\nSources of geospatial data\n—\n\n\n45\nGeoreferencing & digitising\n—\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n—\n\n\n48\nRaster analysis\n—\n\n\n49\nModelling movement\n—\n\n\n50\nPredictive modelling\n—\n\n\n51\nReview\n—"
+    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\n Conolly & Lake, ch. 2\n\n\n40\nTopographic maps\n Styling vector layers as basemap Styling DEM as a basemap\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n—\n\n\n44\nSources of geospatial data\n—\n\n\n45\nGeoreferencing & digitising\n—\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n—\n\n\n48\nRaster analysis\n—\n\n\n49\nModelling movement\n—\n\n\n50\nPredictive modelling\n—\n\n\n51\nReview\n—"
   },
   {
     "objectID": "data_sources.html",
