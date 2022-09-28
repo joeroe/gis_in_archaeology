@@ -2,4 +2,82 @@
 title: "Thematic maps"
 ---
 
-Hello world.
+In this session we will look at **thematic maps**.
+This is one of two broad types of cartographic representations (the other being *terrain* maps), encompassing any map where the main object is to communicate how a given property (the 'theme') varies in space, with the actual shape of the Earth being a secondary aspect (if present at all).
+Some common examples of thematic maps in archaeology are distribution maps (especially of sites) or density (choropleth) maps of finds.
+We will focus especially on **point distribution maps**, one of the most simple but effective genres of cartography in archaeology.
+
+## Objectives
+
+By the end of this session, you should:
+
+* Be able to describe the fundamental data models of GIS
+* Be able to arrange and style vector geospatial data in QGIS
+* Produce an effective archaeological distribution map
+
+## Prerequisites
+
+* Read [Conolly & Lake, ch. 2](https://www.cambridge.org/core/books/geographical-information-systems-in-archaeology/first-principles/ED29DE737206B64937F9E639C5364EB6)
+
+## Practical
+
+### Data
+
+* [acheulean.csv](acheulean.csv)
+  * A table with data on 17 Acheulean sites in Africa, including coordinates
+* Natural Earth Data <<https://www.naturalearthdata.com/>>
+
+### Mapping point distributions
+
+We will start by simply showing where the sites are in the world.
+
+1. Start a new **project** in QGIS.
+2. Add `acheulean.csv` into your map from the **browser** *and* the **layer -> add layer** menu
+    * *Q:* Which one worked?
+    * *Q:* Why do we need to tell QGIS what CRS this layer uses?
+3. This isn't very useful on its own. Find relevent base layers from **Natural Earth** and add it to your map too.
+    * For this practical, use at least one *raster* layer and at least one *vector* layer
+    * *Q:* What kind of base layers are relevent here?
+4. Use the **layers** panel to arrange the layers of your map in a sensible order.
+5. Use the **layer properties** dialog to style your base layers. Remember to think about what you are trying to *communicate* with this map.
+    * *Q:* How does the purpose of the map affect the choice of base layer styles?
+6. Use the **layer properties** dialog to style your point layer
+    * *Q:* Apart from the location of sites, what other information might you want to show at this point?
+
+Use **Project -> Import/Export** to save an image of your map for your portfolio.
+
+### Thematic mapping with points
+
+Now we will pick a class of artefact to explore with our map.
+
+1. Using **single symbol** symbology, vary the **size** of the points according to the number of artefacts.
+2. Using **graduated** symbology, vary the **colour** of the points according to the number of artefacts.
+3. Using **categorized** symbology, vary the **colour** of the points according to the number of artefacts.
+    * *Q:* Which do you think is more effective, and why?
+
+Save an image of a map using your preferred symbology for your portfolio.
+
+### Thematic mapping with polygons
+
+Let's add a bit more information to our base layers, showing the countries in which Acheulean sites are found.
+
+1. If you haven't already, download a **country layer** from Natural Earth Data and add it to your map.
+2. Adjust the **symbology** of the country layer appropriately.
+3. Using the **select** tool, select countries that contain an Acheulean site.
+    * *Q:* In future sessions, we will look at more automatic ways to do this. Why might doing it by hand become inefficient?
+4. In the **layer** panel, **export** the selected features as a new layer, then add it to your map.
+5. Using **single symbol** symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.
+6. Using **inverted** symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.
+    * *Q:* What other uses might inverted symbology have?
+
+Save an image of a map using your preferred symbology for your portfolio.
+
+### Thematic mapping with lines
+
+Finally, let's explore how we can use data to vary the appearance of lines.
+
+1. If you haven't already, download a **river layer** from Natural Earth Data and add it to your map.
+2. Adjust the **symbology** of the river layer appropriately.
+3. Use a data variable to adjust the **width** of the river layer. You will have to experiment to find the right **variable** and **expression**!
+
+Save an image of your map for your portfolio.
