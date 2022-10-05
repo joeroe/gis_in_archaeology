@@ -50,9 +50,33 @@ It is intended to illustrate the historical context of the journeys of Cyril and
 
 You will need the 'Cyril and Methodius' datasets and supplementary data from Natural Earth.
 
-![The Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius](cyril_methodius.png)
+![The Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius. ⓒ Joe Roe](cyril_methodius.png)
 
 Save an image of your reproduced map to your portfolio.
 
 * *Q:* How could this map be improved?
 
+### Relief maps
+
+A relief map is a special class of elevation map that is very widely used as both a base map and an illustrative, topographic map.
+They represent (raster) elevation maps 
+They can look really nice—or they can look awful—it takes practice!
+
+1. Download SRTM elevation data for Switzerland from <<http://dwtkns.com/srtm/>>
+2. Add it to you project along with river, lake, ocean, and country border data from Natural Earth. Style the vector layers appropriately.
+3. Style the DEM layer with **single band pseudocolor** symbology and the built in 'spectral' colour ramp
+4. Change the **mode** to 'equal interval' and experiment with adding more classes.
+5. Change the **interpolation** to 'discrete' and again experiment with different number of classes.
+    * *Q:* What is the difference between continuous and discrete interpolation in this context?
+
+Save an image of a map using the 'spectral' ramp for your portfolio.
+
+1. Create a new color ramp for the DEM layer, using one of the options for topography in the 'cpt-city' catalogue.
+2. Adjust the min/max values and classes to best show the underlying topography.
+3. Duplicate the DEM layer and change its symbology to 'hillshade'
+   * *Q:* What to the 'altitude', 'azimuth', and 'z-factor' options do?
+4. Under transparency, adjust the **blend mode** (try 'multiple') and **opacity** of the layer until it blends well with the underlying terrain colours.
+5. Disable the underlying DEM layer so that just the hillshade is visible.
+  * *Q:* What could this type of base map be used for?
+
+Save an image of your shaded relief map for your portfolio.
