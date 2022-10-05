@@ -1,45 +1,45 @@
 [
   {
-    "objectID": "predictive_models.html",
-    "href": "predictive_models.html",
-    "title": "Predictive modelling",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Objectives\nBy the end of this session, you should:\n\nKnow what to expect from this course\nKnow what is expected of you in terms of classroom participation, homework, and evaluation\nBe familiar with the QGIS software and its basic capabilities\n\n\n\nPrerequisites\nNone.\n\n\nPractical\n\nDraw a map of your journey here to the university today\nInstall QGIS & try to make a map!"
+  },
+  {
+    "objectID": "information.html",
+    "href": "information.html",
+    "title": "Information for students",
+    "section": "",
+    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
+  },
+  {
+    "objectID": "information.html#access-accommodations",
+    "href": "information.html#access-accommodations",
+    "title": "Information for students",
+    "section": "Access & accommodations",
+    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
+  },
+  {
+    "objectID": "information.html#academic-integrity",
+    "href": "information.html#academic-integrity",
+    "title": "Information for students",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
+  },
+  {
+    "objectID": "information.html#mental-health",
+    "href": "information.html#mental-health",
+    "title": "Information for students",
+    "section": "Mental health",
+    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
+  },
+  {
+    "objectID": "field_data.html",
+    "href": "field_data.html",
+    "title": "Field data collection",
     "section": "",
     "text": "Hello world."
-  },
-  {
-    "objectID": "bibliography.html",
-    "href": "bibliography.html",
-    "title": "Bibliography & Further Reading",
-    "section": "",
-    "text": "GIS in Archaeology HS 2020, Martin Hinz’s video tutorials\nA Gentle Introduction to GIS, from the QGIS documentation\nQGIS User Guide"
-  },
-  {
-    "objectID": "bibliography.html#bibliography",
-    "href": "bibliography.html#bibliography",
-    "title": "Bibliography & Further Reading",
-    "section": "Bibliography",
-    "text": "Bibliography\n\nConolly, J., & Lake, M. (2006). Geographical Information Systems in Archaeology (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459\n\nAvailable online via Universitätsbibliothek Bern\n\nMenke, K. (2022). Discover QGIS 3.x (second edition). Locate Press."
-  },
-  {
-    "objectID": "interpolation.html",
-    "href": "interpolation.html",
-    "title": "Interpolation & density estimation",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "layout.html",
-    "href": "layout.html",
-    "title": "Map layout",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\n Conolly & Lake, ch. 2\n\n\n40\nTopographic maps\n Styling vector layers as basemap Styling DEM as a basemap\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n—\n\n\n44\nSources of geospatial data\n—\n\n\n45\nGeoreferencing & digitising\n—\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n—\n\n\n48\nRaster analysis\n—\n\n\n49\nModelling movement\n—\n\n\n50\nPredictive modelling\n—\n\n\n51\nReview\n—"
   },
   {
     "objectID": "data_sources.html",
@@ -52,55 +52,6 @@
     "objectID": "digitising.html",
     "href": "digitising.html",
     "title": "Georeferencing & digitising",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "movement_models.html",
-    "href": "movement_models.html",
-    "title": "Modelling movement",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "theme_maps.html",
-    "href": "theme_maps.html",
-    "title": "Thematic maps",
-    "section": "",
-    "text": "In this session we will look at thematic maps. This is one of two broad types of cartographic representations (the other being terrain maps), encompassing any map where the main object is to communicate how a given property (the ‘theme’) varies in space, with the actual shape of the Earth being a secondary aspect (if present at all). Some common examples of thematic maps in archaeology are distribution maps (especially of sites) or density (choropleth) maps of finds. We will focus especially on point distribution maps, one of the most simple but effective genres of cartography in archaeology."
-  },
-  {
-    "objectID": "theme_maps.html#objectives",
-    "href": "theme_maps.html#objectives",
-    "title": "Thematic maps",
-    "section": "Objectives",
-    "text": "Objectives\nBy the end of this session, you should:\n\nBe able to describe the fundamental data models of GIS\nBe able to arrange and style vector geospatial data in QGIS\nProduce an effective archaeological distribution map"
-  },
-  {
-    "objectID": "theme_maps.html#prerequisites",
-    "href": "theme_maps.html#prerequisites",
-    "title": "Thematic maps",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nRead Conolly & Lake, ch. 2"
-  },
-  {
-    "objectID": "theme_maps.html#practical",
-    "href": "theme_maps.html#practical",
-    "title": "Thematic maps",
-    "section": "Practical",
-    "text": "Practical\n\nData\n\nacheulean.csv\n\nA table with data on 17 Acheulean sites in Africa, including coordinates\n\nNatural Earth Data <https://www.naturalearthdata.com/>\n\n\n\nMapping point distributions\nWe will start by simply showing where the sites are in the world.\n\nStart a new project in QGIS.\nAdd acheulean.csv into your map from the browser and the layer -> add layer menu\n\nQ: Which one worked?\nQ: Why do we need to tell QGIS what CRS this layer uses?\n\nThis isn’t very useful on its own. Find relevent base layers from Natural Earth and add it to your map too.\n\nFor this practical, use at least one raster layer and at least one vector layer\nQ: What kind of base layers are relevent here?\n\nUse the layers panel to arrange the layers of your map in a sensible order.\nUse the layer properties dialog to style your base layers. Remember to think about what you are trying to communicate with this map.\n\nQ: How does the purpose of the map affect the choice of base layer styles?\n\nUse the layer properties dialog to style your point layer\n\nQ: Apart from the location of sites, what other information might you want to show at this point?\n\n\nUse Project -> Import/Export to save an image of your map for your portfolio.\n\n\nThematic mapping with points\nNow we will pick a class of artefact to explore with our map.\n\nUsing single symbol symbology, vary the size of the points according to the number of artefacts.\nUsing graduated symbology, vary the colour of the points according to the number of artefacts.\nUsing categorized symbology, vary the colour of the points according to the number of artefacts.\n\nQ: Which do you think is more effective, and why?\n\n\nSave an image of a map using your preferred symbology for your portfolio.\n\n\nThematic mapping with polygons\nLet’s add a bit more information to our base layers, showing the countries in which Acheulean sites are found.\n\nIf you haven’t already, download a country layer from Natural Earth Data and add it to your map.\nAdjust the symbology of the country layer appropriately.\nUsing the select tool, select countries that contain an Acheulean site.\n\nQ: In future sessions, we will look at more automatic ways to do this. Why might doing it by hand become inefficient?\n\nIn the layer panel, export the selected features as a new layer, then add it to your map.\nUsing single symbol symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.\nUsing inverted symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.\n\nQ: What other uses might inverted symbology have?\n\n\nSave an image of a map using your preferred symbology for your portfolio.\n\n\nThematic mapping with lines\nFinally, let’s explore how we can use data to vary the appearance of lines.\n\nIf you haven’t already, download a river layer from Natural Earth Data and add it to your map.\nAdjust the symbology of the river layer appropriately.\nUse a data variable to adjust the width of the river layer. You will have to experiment to find the right variable and expression!\n\nSave an image of your map for your portfolio."
-  },
-  {
-    "objectID": "raster_analysis.html",
-    "href": "raster_analysis.html",
-    "title": "Raster analysis",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "review.html",
-    "href": "review.html",
-    "title": "Review",
     "section": "",
     "text": "Hello world."
   },
@@ -140,39 +91,18 @@
     "text": "Evaluation\nStudents will be evaluated on their knowledge of course content and their ability to communicate and apply their understanding via a practical portfolio (50%) and an individual project (50%).\n\nPractical portfolio (50%)\nWork produced in each practical session will be compiled into a portfolio assignment to be submitted at the end of the course. The practical portfolio will evaluate students’ knowledge and understanding of the course content.\n\n\nIndividual project (50%)\nThe individual project will assess students’ ability to communicate and apply the skills acquired during the course by producing a publication-quality map with archaeological data. Details to follow."
   },
   {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Introduction",
+    "objectID": "predictive_models.html",
+    "href": "predictive_models.html",
+    "title": "Predictive modelling",
     "section": "",
-    "text": "Objectives\nBy the end of this session, you should:\n\nKnow what to expect from this course\nKnow what is expected of you in terms of classroom participation, homework, and evaluation\nBe familiar with the QGIS software and its basic capabilities\n\n\n\nPrerequisites\nNone.\n\n\nPractical\n\nDraw a map of your journey here to the university today\nInstall QGIS & try to make a map!"
+    "text": "Hello world."
   },
   {
-    "objectID": "information.html",
-    "href": "information.html",
-    "title": "Information for students",
+    "objectID": "raster_analysis.html",
+    "href": "raster_analysis.html",
+    "title": "Raster analysis",
     "section": "",
-    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
-  },
-  {
-    "objectID": "information.html#access-accommodations",
-    "href": "information.html#access-accommodations",
-    "title": "Information for students",
-    "section": "Access & accommodations",
-    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
-  },
-  {
-    "objectID": "information.html#academic-integrity",
-    "href": "information.html#academic-integrity",
-    "title": "Information for students",
-    "section": "Academic integrity",
-    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
-  },
-  {
-    "objectID": "information.html#mental-health",
-    "href": "information.html#mental-health",
-    "title": "Information for students",
-    "section": "Mental health",
-    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
+    "text": "Hello world."
   },
   {
     "objectID": "design.html",
@@ -182,11 +112,46 @@
     "text": "Hello world."
   },
   {
-    "objectID": "field_data.html",
-    "href": "field_data.html",
-    "title": "Field data collection",
+    "objectID": "interpolation.html",
+    "href": "interpolation.html",
+    "title": "Interpolation & density estimation",
     "section": "",
     "text": "Hello world."
+  },
+  {
+    "objectID": "theme_maps.html",
+    "href": "theme_maps.html",
+    "title": "Thematic maps",
+    "section": "",
+    "text": "In this session we will look at thematic maps. This is one of two broad types of cartographic representations (the other being terrain maps), encompassing any map where the main object is to communicate how a given property (the ‘theme’) varies in space, with the actual shape of the Earth being a secondary aspect (if present at all). Some common examples of thematic maps in archaeology are distribution maps (especially of sites) or density (choropleth) maps of finds. We will focus especially on point distribution maps, one of the most simple but effective genres of cartography in archaeology."
+  },
+  {
+    "objectID": "theme_maps.html#objectives",
+    "href": "theme_maps.html#objectives",
+    "title": "Thematic maps",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this session, you should:\n\nBe able to describe the fundamental data models of GIS\nBe able to arrange and style vector geospatial data in QGIS\nProduce an effective archaeological distribution map"
+  },
+  {
+    "objectID": "theme_maps.html#prerequisites",
+    "href": "theme_maps.html#prerequisites",
+    "title": "Thematic maps",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nRead Conolly & Lake, ch. 2"
+  },
+  {
+    "objectID": "theme_maps.html#practical",
+    "href": "theme_maps.html#practical",
+    "title": "Thematic maps",
+    "section": "Practical",
+    "text": "Practical\n\nData\n\nacheulean.csv\n\nA table with data on 17 Acheulean sites in Africa, including coordinates\n\nNatural Earth Data <https://www.naturalearthdata.com/>\n\n\n\nMapping point distributions\nWe will start by simply showing where the sites are in the world.\n\nStart a new project in QGIS.\nAdd acheulean.csv into your map from the browser and the layer -> add layer menu\n\nQ: Which one worked?\nQ: Why do we need to tell QGIS what CRS this layer uses?\n\nThis isn’t very useful on its own. Find relevent base layers from Natural Earth and add it to your map too.\n\nFor this practical, use at least one raster layer and at least one vector layer\nQ: What kind of base layers are relevent here?\n\nUse the layers panel to arrange the layers of your map in a sensible order.\nUse the layer properties dialog to style your base layers. Remember to think about what you are trying to communicate with this map.\n\nQ: How does the purpose of the map affect the choice of base layer styles?\n\nUse the layer properties dialog to style your point layer\n\nQ: Apart from the location of sites, what other information might you want to show at this point?\n\n\nUse Project -> Import/Export to save an image of your map for your portfolio.\n\n\nThematic mapping with points\nNow we will pick a class of artefact to explore with our map.\n\nUsing single symbol symbology, vary the size of the points according to the number of artefacts.\nUsing graduated symbology, vary the colour of the points according to the number of artefacts.\nUsing categorized symbology, vary the colour of the points according to the number of artefacts.\n\nQ: Which do you think is more effective, and why?\n\n\nSave an image of a map using your preferred symbology for your portfolio.\n\n\nThematic mapping with polygons\nLet’s add a bit more information to our base layers, showing the countries in which Acheulean sites are found.\n\nIf you haven’t already, download a country layer from Natural Earth Data and add it to your map.\nAdjust the symbology of the country layer appropriately.\nUsing the select tool, select countries that contain an Acheulean site.\n\nQ: In future sessions, we will look at more automatic ways to do this. Why might doing it by hand become inefficient?\n\nIn the layer panel, export the selected features as a new layer, then add it to your map.\nUsing single symbol symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.\nUsing inverted symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.\n\nQ: What other uses might inverted symbology have?\n\n\nSave an image of a map using your preferred symbology for your portfolio.\n\n\nThematic mapping with lines\nFinally, let’s explore how we can use data to vary the appearance of lines.\n\nIf you haven’t already, download a river layer from Natural Earth Data and add it to your map.\nAdjust the symbology of the river layer appropriately.\nUse a data variable to adjust the width of the river layer. You will have to experiment to find the right variable and expression!\n\nSave an image of your map for your portfolio."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\n Conolly & Lake, ch. 2\n\n\n40\nTopographic maps\n Styling vector layers as basemap Styling DEM as a basemap\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n—\n\n\n44\nSources of geospatial data\n—\n\n\n45\nGeoreferencing & digitising\n—\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n—\n\n\n48\nRaster analysis\n—\n\n\n49\nModelling movement\n—\n\n\n50\nPredictive modelling\n—\n\n\n51\nReview\n—"
   },
   {
     "objectID": "topographic_maps.html",
@@ -207,6 +172,41 @@
     "href": "topographic_maps.html#practical",
     "title": "Topographic maps",
     "section": "Practical",
-    "text": "Practical\n\nCyril and Methodius\n\ncyril_methodius_places.csv – names and coordinates of major locations in the journeys of Cyril and Methodius\ndarmc_kingdoms_ad814.geojson – kingdoms of Europe in 814, from DARMC\ndarmc_towns_ad814.geojson – major towns and cities of Europe in 814, from DARMC\n\nNatural Earth Data <https://www.naturalearthdata.com/>\n\n\nMap services\nMap services are pre-compiled map layers distributed over the internet. They are often the most convinient way to get a quick topographic base map. There is a very, very wide selection of map services out there, including generic topographic maps (e.g. ESRI’s series), shaded relief (ESRI World Topo), street maps (e.g. OpenStreetMap), satellite imagery (e.g. Sentinel, Landsat) and specialised remote sensing data (e.g.OpenWeatherMap). The QGIS plugin QuickMapServices offers a very convenient index for publicly-available map services.\nImportant note: base maps from these services are subject to copyright and almost always come with licensing conditions. You should ensure you have permission to reproduce the individual map service before using them in publications!\n\nInstall and enable the QuickMapServices plugin for QGIS.\nUsing Web → QuickMapServices, add the standard OpenStreetMap (OSM) layer to your project and navigate to the area around Bern\n\nQ: What could we use this kind of map for in archaeology?\nQ: Apart from licensing concerns, why else might we not want to rely on map services for base maps?\n\nUsing the search function of QuickMapServices, find layers suitable as a base map for:\n\nA distribution map of prehistoric sites around Bern\nA plan of an medieval site within the city of Bern\nHelping a survey team find their way around the area around Bern\n\n\nUse Project → Import/Export to save an image of your three maps, briefly explaining why you chose the base layer you did.\n\n\nTopographic base maps\nReproduce the following map as closely as you can. It is intended to illustrate the historical context of the journeys of Cyril and Methodius, two 9th century Byzantine monks credited with introducing Christianity to the Slavic world and devising the Cyrillic alphabet (or technically it’s funky-looking predecessor, Glagolitic).\nYou will need the ‘Cyril and Methodius’ datasets and supplementary data from Natural Earth.\n\n\n\nThe Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius. ⓒ Joe Roe\n\n\nSave an image of your reproduced map to your portfolio.\n\nQ: How could this map be improved?\n\n\n\nRelief maps\nA relief map is a special class of elevation map that is very widely used as both a base map and an illustrative, topographic map. They represent (raster) elevation maps They can look really nice—or they can look awful—it takes practice!\n\nDownload SRTM elevation data for Switzerland from <http://dwtkns.com/srtm/>\nAdd it to you project along with river, lake, ocean, and country border data from Natural Earth. Style the vector layers appropriately.\nStyle the DEM layer with single band pseudocolor symbology and the built in ‘spectral’ colour ramp\nChange the mode to ‘equal interval’ and experiment with adding more classes.\nChange the interpolation to ‘discrete’ and again experiment with different number of classes.\n\nQ: What is the difference between continuous and discrete interpolation in this context?\n\n\nSave an image of a map using the ‘spectral’ ramp for your portfolio.\n\nCreate a new color ramp for the DEM layer, using one of the options for topography in the ‘cpt-city’ catalogue.\nAdjust the min/max values and classes to best show the underlying topography.\nDuplicate the DEM layer and change its symbology to ‘hillshade’\n\nQ: What to the ‘altitude’, ‘azimuth’, and ‘z-factor’ options do?\n\nUnder transparency, adjust the blend mode (try ‘multiple’) and opacity of the layer until it blends well with the underlying terrain colours.\nDisable the underlying DEM layer so that just the hillshade is visible.\n\n\nQ: What could this type of base map be used for?\n\nSave an image of your shaded relief map for your portfolio."
+    "text": "Practical\n\nCyril and Methodius\n\ncyril_methodius_places.csv – names and coordinates of major locations in the journeys of Cyril and Methodius\ndarmc_kingdoms_ad814.geojson – kingdoms of Europe in 814, from DARMC\ndarmc_towns_ad814.geojson – major towns and cities of Europe in 814, from DARMC\n\nNatural Earth Data <https://www.naturalearthdata.com/>\n\n\nMap services\nMap services are pre-compiled map layers distributed over the internet. They are often the most convinient way to get a quick topographic base map. There is a very, very wide selection of map services out there, including generic topographic maps (e.g. ESRI’s series), shaded relief (ESRI World Topo), street maps (e.g. OpenStreetMap), satellite imagery (e.g. Sentinel, Landsat) and specialised remote sensing data (e.g.OpenWeatherMap). The QGIS plugin QuickMapServices offers a very convenient index for publicly-available map services.\nImportant note: base maps from these services are subject to copyright and almost always come with licensing conditions. You should ensure you have permission to reproduce the individual map service before using them in publications!\n\nInstall and enable the QuickMapServices plugin for QGIS.\nUsing Web → QuickMapServices, add the standard OpenStreetMap (OSM) layer to your project and navigate to the area around Bern\n\nQ: What could we use this kind of map for in archaeology?\nQ: Apart from licensing concerns, why else might we not want to rely on map services for base maps?\n\nUsing the search function of QuickMapServices, find layers suitable as a base map for:\n\nA distribution map of prehistoric sites around Bern\nA plan of an medieval site within the city of Bern\nHelping a survey team find their way around the area around Bern\n\n\nUse Project → Import/Export to save an image of your three maps, briefly explaining why you chose the base layer you did.\n\n\nTopographic base maps\nReproduce the following map as closely as you can. It is intended to illustrate the historical context of the journeys of Cyril and Methodius, two 9th century Byzantine monks credited with introducing Christianity to the Slavic world and devising the Cyrillic alphabet (or technically it’s funky-looking predecessor, Glagolitic).\nYou will need the ‘Cyril and Methodius’ datasets and supplementary data from Natural Earth.\n\n\n\nThe Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius. ⓒ Joe Roe\n\n\nSave an image of your reproduced map to your portfolio.\n\nQ: How could this map be improved?\n\n\n\nRelief maps\nA relief map is a special class of elevation map that is very widely used as both a base map and an illustrative, topographic map. They represent (raster) elevation maps They can look really nice—or they can look awful—it takes practice!\n\nDownload SRTM elevation data for Switzerland from <http://dwtkns.com/srtm/>\nAdd it to you project along with river, lake, ocean, and country border data from Natural Earth. Style the vector layers appropriately.\nStyle the DEM layer with single band pseudocolor symbology and the built in ‘spectral’ colour ramp\nChange the mode to ‘equal interval’ and experiment with adding more classes.\nChange the interpolation to ‘discrete’ and again experiment with different number of classes.\n\nQ: What is the difference between continuous and discrete interpolation in this context?\n\n\nSave an image of a map using the ‘spectral’ ramp for your portfolio.\n\nCreate a new color ramp for the DEM layer, using one of the options for topography in the ‘cpt-city’ catalogue.\nAdjust the min/max values and classes to best show the underlying topography.\nDuplicate the DEM layer and change its symbology to ‘hillshade’\n\nQ: What to the ‘altitude’, ‘azimuth’, and ‘z-factor’ options do?\n\nUnder transparency, adjust the blend mode (try ‘multiple’) and opacity of the layer until it blends well with the underlying terrain colours.\nDisable the underlying DEM layer so that just the hillshade is visible.\n\nQ: What could this type of base map be used for?\n\n\nSave an image of your shaded relief map for your portfolio."
+  },
+  {
+    "objectID": "bibliography.html",
+    "href": "bibliography.html",
+    "title": "Bibliography & Further Reading",
+    "section": "",
+    "text": "GIS in Archaeology HS 2020, Martin Hinz’s video tutorials\nA Gentle Introduction to GIS, from the QGIS documentation\nQGIS User Guide"
+  },
+  {
+    "objectID": "bibliography.html#bibliography",
+    "href": "bibliography.html#bibliography",
+    "title": "Bibliography & Further Reading",
+    "section": "Bibliography",
+    "text": "Bibliography\n\nConolly, J., & Lake, M. (2006). Geographical Information Systems in Archaeology (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459\n\nAvailable online via Universitätsbibliothek Bern\n\nMenke, K. (2022). Discover QGIS 3.x (second edition). Locate Press."
+  },
+  {
+    "objectID": "movement_models.html",
+    "href": "movement_models.html",
+    "title": "Modelling movement",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "review.html",
+    "href": "review.html",
+    "title": "Review",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "layout.html",
+    "href": "layout.html",
+    "title": "Map layout",
+    "section": "",
+    "text": "Hello world."
   }
 ]
