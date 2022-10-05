@@ -373,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="cyril_methodius.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">The Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius</figcaption><p></p>
+<p></p><figcaption class="figure-caption">The Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius. ⓒ Joe Roe</figcaption><p></p>
 </figure>
 </div>
 <p>Save an image of your reproduced map to your portfolio.</p>
@@ -383,22 +383,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="relief-maps" class="level3">
 <h3 class="anchored" data-anchor-id="relief-maps">Relief maps</h3>
-<p>A relief map is a special type of elevation map that</p>
+<p>A relief map is a special class of elevation map that is very widely used as both a base map and an illustrative, topographic map. They represent (raster) elevation maps They can look really nice—or they can look awful—it takes practice!</p>
 <ol type="1">
 <li>Download SRTM elevation data for Switzerland from &lt;<a href="http://dwtkns.com/srtm/" class="uri">http://dwtkns.com/srtm/</a>&gt;</li>
+<li>Add it to you project along with river, lake, ocean, and country border data from Natural Earth. Style the vector layers appropriately.</li>
+<li>Style the DEM layer with <strong>single band pseudocolor</strong> symbology and the built in ‘spectral’ colour ramp</li>
+<li>Change the <strong>mode</strong> to ‘equal interval’ and experiment with adding more classes.</li>
+<li>Change the <strong>interpolation</strong> to ‘discrete’ and again experiment with different number of classes.
+<ul>
+<li><em>Q:</em> What is the difference between continuous and discrete interpolation in this context?</li>
+</ul></li>
+</ol>
+<p>Save an image of a map using the ‘spectral’ ramp for your portfolio.</p>
+<ol type="1">
+<li>Create a new color ramp for the DEM layer, using one of the options for topography in the ‘cpt-city’ catalogue.</li>
+<li>Adjust the min/max values and classes to best show the underlying topography.</li>
+<li>Duplicate the DEM layer and change its symbology to ‘hillshade’
+<ul>
+<li><em>Q:</em> What to the ‘altitude’, ‘azimuth’, and ‘z-factor’ options do?</li>
+</ul></li>
+<li>Under transparency, adjust the <strong>blend mode</strong> (try ‘multiple’) and <strong>opacity</strong> of the layer until it blends well with the underlying terrain colours.</li>
+<li>Disable the underlying DEM layer so that just the hillshade is visible.</li>
 </ol>
 <ul>
-<li>Basic colour ramps</li>
-<li>Better colour ramps
-<ul>
-<li>Adjusting bounds</li>
-</ul></li>
-<li>Hill-shading
-<ul>
-<li>Opacity/blend modes</li>
-</ul></li>
-<li>Hill shade on its own</li>
+<li><em>Q:</em> What could this type of base map be used for?</li>
 </ul>
+<p>Save an image of your shaded relief map for your portfolio.</p>
 
 
 </section>
