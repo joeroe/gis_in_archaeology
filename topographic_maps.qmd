@@ -77,6 +77,6 @@ Save an image of a map using the 'spectral' ramp for your portfolio.
    * *Q:* What to the 'altitude', 'azimuth', and 'z-factor' options do?
 4. Under transparency, adjust the **blend mode** (try 'multiple') and **opacity** of the layer until it blends well with the underlying terrain colours.
 5. Disable the underlying DEM layer so that just the hillshade is visible.
-  * *Q:* What could this type of base map be used for?
+   * *Q:* What could this type of base map be used for?
 
 Save an image of your shaded relief map for your portfolio.
