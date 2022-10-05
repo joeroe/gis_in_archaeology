@@ -7,7 +7,7 @@ title: "Schedule"
 | 38   | [Introduction](introduction.qmd) | --- |
 | **Making maps**              |
 | 39   | [Thematic maps](theme_maps.qmd) | [{{< fa book >}} Conolly & Lake, ch. 2](https://www.cambridge.org/core/books/geographical-information-systems-in-archaeology/first-principles/ED29DE737206B64937F9E639C5364EB6) |
-| 40   | [Topographic maps](terrain_maps.qmd) | [{{< fa circle-play >}} Styling vector layers as basemap](https://tube.switch.ch/videos/52650b8c)<br />[{{< fa circle-play >}} Styling DEM as a basemap](https://tube.switch.ch/videos/798f310f) |
+| 40   | [Topographic maps](topographic_maps.qmd) | [{{< fa circle-play >}} Styling vector layers as basemap](https://tube.switch.ch/videos/52650b8c)<br />[{{< fa circle-play >}} Styling DEM as a basemap](https://tube.switch.ch/videos/798f310f) |
 | 41   | [Map layout](layout.qmd) | --- |
 | 42   | [Map design](design.qmd) | --- |
 | **Geospatial data**          |
