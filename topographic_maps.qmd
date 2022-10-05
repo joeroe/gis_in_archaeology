@@ -2,7 +2,57 @@
 title: "Topographic maps"
 ---
 
+## Objectives
+
+After following this practical, you should be able to:
+
+* Use map services to obtain premade topographic maps in QGIS
+* Style vector and raster data to produce a base map
+* Combine raster digital elevation model (DEM) layers to produce a relief map
+
 ## Prerequisites
 
 * [Styling vector layers as basemap](https://tube.switch.ch/videos/52650b8c) (Video, Martin Hinz)
 * [Styling DEM as a basemap](https://tube.switch.ch/videos/798f310f) (Video, Martin Hinz)
+
+## Practical
+
+* Cyril and Methodius
+  * [cyril_methodius_places.csv](cyril_methodius_places.csv) – names and coordinates of major locations in the journeys of Cyril and Methodius
+  * [darmc_kingdoms_ad814.geojson](darmc_kingdoms_ad814.geojson) – kingdoms of Europe in 814, from [DARMC](https://darmc.harvard.edu/)
+  * [darmc_towns_ad814.geojson](darmc_towns_ad814.geojson) – major towns and cities of Europe in 814, from [DARMC](https://darmc.harvard.edu/)
+* Natural Earth Data <<https://www.naturalearthdata.com/>>
+
+### Map services
+
+Map services are pre-compiled map layers distributed over the internet.
+They are often the most convinient way to get a quick topographic base map.
+There is a very, very wide selection of map services out there, including generic topographic maps (e.g. ESRI's series), shaded relief (ESRI World Topo), street maps (e.g. OpenStreetMap), satellite imagery (e.g. Sentinel, Landsat) and specialised remote sensing data (e.g.OpenWeatherMap).
+The QGIS plugin [QuickMapServices](https://qms.nextgis.com/) offers a very convenient index for publicly-available map services.
+
+**Important note:** base maps from these services are subject to copyright and almost always come with licensing conditions. You should ensure you have permission to reproduce the *individual map service* before using them in publications!
+
+1. Install and enable the **QuickMapServices plugin** for QGIS.
+2. Using **Web → QuickMapServices**, add the standard OpenStreetMap (OSM) layer to your project and navigate to the area around Bern
+    * *Q:* What could we use this kind of map for in archaeology?
+    * *Q:* Apart from licensing concerns, why else might we not want to rely on map services for base maps?
+3. Using the search function of QuickMapServices, find layers suitable as a base map for:
+    a. A distribution map of prehistoric sites around Bern
+    b. A plan of an medieval site within the city of Bern
+    c. Helping a survey team find their way around the area around Bern
+
+Use **Project → Import/Export** to save an image of your three maps, briefly explaining why you chose the base layer you did.
+
+### Topographic base maps
+
+Reproduce the following map as closely as you can.
+It is intended to illustrate the historical context of the journeys of Cyril and Methodius, two 9th century Byzantine monks credited with introducing Christianity to the Slavic world and devising the Cyrillic alphabet (or technically it's funky-looking predecessor, Glagolitic).
+
+You will need the 'Cyril and Methodius' datasets and supplementary data from Natural Earth.
+
+![The Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius](cyril_methodius.png)
+
+Save an image of your reproduced map to your portfolio.
+
+* *Q:* How could this map be improved?
+
