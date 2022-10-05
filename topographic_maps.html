@@ -289,7 +289,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#map-services" id="toc-map-services" class="nav-link" data-scroll-target="#map-services">Map services</a></li>
+  <li><a href="#topographic-base-maps" id="toc-topographic-base-maps" class="nav-link" data-scroll-target="#topographic-base-maps">Topographic base maps</a></li>
+  <li><a href="#relief-maps" id="toc-relief-maps" class="nav-link" data-scroll-target="#relief-maps">Relief maps</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/topographic_maps.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -312,14 +319,89 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>After following this practical, you should be able to:</p>
+<ul>
+<li>Use map services to obtain premade topographic maps in QGIS</li>
+<li>Style vector and raster data to produce a base map</li>
+<li>Combine raster digital elevation model (DEM) layers to produce a relief map</li>
+</ul>
+</section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
 <li><a href="https://tube.switch.ch/videos/52650b8c">Styling vector layers as basemap</a> (Video, Martin Hinz)</li>
 <li><a href="https://tube.switch.ch/videos/798f310f">Styling DEM as a basemap</a> (Video, Martin Hinz)</li>
 </ul>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<ul>
+<li>Cyril and Methodius
+<ul>
+<li><a href="cyril_methodius_places.csv">cyril_methodius_places.csv</a> – names and coordinates of major locations in the journeys of Cyril and Methodius</li>
+<li><a href="darmc_kingdoms_ad814.geojson">darmc_kingdoms_ad814.geojson</a> – kingdoms of Europe in 814, from <a href="https://darmc.harvard.edu/">DARMC</a></li>
+<li><a href="darmc_towns_ad814.geojson">darmc_towns_ad814.geojson</a> – major towns and cities of Europe in 814, from <a href="https://darmc.harvard.edu/">DARMC</a></li>
+</ul></li>
+<li>Natural Earth Data &lt;<a href="https://www.naturalearthdata.com/" class="uri">https://www.naturalearthdata.com/</a>&gt;</li>
+</ul>
+<section id="map-services" class="level3">
+<h3 class="anchored" data-anchor-id="map-services">Map services</h3>
+<p>Map services are pre-compiled map layers distributed over the internet. They are often the most convinient way to get a quick topographic base map. There is a very, very wide selection of map services out there, including generic topographic maps (e.g.&nbsp;ESRI’s series), shaded relief (ESRI World Topo), street maps (e.g.&nbsp;OpenStreetMap), satellite imagery (e.g.&nbsp;Sentinel, Landsat) and specialised remote sensing data (e.g.OpenWeatherMap). The QGIS plugin <a href="https://qms.nextgis.com/">QuickMapServices</a> offers a very convenient index for publicly-available map services.</p>
+<p><strong>Important note:</strong> base maps from these services are subject to copyright and almost always come with licensing conditions. You should ensure you have permission to reproduce the <em>individual map service</em> before using them in publications!</p>
+<ol type="1">
+<li>Install and enable the <strong>QuickMapServices plugin</strong> for QGIS.</li>
+<li>Using <strong>Web → QuickMapServices</strong>, add the standard OpenStreetMap (OSM) layer to your project and navigate to the area around Bern
+<ul>
+<li><em>Q:</em> What could we use this kind of map for in archaeology?</li>
+<li><em>Q:</em> Apart from licensing concerns, why else might we not want to rely on map services for base maps?</li>
+</ul></li>
+<li>Using the search function of QuickMapServices, find layers suitable as a base map for:
+<ol type="a">
+<li>A distribution map of prehistoric sites around Bern</li>
+<li>A plan of an medieval site within the city of Bern</li>
+<li>Helping a survey team find their way around the area around Bern</li>
+</ol></li>
+</ol>
+<p>Use <strong>Project → Import/Export</strong> to save an image of your three maps, briefly explaining why you chose the base layer you did.</p>
+</section>
+<section id="topographic-base-maps" class="level3">
+<h3 class="anchored" data-anchor-id="topographic-base-maps">Topographic base maps</h3>
+<p>Reproduce the following map as closely as you can. It is intended to illustrate the historical context of the journeys of Cyril and Methodius, two 9th century Byzantine monks credited with introducing Christianity to the Slavic world and devising the Cyrillic alphabet (or technically it’s funky-looking predecessor, Glagolitic).</p>
+<p>You will need the ‘Cyril and Methodius’ datasets and supplementary data from Natural Earth.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cyril_methodius.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">The Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius</figcaption><p></p>
+</figure>
+</div>
+<p>Save an image of your reproduced map to your portfolio.</p>
+<ul>
+<li><em>Q:</em> How could this map be improved?</li>
+</ul>
+</section>
+<section id="relief-maps" class="level3">
+<h3 class="anchored" data-anchor-id="relief-maps">Relief maps</h3>
+<p>A relief map is a special type of elevation map that</p>
+<ol type="1">
+<li>Download SRTM elevation data for Switzerland from &lt;<a href="http://dwtkns.com/srtm/" class="uri">http://dwtkns.com/srtm/</a>&gt;</li>
+</ol>
+<ul>
+<li>Basic colour ramps</li>
+<li>Better colour ramps
+<ul>
+<li>Adjusting bounds</li>
+</ul></li>
+<li>Hill-shading
+<ul>
+<li>Opacity/blend modes</li>
+</ul></li>
+<li>Hill shade on its own</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
