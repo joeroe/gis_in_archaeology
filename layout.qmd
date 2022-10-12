@@ -2,4 +2,93 @@
 title: "Map layout"
 ---
 
-Hello world.
+In this session we look at adding various "finishing touches" to maps and preparing them for publication.
+
+## Objectives
+
+By the end of this session, you should:
+
+* Be able to customise the display of labels in QGIS
+* Be able to use the QGIS map composer to add annotations, scales and legends to a map
+* Produce a 'publication-ready' map
+
+## Prerequisites
+
+None.
+
+## Practical
+
+### Data
+
+* See [Session 1](theme_maps.qmd)
+
+### Labelling features
+
+We will reuse the 'acheulean' dataset from session 1.
+
+1. Add **acheulean.csv** and base map layers to your map, and style them accordingly
+    * Make sure to include a) cities, b) rivers, and c) countries in your base map
+2. **Label** the point layer with site names
+3. Adjust the **formatting** of your labels so that they look good on your screen
+4. Adjust the **placement** of the labels so that they look good on your screen
+5. **Label** the cities, rivers, and countries in your past map, and style them accordingly.
+    * *Q:* How can you visually communicate that some labels (e.g. site names) are more important than others?
+6. Adjust the **placement** of the labels of your base map so that they look good on your screen
+    * *Q:* How are the placement options different for point, line, and polygon layers?
+
+Export an image of your labelled map for your portfolio.
+
+### Dealing with overplotting
+
+You now probably have a very busy map – a common problem!
+There are a few strategies we can use, though it can be tricky to overcome completely.
+Often you will have to settle for getting labels 'as good as possible' in QGIS, and manually adjust them later in other software.
+Try to:
+
+1. Adjust the **placement** and **rendering** of labels in your layer
+    * *Q:* What rendering options are there for reducing *duplication* of labels in different types of layer?
+2. Use the **Export selected features...** tool to reduce the number of features on the screen and/or selectively label them
+    * *Q:* What factors might influence your choice of whether to show e.g. cities?
+3. Use **buffer**, **mask** or **shadow** formatting to increase the visibility of labels against features
+
+Export an image of your map, with overplotting reduced as much as possible, for your portfolio.
+
+### Composing a print layout
+
+Until now we have worked with maps as they appear within QGIS, exporting them as images 'on the fly'.
+In practice, publication-quality maps require additional elements (annotations, etc.) and should be exported at a specific print size – even if only 'printed' digitally (e.g. to a PDF).
+In QGIS, these are handled in the **map composer**.
+
+1. Use **Project → New print layout...** to create a new print layout and open the map composer
+2. Under **page properties**, change the **page size** to A5 landscape
+    * *Q:* In practice, what would determine how big your printed map should be?
+3. **Add map** to the page, making it fill the full page, and use the **move item content** tool to adjust the position and scale
+    * *Q:* You can have more than one map on a page: when might this be useful?
+4. **Export** your map as an image and as a PDF
+    * *Q:* What is the difference between
+5. Go back to the main QGIS window and adjust the font size of the feature labels until they look good on the *printed* layout
+    * *Q:* Why does the text look different in QGIS, compared to the exported page?
+
+Include your map, exported as an image, in your portfolio.
+
+### Annotating a print layout
+
+1. Add a north arrow to your map
+    * *Q:* When is a north arrow helpful?
+2. Add a **text annotation** (e.g. its author's name) to your map 
+3. Add a **dynamic text annotation** (e.g. the date) to your map
+
+Export your annotated map for your portfolio.
+
+### Scales, grids, and legends
+
+1. Fix your print layout to a numeric **scale**, e.g. `20000000`.
+2. Ensuring that you have set the **project CRS** appropriately, add a **scale bar** in *kilometers* to your map
+3. Add a **grid** in *latitude/longitude* degrees to your map
+    * *Q:* What information does a grid give the reader of the map, that a scale bar doesn't?
+4. Adjust the styling of the scale bar and grid.
+5. Remove the labels from the sites layer and instead use **categorised symbology** to give each site a different colour *and* symbol.
+6. Add a **legend** to your print layout and style it accordingly.
+    * *Q:* Why use a legend instead of labelling features directly?
+
+Export your annotated map for your portfolio.
