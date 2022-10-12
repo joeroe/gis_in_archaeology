@@ -285,7 +285,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#labelling-features" id="toc-labelling-features" class="nav-link" data-scroll-target="#labelling-features">Labelling features</a></li>
+  <li><a href="#dealing-with-overplotting" id="toc-dealing-with-overplotting" class="nav-link" data-scroll-target="#dealing-with-overplotting">Dealing with overplotting</a></li>
+  <li><a href="#composing-a-print-layout" id="toc-composing-a-print-layout" class="nav-link" data-scroll-target="#composing-a-print-layout">Composing a print layout</a></li>
+  <li><a href="#annotating-a-print-layout" id="toc-annotating-a-print-layout" class="nav-link" data-scroll-target="#annotating-a-print-layout">Annotating a print layout</a></li>
+  <li><a href="#scales-grids-and-legends" id="toc-scales-grids-and-legends" class="nav-link" data-scroll-target="#scales-grids-and-legends">Scales, grids, and legends</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/layout.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -306,9 +322,123 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Hello world.</p>
+<p>In this session we look at adding various “finishing touches” to maps and preparing them for publication.</p>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this session, you should:</p>
+<ul>
+<li>Be able to customise the display of labels in QGIS</li>
+<li>Be able to use the QGIS map composer to add annotations, scales and legends to a map</li>
+<li>Produce a ‘publication-ready’ map</li>
+</ul>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>None.</p>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li>See <a href="./theme_maps.html">Session 1</a></li>
+</ul>
+</section>
+<section id="labelling-features" class="level3">
+<h3 class="anchored" data-anchor-id="labelling-features">Labelling features</h3>
+<p>We will reuse the ‘acheulean’ dataset from session 1.</p>
+<ol type="1">
+<li>Add <strong>acheulean.csv</strong> and base map layers to your map, and style them accordingly
+<ul>
+<li>Make sure to include a) cities, b) rivers, and c) countries in your base map</li>
+</ul></li>
+<li><strong>Label</strong> the point layer with site names</li>
+<li>Adjust the <strong>formatting</strong> of your labels so that they look good on your screen</li>
+<li>Adjust the <strong>placement</strong> of the labels so that they look good on your screen</li>
+<li><strong>Label</strong> the cities, rivers, and countries in your past map, and style them accordingly.
+<ul>
+<li><em>Q:</em> How can you visually communicate that some labels (e.g.&nbsp;site names) are more important than others?</li>
+</ul></li>
+<li>Adjust the <strong>placement</strong> of the labels of your base map so that they look good on your screen
+<ul>
+<li><em>Q:</em> How are the placement options different for point, line, and polygon layers?</li>
+</ul></li>
+</ol>
+<p>Export an image of your labelled map for your portfolio.</p>
+</section>
+<section id="dealing-with-overplotting" class="level3">
+<h3 class="anchored" data-anchor-id="dealing-with-overplotting">Dealing with overplotting</h3>
+<p>You now probably have a very busy map – a common problem! There are a few strategies we can use, though it can be tricky to overcome completely. Often you will have to settle for getting labels ‘as good as possible’ in QGIS, and manually adjust them later in other software. Try to:</p>
+<ol type="1">
+<li>Adjust the <strong>placement</strong> and <strong>rendering</strong> of labels in your layer
+<ul>
+<li><em>Q:</em> What rendering options are there for reducing <em>duplication</em> of labels in different types of layer?</li>
+</ul></li>
+<li>Use the <strong>Export selected features…</strong> tool to reduce the number of features on the screen and/or selectively label them
+<ul>
+<li><em>Q:</em> What factors might influence your choice of whether to show e.g.&nbsp;cities?</li>
+</ul></li>
+<li>Use <strong>buffer</strong>, <strong>mask</strong> or <strong>shadow</strong> formatting to increase the visibility of labels against features</li>
+</ol>
+<p>Export an image of your map, with overplotting reduced as much as possible, for your portfolio.</p>
+</section>
+<section id="composing-a-print-layout" class="level3">
+<h3 class="anchored" data-anchor-id="composing-a-print-layout">Composing a print layout</h3>
+<p>Until now we have worked with maps as they appear within QGIS, exporting them as images ‘on the fly’. In practice, publication-quality maps require additional elements (annotations, etc.) and should be exported at a specific print size – even if only ‘printed’ digitally (e.g.&nbsp;to a PDF). In QGIS, these are handled in the <strong>map composer</strong>.</p>
+<ol type="1">
+<li>Use <strong>Project → New print layout…</strong> to create a new print layout and open the map composer</li>
+<li>Under <strong>page properties</strong>, change the <strong>page size</strong> to A5 landscape
+<ul>
+<li><em>Q:</em> In practice, what would determine how big your printed map should be?</li>
+</ul></li>
+<li><strong>Add map</strong> to the page, making it fill the full page, and use the <strong>move item content</strong> tool to adjust the position and scale
+<ul>
+<li><em>Q:</em> You can have more than one map on a page: when might this be useful?</li>
+</ul></li>
+<li><strong>Export</strong> your map as an image and as a PDF
+<ul>
+<li><em>Q:</em> What is the difference between</li>
+</ul></li>
+<li>Go back to the main QGIS window and adjust the font size of the feature labels until they look good on the <em>printed</em> layout
+<ul>
+<li><em>Q:</em> Why does the text look different in QGIS, compared to the exported page?</li>
+</ul></li>
+</ol>
+<p>Include your map, exported as an image, in your portfolio.</p>
+</section>
+<section id="annotating-a-print-layout" class="level3">
+<h3 class="anchored" data-anchor-id="annotating-a-print-layout">Annotating a print layout</h3>
+<ol type="1">
+<li>Add a north arrow to your map
+<ul>
+<li><em>Q:</em> When is a north arrow helpful?</li>
+</ul></li>
+<li>Add a <strong>text annotation</strong> (e.g.&nbsp;its author’s name) to your map</li>
+<li>Add a <strong>dynamic text annotation</strong> (e.g.&nbsp;the date) to your map</li>
+</ol>
+<p>Export your annotated map for your portfolio.</p>
+</section>
+<section id="scales-grids-and-legends" class="level3">
+<h3 class="anchored" data-anchor-id="scales-grids-and-legends">Scales, grids, and legends</h3>
+<ol type="1">
+<li>Fix your print layout to a numeric <strong>scale</strong>, e.g.&nbsp;<code>20000000</code>.</li>
+<li>Ensuring that you have set the <strong>project CRS</strong> appropriately, add a <strong>scale bar</strong> in <em>kilometers</em> to your map</li>
+<li>Add a <strong>grid</strong> in <em>latitude/longitude</em> degrees to your map
+<ul>
+<li><em>Q:</em> What information does a grid give the reader of the map, that a scale bar doesn’t?</li>
+</ul></li>
+<li>Adjust the styling of the scale bar and grid.</li>
+<li>Remove the labels from the sites layer and instead use <strong>categorised symbology</strong> to give each site a different colour <em>and</em> symbol.</li>
+<li>Add a <strong>legend</strong> to your print layout and style it accordingly.
+<ul>
+<li><em>Q:</em> Why use a legend instead of labelling features directly?</li>
+</ul></li>
+</ol>
+<p>Export your annotated map for your portfolio.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
