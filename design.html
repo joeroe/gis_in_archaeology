@@ -285,7 +285,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-thematic-map" id="toc-problem-1-thematic-map" class="nav-link" data-scroll-target="#problem-1-thematic-map">Problem 1: Thematic Map</a></li>
+  <li><a href="#problem-2-topographic-map" id="toc-problem-2-topographic-map" class="nav-link" data-scroll-target="#problem-2-topographic-map">Problem 2: Topographic Map</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/design.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -306,9 +318,107 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Hello world.</p>
+<p>In this session we will refine your skills in map design by applying the techniques you have learned in previous session to a ‘real world’ problem in archaeological cartography.</p>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this session, you should:</p>
+<ol type="1">
+<li>Demonstrate the ability to produce a publication-quality map with a given objective, target audience and design parameters</li>
+<li>Be able to critically reflect on the design choices and effectiveness of an archaeological map</li>
+<li>Be able to incorporate constructive criticism into your own map design</li>
+</ol>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>None</p>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<p>Today’s practical will consist of a problem set that you will work through in groups, based on real-world applications of cartography in archaeological research. In groups of four:</p>
+<ol type="1">
+<li>Assign each member of your group one of the problems below</li>
+<li>Individually, produce a draft map according to the objectives, target audience, and design parameters given</li>
+<li>Reconvene as a group and discuss the design and effectivness of each others’ maps
+<ul>
+<li>Is the choice of ‘base layers’ appropriate to the objective of the map?</li>
+<li>Do thematic elements make the best use of ‘data-ink’?</li>
+<li>Does the map include all the elements and decorations expected, considering the target audience and parameters?</li>
+</ul></li>
+<li>Revise and improve your draft to based on the criticism you have received</li>
+</ol>
+<p>Your portfolio entry for this practical should include:</p>
+<ul>
+<li>Your draft map</li>
+<li>Notes on the points of critique you received from the rest of your group, and what you did to address them</li>
+<li>Your revised map</li>
+</ul>
+<section id="problem-1-thematic-map" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1-thematic-map">Problem 1: Thematic Map</h3>
+<section id="late-epipalaeolithic-sites-in-the-levant" class="level4">
+<h4 class="anchored" data-anchor-id="late-epipalaeolithic-sites-in-the-levant">Late Epipalaeolithic sites in the Levant</h4>
+<p>You have been asked to produce a distribution map of Late Epipalaeolithic (Natufian and Harifian) sites in the Levant, to be included in a research article on the subsistence economy of this period.</p>
+<p><strong>Objective</strong>: show the locations and regional context of the sites discussed in the article text</p>
+<p><strong>Target audience</strong>: readers of a specialist scientific journal, who may not be familiar with the region/period</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>The map must illustrate the location of sites in relation to major geographic features, e.g.&nbsp;the Dead Sea, the Jordan River</li>
+<li>The map must give some indication of the regional topography</li>
+<li>Readers must be able to distinguish sites which have been excavated from those that haven’t</li>
+<li>Readers must be able to distinguish sites which have macro-archaeobotanical remains from those that don’t</li>
+<li>The names of sites mentioned in the text must be labelled. These are:
+<ul>
+<li>Abu Hureyra</li>
+<li>Hayonim Cave &amp; Terrace</li>
+<li>Jericho</li>
+<li>El Khiam</li>
+<li>Shubayqa 1</li>
+<li>Wadi Hammeh 27</li>
+</ul></li>
+<li>It must be possible to extract the rough geographic coordinates of sites from the map</li>
+</ul>
+</section>
+<section id="data-problem-1" class="level4">
+<h4 class="anchored" data-anchor-id="data-problem-1">Data (Problem 1)</h4>
+<ul>
+<li><a href="natufian/natufian_sites.csv">natufian_sites.csv</a> – locations and data about Epipalaeolithic sites in the Levant (<a href="https://doi.org/10.1016/j.quascirev.2018.02.011">Arranz-Otaegui et al.&nbsp;2018</a>)</li>
+</ul>
+</section>
+</section>
+<section id="problem-2-topographic-map" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2-topographic-map">Problem 2: Topographic Map</h3>
+<section id="hydrology-of-the-azraq-basin" class="level4">
+<h4 class="anchored" data-anchor-id="hydrology-of-the-azraq-basin">Hydrology of the Azraq basin</h4>
+<p>Prehistoric settlement in the Azraq basin, eastern Jordan, was strongly conditioned by the availability of water in the steppe/desert region. You have been asked to prepare a topographic map of the contemporary hydrology of the basin for a text giving a regional overview its prehistory.</p>
+<p><strong>Objective:</strong> illustrate the major topographic and hydrological features of the Azraq basin relevant to its prehistory</p>
+<p><strong>Target audience:</strong> prehistorians and environmental scientists familiar with the region</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>The map must include:
+<ul>
+<li>Regional topography</li>
+<li>Annual precipitation</li>
+<li>The extent of the Azraq basin</li>
+<li>The basin’s major hydrological features (the Qa Azraq and Wadi Rajil)</li>
+</ul></li>
+<li>The map should be in colour</li>
+<li>Hydrological features should be labelled</li>
+<li>The scale of the map must be indicated in kilometres</li>
+</ul>
+</section>
+<section id="data-problem-2" class="level4">
+<h4 class="anchored" data-anchor-id="data-problem-2">Data (Problem 2)</h4>
+<ul>
+<li><a href="http://dwtkns.com/srtm/">SRTM Tile Grabber</a> – for elevation data (DEM)</li>
+<li><a href="azraq/wc2_30s_prec_sum_sw_asia_contour.geojson">wc2_30s_prec_sum_sw_asia_contour.geojson</a> – annual precipitation contours (isohyets) for Southwest Asia (derived from <a href="https://www.worldclim.org/">WorldClim</a></li>
+<li><a href="azraq/basin_azraq.zip">basin_azraq.zip</a> – extent of the Azraq hydrological basin</li>
+<li><a href="azraq/qa_azraq.zip">qa_azraq.zip</a> – extent of the Qa Azraq, a seasonal lake surrounding the Azraq oasis</li>
+<li><a href="azraq/wadi_rajil_simple.zip">wadi_rajil_simple.zip</a> – course of the Wadi Rajil (a seasonal river), in two parts</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
