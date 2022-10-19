@@ -2,4 +2,93 @@
 title: "Map design"
 ---
 
-Hello world.
+In this session we will refine your skills in map design by applying the techniques you have learned in previous session to a 'real world' problem in archaeological cartography.
+
+## Objectives
+
+By the end of this session, you should:
+
+1. Demonstrate the ability to produce a publication-quality map with a given objective, target audience and design parameters
+2. Be able to critically reflect on the design choices and effectiveness of an archaeological map
+3. Be able to incorporate constructive criticism into your own map design
+
+## Prerequisites
+
+None
+
+## Practical
+
+Today's practical will consist of a problem set that you will work through in groups, based on real-world applications of cartography in archaeological research.
+In groups of four:
+
+1. Assign each member of your group one of the problems below
+2. Individually, produce a draft map according to the objectives, target audience, and design parameters given
+3. Reconvene as a group and discuss the design and effectivness of each others' maps
+    * Is the choice of 'base layers' appropriate to the objective of the map?
+    * Do thematic elements make the best use of 'data-ink'?
+    * Does the map include all the elements and decorations expected, considering the target audience and parameters?
+4. Revise and improve your draft to based on the criticism you have received
+
+Your portfolio entry for this practical should include:
+
+* Your draft map
+* Notes on the points of critique you received from the rest of your group, and what you did to address them
+* Your revised map
+
+### Problem 1: Thematic Map 
+#### Late Epipalaeolithic sites in the Levant
+
+You have been asked to produce a distribution map of Late Epipalaeolithic (Natufian and Harifian) sites in the Levant, to be included in a research article on the subsistence economy of this period.
+
+**Objective**: show the locations and regional context of the sites discussed in the article text
+
+**Target audience**: readers of a specialist scientific journal, who may not be familiar with the region/period
+
+**Parameters:**
+
+* The map must illustrate the location of sites in relation to major geographic features, e.g. the Dead Sea, the Jordan River
+* The map must give some indication of the regional topography
+* Readers must be able to distinguish sites which have been excavated from those that haven't
+* Readers must be able to distinguish sites which have macro-archaeobotanical remains from those that don't
+* The names of sites mentioned in the text must be labelled. These are:
+  * Abu Hureyra
+  * Hayonim Cave & Terrace
+  * Jericho
+  * El Khiam
+  * Shubayqa 1
+  * Wadi Hammeh 27
+* It must be possible to extract the rough geographic coordinates of sites from the map
+
+#### Data (Problem 1)
+
+* [natufian_sites.csv](natufian/natufian_sites.csv) – locations and data about Epipalaeolithic sites in the Levant ([Arranz-Otaegui et al. 2018](https://doi.org/10.1016/j.quascirev.2018.02.011))
+
+### Problem 2: Topographic Map
+#### Hydrology of the Azraq basin
+
+Prehistoric settlement in the Azraq basin, eastern Jordan, was strongly conditioned by the availability of water in the steppe/desert region.
+You have been asked to prepare a topographic map of the contemporary hydrology of the basin for a text giving a regional overview its prehistory.
+
+**Objective:** illustrate the major topographic and hydrological features of the Azraq basin relevant to its prehistory
+
+**Target audience:** prehistorians and environmental scientists familiar with the region
+
+**Parameters:**
+
+* The map must include:
+  * Regional topography
+  * Annual precipitation
+  * The extent of the Azraq basin
+  * The basin's major hydrological features (the Qa Azraq and Wadi Rajil)
+* The map should be in colour
+* Hydrological features should be labelled
+* The scale of the map must be indicated in kilometres
+
+#### Data (Problem 2)
+
+* [SRTM Tile Grabber](http://dwtkns.com/srtm/) – for elevation data (DEM)
+* [wc2_30s_prec_sum_sw_asia_contour.geojson](azraq/wc2_30s_prec_sum_sw_asia_contour.geojson) – annual precipitation contours (isohyets) for Southwest Asia (derived from [WorldClim](https://www.worldclim.org/)
+* [basin_azraq.zip](azraq/basin_azraq.zip) – extent of the Azraq hydrological basin
+* [qa_azraq.zip](azraq/qa_azraq.zip) – extent of the Qa Azraq, a seasonal lake surrounding the Azraq oasis
+* [wadi_rajil_simple.zip](azraq/wadi_rajil_simple.zip) – course of the Wadi Rajil (a seasonal river), in two parts
+
