@@ -2,4 +2,7 @@
 title: "Data management"
 ---
 
+## Prerequisities
 
+* *[Shapefile must die!](http://switchfromshapefile.org/)*, an 'opinionated' guide to common geospatial data formats
+* Hart EM, Barmby P, LeBauer D, Michonneau F, Mount S, Mulrooney P, et al. (2016) [Ten Simple Rules for Digital Data Storage](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005097). *PLoS Computational Biology* 12(10): e1005097. <https://doi.org/10.1371/journal.pcbi.1005097>
