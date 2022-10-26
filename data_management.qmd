@@ -2,7 +2,132 @@
 title: "Data management"
 ---
 
+## Objectives
+
+By the end of this session, you should:
+
+* Understand how to organise GIS projects efficiently and why this is important
+* Be familiar with common geospatial data formats on how to import them into QGIS
+* Be able to perform basic data selection and manipulation in QGIS
+
 ## Prerequisities
+
+Reading:
 
 * *[Shapefile must die!](http://switchfromshapefile.org/)*, an 'opinionated' guide to common geospatial data formats
 * Hart EM, Barmby P, LeBauer D, Michonneau F, Mount S, Mulrooney P, et al. (2016) [Ten Simple Rules for Digital Data Storage](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005097). *PLoS Computational Biology* 12(10): e1005097. <https://doi.org/10.1371/journal.pcbi.1005097>
+
+## Practical
+
+### Data
+
+* Acheulean sites:
+  * [acheulean.csv](acheulean.csv) – comma-seperated values (CSV)
+  * [acheulean.tsv](acheulean.tsv) – tab-seperated values (TSV)
+  * [acheulean.txt](acheulean.txt) – delimited text, e.g. as exported from Microsoft Access
+  * [acheulean_utm36s.csv](acheulean_utm36s.csv) – coordinates have been converted from latitude/longitude to `WGS84 / UTM Zone 36S`
+* [c14_dates.csv](c14_dates.csv) – radiocarbon dates from Switzerland
+* [fundstellen_bern.zip](fundstellen_bern.zip) – sites in the Canton of Bern
+
+### File management
+
+Good data management starts before you open your GIS! 
+Like most GIS and statistical software, QGIS does not work with a single file.
+It uses 'projects' (`.qgz` files or `.qgs` in older versions) to separate different working environments, which may incorporate many different files containing geospatial data, layer and style definitions, and output in various formats.
+QGIS does not impose a structure on these files: it is up to you to keep them organised.
+
+There isn't a single way to organise files.
+Above all, the most important thing is that your file structure is *consistent* and *predictable* – to you and to others.
+
+1. Start a **new project** in QGIS and save it in a new directory
+    * Under `Project → Properties`, in the `General` tab, ensure that **save paths** is set to 'relative' (this is the default)
+    * *Q:* What is the difference between 'relative' and 'absolute' file paths?
+2. Create a **basic directory structure** for your project. Bear in mind it will include:
+    * Data files, project files, and output files (e.g. maps)
+    * Base map data
+    * Data from different regions
+    * Data in different file formats
+    * *NB.*: You don't have to leave QGIS to do this. Look for the 'Project Home' node in the browser pane.
+3. Copy `acheulean.csv` to an appropriate place within your project and add it your map.
+4. Save your project, close QGIS, **move or rename** your project directory, then open it in QGIS again.
+5. Change **save paths** to 'absolute' and repeat the last step.
+    * *Q:* What happened?
+6. Set **save paths** back to the default, 'relative'.
+    * *Q:* Why is it better to use relative paths?
+
+Use this project to organise all the data you will work with over the course of this practical.
+In your portfolio, include your finished file structure, *after* you have completed the rest of the practical.
+
+### Data sources
+
+There are a *lot* of file formats that can be used as data sources within a GIS.
+From a GIS user's point of view, we can group them into three categories: delimited text files, file- or directory-based formats, and database-based formats.
+
+#### Delimited text files
+
+Plain text files are the most common and portable way to store tabular data ('spreadsheets') in a scientific context.
+The are not a true geospatial format, because they do not contain information on the coordinate reference system, but they are widely used to distribute geospatial data, especially point geometries.
+
+1. Copy `acheulean.csv`, `acheulean.tsv`, `acheulean.txt` and `acheulean_utm36s.csv` to your project.
+2. Add all four files to your map
+    * Ensure that they are all imported correctly, i.e. they should result in exactly the same points with exactly the same attributes being added to your map.
+    * *Q:* When might you prefer delimited text files over geospatial formats?
+
+#### File/directory-based geospatial formats
+
+The majority of commonly used formats fall into this category, where geospatial data (geometries, attributes, and CRS) is bundled together in either a single file, or a collection of files contained within a single directory.
+Adding any of these formats to a project in QGIS is generally straightforward, as is converting between them, so the choice is not so relevent in day-to-day work.
+However, it is important to consider which format is the best for long-term storage and exchange.
+
+1. Fill in the table below for your portfolio.
+
+-------------------------------------------------------------------
+| Format      | File extension | Vector or raster? | Open format? | 
+| ----------- | -------------- | ----------------- | ------------ |
+| Shapefile   |                |                   |              |
+| GeoJSON     |                |                   |              |
+| KML         |                |                   |              |
+| Autocad DXF |                |                   |              |
+| Geopackage  |                |                   |              |
+| FlatGeobuf  |                |                   |              |
+| GPX         |                |                   |              |
+| Geodatabase |                |                   |              |
+| GeoTIFF     |                |                   |              |
+| ASCII Grid  |                |                   |              |
+
+2. Copy `fundstellen_bern.csv` to your project and add it to your map.
+2. Export `fundstellen_bern.csv` to each of the formats below, copying the exported file to your project:
+    * ESRI shapefile
+    * GeoPackage
+    * Comma Seperated Value (CSV)
+    * *Q:* What are the advantages and disadvantages of each of these formats?
+
+#### Database-based geospatial formats
+
+When geospatial data gets more complex, it is common to incorporate them within a relational database system (RDMS).
+Some of the file-based formats above (e.g. GeoPackage, Geodatabase) are in fact databases saved as a file (or files).
+Most general-purpose database software (e.g. MySQL/MariaDB, PostgreSQL, SQLite) also have extensions for representing geospatial data – usually in the form of a special "geometry" column.
+The latter can be used to connect to data sources in a remote location.
+Otherwise, they work much like any other format.
+
+### Attribute data 
+
+Apart from the geospatial data needed to put points (or lines, or polygons) on a map, geospatial formats usually come with "attributes"; that is, a table of data associated with the geometries.
+This is what we have been using for data-dependent symbologies, for example.
+QGIS has many features for selecting, filtering and manipulating these attributes.
+
+1. Copy `c14_dates.csv` to your project.
+2. Convert it to a suitable geospatial format, add this to your map, and remove the CSV.
+3. View the **attribute table** of the layer.
+   * *Q:* What *data types* are used in this attribute table?
+4. Using **select features by value**, export dates from the 'radon' and 'radonb' databases as a new layer and add it to your project.
+5. Using the **filter** tool, filter this layer to only show dates which fit the following conditions:
+    * Have an error (`std`) of less than 50
+    * Are from samples of charcoal, "collagen, bone" or "plant remains"
+    * Are from the Bronze Age
+    * *Q:* How many dates fit all these criteria?
+6. **Edit** the attribute table to correct the lab codes from 'Rome-'. They should be 'R-'.
+7. Using the **field calculator**, update the 'site_type' field to use uppercase letters.
+8. Using the **field calculator**, create a new column with the difference between the uncalibrated and calibrated ages.
+
+**Remember** to include your finished file structure from the first part of this practical in your portfolio.
