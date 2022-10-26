@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Introduction",
+    "objectID": "raster_analysis.html",
+    "href": "raster_analysis.html",
+    "title": "Raster analysis",
     "section": "",
-    "text": "Objectives\nBy the end of this session, you should:\n\nKnow what to expect from this course\nKnow what is expected of you in terms of classroom participation, homework, and evaluation\nBe familiar with the QGIS software and its basic capabilities\n\n\n\nPrerequisites\nNone.\n\n\nPractical\n\nDraw a map of your journey here to the university today\nInstall QGIS & try to make a map!"
+    "text": "Hello world."
   },
   {
     "objectID": "information.html",
@@ -33,27 +33,6 @@
     "title": "Information for students",
     "section": "Mental health",
     "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
-  },
-  {
-    "objectID": "field_data.html",
-    "href": "field_data.html",
-    "title": "Field data collection",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "data_sources.html",
-    "href": "data_sources.html",
-    "title": "Obtaining geospatial data",
-    "section": "",
-    "text": "Reading:\n\nChapter 3 in Parcak, S. H. (2009). Satellite Remote Sensing for Archaeology. Routledge. ISBN 9780415448789."
-  },
-  {
-    "objectID": "digitising.html",
-    "href": "digitising.html",
-    "title": "Georeferencing & digitising",
-    "section": "",
-    "text": "Hello world."
   },
   {
     "objectID": "index.html",
@@ -91,6 +70,13 @@
     "text": "Evaluation\nStudents will be evaluated on their knowledge of course content and their ability to communicate and apply their understanding via a practical portfolio (50%) and an individual project (50%).\n\nPractical portfolio (50%)\nWork produced in each practical session will be compiled into a portfolio assignment to be submitted at the end of the course. The practical portfolio will evaluate students’ knowledge and understanding of the course content.\n\n\nIndividual project (50%)\nThe individual project will assess students’ ability to communicate and apply the skills acquired during the course by producing a publication-quality map with archaeological data. Details to follow."
   },
   {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\n Conolly & Lake, ch. 2\n\n\n40\nTopographic maps\n Styling vector layers as basemap Styling DEM as a basemap\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n Shapefile must die! Hart et al. 2016\n\n\n44\nSources of geospatial data\n Parcak 2009, ch. 3\n\n\n45\nGeoreferencing & digitising\n—\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n—\n\n\n48\nRaster analysis\n—\n\n\n49\nModelling movement\n—\n\n\n50\nPredictive modelling\n—\n\n\n51\nReview\n—"
+  },
+  {
     "objectID": "predictive_models.html",
     "href": "predictive_models.html",
     "title": "Predictive modelling",
@@ -98,11 +84,130 @@
     "text": "Hello world."
   },
   {
-    "objectID": "raster_analysis.html",
-    "href": "raster_analysis.html",
-    "title": "Raster analysis",
+    "objectID": "topographic_maps.html",
+    "href": "topographic_maps.html",
+    "title": "Topographic maps",
+    "section": "",
+    "text": "After following this practical, you should be able to:\n\nUse map services to obtain premade topographic maps in QGIS\nStyle vector and raster data to produce a base map\nCombine raster digital elevation model (DEM) layers to produce a relief map"
+  },
+  {
+    "objectID": "topographic_maps.html#prerequisites",
+    "href": "topographic_maps.html#prerequisites",
+    "title": "Topographic maps",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nStyling vector layers as basemap (Video, Martin Hinz)\nStyling DEM as a basemap (Video, Martin Hinz)"
+  },
+  {
+    "objectID": "topographic_maps.html#practical",
+    "href": "topographic_maps.html#practical",
+    "title": "Topographic maps",
+    "section": "Practical",
+    "text": "Practical\n\nCyril and Methodius\n\ncyril_methodius_places.csv – names and coordinates of major locations in the journeys of Cyril and Methodius\ndarmc_kingdoms_ad814.geojson – kingdoms of Europe in 814, from DARMC\ndarmc_towns_ad814.geojson – major towns and cities of Europe in 814, from DARMC\n\nNatural Earth Data <https://www.naturalearthdata.com/>\n\n\nMap services\nMap services are pre-compiled map layers distributed over the internet. They are often the most convinient way to get a quick topographic base map. There is a very, very wide selection of map services out there, including generic topographic maps (e.g. ESRI’s series), shaded relief (ESRI World Topo), street maps (e.g. OpenStreetMap), satellite imagery (e.g. Sentinel, Landsat) and specialised remote sensing data (e.g.OpenWeatherMap). The QGIS plugin QuickMapServices offers a very convenient index for publicly-available map services.\nImportant note: base maps from these services are subject to copyright and almost always come with licensing conditions. You should ensure you have permission to reproduce the individual map service before using them in publications!\n\nInstall and enable the QuickMapServices plugin for QGIS.\nUsing Web → QuickMapServices, add the standard OpenStreetMap (OSM) layer to your project and navigate to the area around Bern\n\nQ: What could we use this kind of map for in archaeology?\nQ: Apart from licensing concerns, why else might we not want to rely on map services for base maps?\n\nUsing the search function of QuickMapServices, find layers suitable as a base map for:\n\nA distribution map of prehistoric sites around Bern\nA plan of an medieval site within the city of Bern\nHelping a survey team find their way around the area around Bern\n\n\nUse Project → Import/Export to save an image of your three maps, briefly explaining why you chose the base layer you did.\n\n\nTopographic base maps\nReproduce the following map as closely as you can. It is intended to illustrate the historical context of the journeys of Cyril and Methodius, two 9th century Byzantine monks credited with introducing Christianity to the Slavic world and devising the Cyrillic alphabet (or technically it’s funky-looking predecessor, Glagolitic).\nYou will need the ‘Cyril and Methodius’ datasets and supplementary data from Natural Earth.\n\n\n\nThe Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius. ⓒ Joe Roe\n\n\nSave an image of your reproduced map to your portfolio.\n\nQ: How could this map be improved?\n\n\n\nRelief maps\nA relief map is a special class of elevation map that is very widely used as both a base map and an illustrative, topographic map. They represent (raster) elevation maps They can look really nice—or they can look awful—it takes practice!\n\nDownload SRTM elevation data for Switzerland from <http://dwtkns.com/srtm/>\nAdd it to you project along with river, lake, ocean, and country border data from Natural Earth. Style the vector layers appropriately.\nStyle the DEM layer with single band pseudocolor symbology and the built in ‘spectral’ colour ramp\nChange the mode to ‘equal interval’ and experiment with adding more classes.\nChange the interpolation to ‘discrete’ and again experiment with different number of classes.\n\nQ: What is the difference between continuous and discrete interpolation in this context?\n\n\nSave an image of a map using the ‘spectral’ ramp for your portfolio.\n\nCreate a new color ramp for the DEM layer, using one of the options for topography in the ‘cpt-city’ catalogue.\nAdjust the min/max values and classes to best show the underlying topography.\nDuplicate the DEM layer and change its symbology to ‘hillshade’\n\nQ: What to the ‘altitude’, ‘azimuth’, and ‘z-factor’ options do?\n\nUnder transparency, adjust the blend mode (try ‘multiple’) and opacity of the layer until it blends well with the underlying terrain colours.\nDisable the underlying DEM layer so that just the hillshade is visible.\n\nQ: What could this type of base map be used for?\n\n\nSave an image of your shaded relief map for your portfolio."
+  },
+  {
+    "objectID": "field_data.html",
+    "href": "field_data.html",
+    "title": "Field data collection",
     "section": "",
     "text": "Hello world."
+  },
+  {
+    "objectID": "bibliography.html",
+    "href": "bibliography.html",
+    "title": "Bibliography & Further Reading",
+    "section": "",
+    "text": "GIS in Archaeology HS 2020, Martin Hinz’s video tutorials\nA Gentle Introduction to GIS, from the QGIS documentation\nQGIS User Guide"
+  },
+  {
+    "objectID": "bibliography.html#bibliography",
+    "href": "bibliography.html#bibliography",
+    "title": "Bibliography & Further Reading",
+    "section": "Bibliography",
+    "text": "Bibliography\n\nConolly, J., & Lake, M. (2006). Geographical Information Systems in Archaeology (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459\n\nAvailable online via Universitätsbibliothek Bern\n\nMenke, K. (2022). Discover QGIS 3.x (second edition). Locate Press. ISBN 9780986805257.\nParcak, S. H. (2009). Satellite Remote Sensing for Archaeology. Routledge. ISBN 9780415448789."
+  },
+  {
+    "objectID": "digitising.html",
+    "href": "digitising.html",
+    "title": "Georeferencing & digitising",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "movement_models.html",
+    "href": "movement_models.html",
+    "title": "Modelling movement",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "data_sources.html",
+    "href": "data_sources.html",
+    "title": "Obtaining geospatial data",
+    "section": "",
+    "text": "Reading:\n\nChapter 3 in Parcak, S. H. (2009). Satellite Remote Sensing for Archaeology. Routledge. ISBN 9780415448789."
+  },
+  {
+    "objectID": "layout.html",
+    "href": "layout.html",
+    "title": "Map layout",
+    "section": "",
+    "text": "In this session we look at adding various “finishing touches” to maps and preparing them for publication."
+  },
+  {
+    "objectID": "layout.html#objectives",
+    "href": "layout.html#objectives",
+    "title": "Map layout",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this session, you should:\n\nBe able to customise the display of labels in QGIS\nBe able to use the QGIS map composer to add annotations, scales and legends to a map\nProduce a ‘publication-ready’ map"
+  },
+  {
+    "objectID": "layout.html#prerequisites",
+    "href": "layout.html#prerequisites",
+    "title": "Map layout",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNone."
+  },
+  {
+    "objectID": "layout.html#practical",
+    "href": "layout.html#practical",
+    "title": "Map layout",
+    "section": "Practical",
+    "text": "Practical\n\nData\n\nSee Session 1\n\n\n\nLabelling features\nWe will reuse the ‘acheulean’ dataset from session 1.\n\nAdd acheulean.csv and base map layers to your map, and style them accordingly\n\nMake sure to include a) cities, b) rivers, and c) countries in your base map\n\nLabel the point layer with site names\nAdjust the formatting of your labels so that they look good on your screen\nAdjust the placement of the labels so that they look good on your screen\nLabel the cities, rivers, and countries in your past map, and style them accordingly.\n\nQ: How can you visually communicate that some labels (e.g. site names) are more important than others?\n\nAdjust the placement of the labels of your base map so that they look good on your screen\n\nQ: How are the placement options different for point, line, and polygon layers?\n\n\nExport an image of your labelled map for your portfolio.\n\n\nDealing with overplotting\nYou now probably have a very busy map – a common problem! There are a few strategies we can use, though it can be tricky to overcome completely. Often you will have to settle for getting labels ‘as good as possible’ in QGIS, and manually adjust them later in other software. Try to:\n\nAdjust the placement and rendering of labels in your layer\n\nQ: What rendering options are there for reducing duplication of labels in different types of layer?\n\nUse the Export selected features… tool to reduce the number of features on the screen and/or selectively label them\n\nQ: What factors might influence your choice of whether to show e.g. cities?\n\nUse buffer, mask or shadow formatting to increase the visibility of labels against features\n\nExport an image of your map, with overplotting reduced as much as possible, for your portfolio.\n\n\nComposing a print layout\nUntil now we have worked with maps as they appear within QGIS, exporting them as images ‘on the fly’. In practice, publication-quality maps require additional elements (annotations, etc.) and should be exported at a specific print size – even if only ‘printed’ digitally (e.g. to a PDF). In QGIS, these are handled in the map composer.\n\nUse Project → New print layout… to create a new print layout and open the map composer\nUnder page properties, change the page size to A5 landscape\n\nQ: In practice, what would determine how big your printed map should be?\n\nAdd map to the page, making it fill the full page, and use the move item content tool to adjust the position and scale\n\nQ: You can have more than one map on a page: when might this be useful?\n\nExport your map as an image and as a PDF\n\nQ: What is the difference between\n\nGo back to the main QGIS window and adjust the font size of the feature labels until they look good on the printed layout\n\nQ: Why does the text look different in QGIS, compared to the exported page?\n\n\nInclude your map, exported as an image, in your portfolio.\n\n\nAnnotating a print layout\n\nAdd a north arrow to your map\n\nQ: When is a north arrow helpful?\n\nAdd a text annotation (e.g. its author’s name) to your map\nAdd a dynamic text annotation (e.g. the date) to your map\n\nExport your annotated map for your portfolio.\n\n\nScales, grids, and legends\n\nFix your print layout to a numeric scale, e.g. 20000000.\nEnsuring that you have set the project CRS appropriately, add a scale bar in kilometers to your map\nAdd a grid in latitude/longitude degrees to your map\n\nQ: What information does a grid give the reader of the map, that a scale bar doesn’t?\n\nAdjust the styling of the scale bar and grid.\nRemove the labels from the sites layer and instead use categorised symbology to give each site a different colour and symbol.\nAdd a legend to your print layout and style it accordingly.\n\nQ: Why use a legend instead of labelling features directly?\n\n\nExport your annotated map for your portfolio."
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Objectives\nBy the end of this session, you should:\n\nKnow what to expect from this course\nKnow what is expected of you in terms of classroom participation, homework, and evaluation\nBe familiar with the QGIS software and its basic capabilities\n\n\n\nPrerequisites\nNone.\n\n\nPractical\n\nDraw a map of your journey here to the university today\nInstall QGIS & try to make a map!"
+  },
+  {
+    "objectID": "interpolation.html",
+    "href": "interpolation.html",
+    "title": "Interpolation & density estimation",
+    "section": "",
+    "text": "Hello world."
+  },
+  {
+    "objectID": "data_management.html",
+    "href": "data_management.html",
+    "title": "Data management",
+    "section": "",
+    "text": "By the end of this session, you should:\n\nUnderstand how to organise GIS projects efficiently and why this is important\nBe familiar with common geospatial data formats on how to import them into QGIS\nBe able to perform basic data selection and manipulation in QGIS"
+  },
+  {
+    "objectID": "data_management.html#prerequisities",
+    "href": "data_management.html#prerequisities",
+    "title": "Data management",
+    "section": "Prerequisities",
+    "text": "Prerequisities\nReading:\n\nShapefile must die!, an ‘opinionated’ guide to common geospatial data formats\nHart EM, Barmby P, LeBauer D, Michonneau F, Mount S, Mulrooney P, et al. (2016) Ten Simple Rules for Digital Data Storage. PLoS Computational Biology 12(10): e1005097. https://doi.org/10.1371/journal.pcbi.1005097"
+  },
+  {
+    "objectID": "data_management.html#practical",
+    "href": "data_management.html#practical",
+    "title": "Data management",
+    "section": "Practical",
+    "text": "Practical\n\nData\n\nAcheulean sites:\n\nacheulean.csv – comma-seperated values (CSV)\nacheulean.tsv – tab-seperated values (TSV)\nacheulean.txt – delimited text, e.g. as exported from Microsoft Access\nacheulean_utm36s.csv – coordinates have been converted from latitude/longitude to WGS84 / UTM Zone 36S\n\nc14_dates.csv – radiocarbon dates from Switzerland\nfundstellen_bern.zip – sites in the Canton of Bern\n\n\n\nFile management\nGood data management starts before you open your GIS! Like most GIS and statistical software, QGIS does not work with a single file. It uses ‘projects’ (.qgz files or .qgs in older versions) to separate different working environments, which may incorporate many different files containing geospatial data, layer and style definitions, and output in various formats. QGIS does not impose a structure on these files: it is up to you to keep them organised.\nThere isn’t a single way to organise files. Above all, the most important thing is that your file structure is consistent and predictable – to you and to others.\n\nStart a new project in QGIS and save it in a new directory\n\nUnder Project → Properties, in the General tab, ensure that save paths is set to ‘relative’ (this is the default)\nQ: What is the difference between ‘relative’ and ‘absolute’ file paths?\n\nCreate a basic directory structure for your project. Bear in mind it will include:\n\nData files, project files, and output files (e.g. maps)\nBase map data\nData from different regions\nData in different file formats\nNB.: You don’t have to leave QGIS to do this. Look for the ‘Project Home’ node in the browser pane.\n\nCopy acheulean.csv to an appropriate place within your project and add it your map.\nSave your project, close QGIS, move or rename your project directory, then open it in QGIS again.\nChange save paths to ‘absolute’ and repeat the last step.\n\nQ: What happened?\n\nSet save paths back to the default, ‘relative’.\n\nQ: Why is it better to use relative paths?\n\n\nUse this project to organise all the data you will work with over the course of this practical. In your portfolio, include your finished file structure, after you have completed the rest of the practical.\n\n\nData sources\nThere are a lot of file formats that can be used as data sources within a GIS. From a GIS user’s point of view, we can group them into three categories: delimited text files, file- or directory-based formats, and database-based formats.\n\nDelimited text files\nPlain text files are the most common and portable way to store tabular data (‘spreadsheets’) in a scientific context. The are not a true geospatial format, because they do not contain information on the coordinate reference system, but they are widely used to distribute geospatial data, especially point geometries.\n\nCopy acheulean.csv, acheulean.tsv, acheulean.txt and acheulean_utm36s.csv to your project.\nAdd all four files to your map\n\nEnsure that they are all imported correctly, i.e. they should result in exactly the same points with exactly the same attributes being added to your map.\nQ: When might you prefer delimited text files over geospatial formats?\n\n\n\n\nFile/directory-based geospatial formats\nThe majority of commonly used formats fall into this category, where geospatial data (geometries, attributes, and CRS) is bundled together in either a single file, or a collection of files contained within a single directory. Adding any of these formats to a project in QGIS is generally straightforward, as is converting between them, so the choice is not so relevent in day-to-day work. However, it is important to consider which format is the best for long-term storage and exchange.\n\nFill in the table below for your portfolio.\n\n\n\n\n\nFormat\nFile extension\nVector or raster?\nOpen format?\n\n\n\n\nShapefile\n\n\n\n\n\nGeoJSON\n\n\n\n\n\nKML\n\n\n\n\n\nAutocad DXF\n\n\n\n\n\nGeopackage\n\n\n\n\n\nFlatGeobuf\n\n\n\n\n\nGPX\n\n\n\n\n\nGeodatabase\n\n\n\n\n\nGeoTIFF\n\n\n\n\n\nASCII Grid\n\n\n\n\n\n\n\nCopy fundstellen_bern.csv to your project and add it to your map.\nExport fundstellen_bern.csv to each of the formats below, copying the exported file to your project:\n\nESRI shapefile\nGeoPackage\nComma Seperated Value (CSV)\nQ: What are the advantages and disadvantages of each of these formats?\n\n\n\n\nDatabase-based geospatial formats\nWhen geospatial data gets more complex, it is common to incorporate them within a relational database system (RDMS). Some of the file-based formats above (e.g. GeoPackage, Geodatabase) are in fact databases saved as a file (or files). Most general-purpose database software (e.g. MySQL/MariaDB, PostgreSQL, SQLite) also have extensions for representing geospatial data – usually in the form of a special “geometry” column. The latter can be used to connect to data sources in a remote location. Otherwise, they work much like any other format.\n\n\n\nAttribute data\nApart from the geospatial data needed to put points (or lines, or polygons) on a map, geospatial formats usually come with “attributes”; that is, a table of data associated with the geometries. This is what we have been using for data-dependent symbologies, for example. QGIS has many features for selecting, filtering and manipulating these attributes.\n\nCopy c14_dates.csv to your project.\nConvert it to a suitable geospatial format, add this to your map, and remove the CSV.\nView the attribute table of the layer.\n\nQ: What data types are used in this attribute table?\n\nUsing select features by value, export dates from the ‘radon’ and ‘radonb’ databases as a new layer and add it to your project.\nUsing the filter tool, filter this layer to only show dates which fit the following conditions:\n\nHave an error (std) of less than 50\nAre from samples of charcoal, “collagen, bone” or “plant remains”\nAre from the Bronze Age\nQ: How many dates fit all these criteria?\n\nEdit the attribute table to correct the lab codes from ‘Rome-’. They should be ‘R-’.\nUsing the field calculator, update the ‘site_type’ field to use uppercase letters.\nUsing the field calculator, create a new column with the difference between the uncalibrated and calibrated ages.\n\nRemember to include your finished file structure from the first part of this practical in your portfolio."
   },
   {
     "objectID": "design.html",
@@ -133,9 +238,9 @@
     "text": "Practical\nToday’s practical will consist of a problem set that you will work through in groups, based on real-world applications of cartography in archaeological research. In groups of four:\n\nAssign each member of your group one of the problems below\nIndividually, produce a draft map according to the objectives, target audience, and design parameters given\nReconvene as a group and discuss the design and effectivness of each others’ maps\n\nIs the choice of ‘base layers’ appropriate to the objective of the map?\nDo thematic elements make the best use of ‘data-ink’?\nDoes the map include all the elements and decorations expected, considering the target audience and parameters?\n\nRevise and improve your draft to based on the criticism you have received\n\nYour portfolio entry for this practical should include:\n\nYour draft map\nNotes on the points of critique you received from the rest of your group, and what you did to address them\nYour revised map\n\n\nProblem 1: Thematic Map\n\nLate Epipalaeolithic sites in the Levant\nYou have been asked to produce a distribution map of Late Epipalaeolithic (Natufian and Harifian) sites in the Levant, to be included in a research article on the subsistence economy of this period.\nObjective: show the locations and regional context of the sites discussed in the article text\nTarget audience: readers of a specialist scientific journal, who may not be familiar with the region/period\nParameters:\n\nThe map must illustrate the location of sites in relation to major geographic features, e.g. the Dead Sea, the Jordan River\nThe map must give some indication of the regional topography\nReaders must be able to distinguish sites which have been excavated from those that haven’t\nReaders must be able to distinguish sites which have macro-archaeobotanical remains from those that don’t\nThe names of sites mentioned in the text must be labelled. These are:\n\nAbu Hureyra\nHayonim Cave & Terrace\nJericho\nEl Khiam\nShubayqa 1\nWadi Hammeh 27\n\nIt must be possible to extract the rough geographic coordinates of sites from the map\n\n\n\nData (Problem 1)\n\nnatufian_sites.csv – locations and data about Epipalaeolithic sites in the Levant (Arranz-Otaegui et al. 2018)\n\n\n\n\nProblem 2: Topographic Map\n\nHydrology of the Azraq basin\nPrehistoric settlement in the Azraq basin, eastern Jordan, was strongly conditioned by the availability of water in the steppe/desert region. You have been asked to prepare a topographic map of the contemporary hydrology of the basin for a text giving a regional overview its prehistory.\nObjective: illustrate the major topographic and hydrological features of the Azraq basin relevant to its prehistory\nTarget audience: prehistorians and environmental scientists familiar with the region\nParameters:\n\nThe map must include:\n\nRegional topography\nAnnual precipitation\nThe extent of the Azraq basin\nThe basin’s major hydrological features (the Qa Azraq and Wadi Rajil)\n\nThe map should be in colour\nHydrological features should be labelled\nThe scale of the map must be indicated in kilometres\n\n\n\nData (Problem 2)\n\nSRTM Tile Grabber – for elevation data (DEM)\nwc2_30s_prec_sum_sw_asia_contour.geojson – annual precipitation contours (isohyets) for Southwest Asia (derived from WorldClim\nbasin_azraq.zip – extent of the Azraq hydrological basin\nqa_azraq.zip – extent of the Qa Azraq, a seasonal lake surrounding the Azraq oasis\nwadi_rajil_simple.zip – course of the Wadi Rajil (a seasonal river), in two parts"
   },
   {
-    "objectID": "interpolation.html",
-    "href": "interpolation.html",
-    "title": "Interpolation & density estimation",
+    "objectID": "review.html",
+    "href": "review.html",
+    "title": "Review",
     "section": "",
     "text": "Hello world."
   },
@@ -166,110 +271,5 @@
     "title": "Thematic maps",
     "section": "Practical",
     "text": "Practical\n\nData\n\nacheulean.csv\n\nA table with data on 17 Acheulean sites in Africa, including coordinates\n\nNatural Earth Data <https://www.naturalearthdata.com/>\n\n\n\nMapping point distributions\nWe will start by simply showing where the sites are in the world.\n\nStart a new project in QGIS.\nAdd acheulean.csv into your map from the browser and the layer -> add layer menu\n\nQ: Which one worked?\nQ: Why do we need to tell QGIS what CRS this layer uses?\n\nThis isn’t very useful on its own. Find relevent base layers from Natural Earth and add it to your map too.\n\nFor this practical, use at least one raster layer and at least one vector layer\nQ: What kind of base layers are relevent here?\n\nUse the layers panel to arrange the layers of your map in a sensible order.\nUse the layer properties dialog to style your base layers. Remember to think about what you are trying to communicate with this map.\n\nQ: How does the purpose of the map affect the choice of base layer styles?\n\nUse the layer properties dialog to style your point layer\n\nQ: Apart from the location of sites, what other information might you want to show at this point?\n\n\nUse Project -> Import/Export to save an image of your map for your portfolio.\n\n\nThematic mapping with points\nNow we will pick a class of artefact to explore with our map.\n\nUsing single symbol symbology, vary the size of the points according to the number of artefacts.\nUsing graduated symbology, vary the colour of the points according to the number of artefacts.\nUsing categorized symbology, vary the colour of the points according to the number of artefacts.\n\nQ: Which do you think is more effective, and why?\n\n\nSave an image of a map using your preferred symbology for your portfolio.\n\n\nThematic mapping with polygons\nLet’s add a bit more information to our base layers, showing the countries in which Acheulean sites are found.\n\nIf you haven’t already, download a country layer from Natural Earth Data and add it to your map.\nAdjust the symbology of the country layer appropriately.\nUsing the select tool, select countries that contain an Acheulean site.\n\nQ: In future sessions, we will look at more automatic ways to do this. Why might doing it by hand become inefficient?\n\nIn the layer panel, export the selected features as a new layer, then add it to your map.\nUsing single symbol symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.\nUsing inverted symbology, adjust the appearance of the two country layers to highlight those containing Acheulean sites.\n\nQ: What other uses might inverted symbology have?\n\n\nSave an image of a map using your preferred symbology for your portfolio.\n\n\nThematic mapping with lines\nFinally, let’s explore how we can use data to vary the appearance of lines.\n\nIf you haven’t already, download a river layer from Natural Earth Data and add it to your map.\nAdjust the symbology of the river layer appropriately.\nUse a data variable to adjust the width of the river layer. You will have to experiment to find the right variable and expression!\n\nSave an image of your map for your portfolio."
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\n Conolly & Lake, ch. 2\n\n\n40\nTopographic maps\n Styling vector layers as basemap Styling DEM as a basemap\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n Shapefile must die! Hart et al. 2016\n\n\n44\nSources of geospatial data\n Parcak 2009, ch. 3\n\n\n45\nGeoreferencing & digitising\n—\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n—\n\n\n48\nRaster analysis\n—\n\n\n49\nModelling movement\n—\n\n\n50\nPredictive modelling\n—\n\n\n51\nReview\n—"
-  },
-  {
-    "objectID": "topographic_maps.html",
-    "href": "topographic_maps.html",
-    "title": "Topographic maps",
-    "section": "",
-    "text": "After following this practical, you should be able to:\n\nUse map services to obtain premade topographic maps in QGIS\nStyle vector and raster data to produce a base map\nCombine raster digital elevation model (DEM) layers to produce a relief map"
-  },
-  {
-    "objectID": "topographic_maps.html#prerequisites",
-    "href": "topographic_maps.html#prerequisites",
-    "title": "Topographic maps",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nStyling vector layers as basemap (Video, Martin Hinz)\nStyling DEM as a basemap (Video, Martin Hinz)"
-  },
-  {
-    "objectID": "topographic_maps.html#practical",
-    "href": "topographic_maps.html#practical",
-    "title": "Topographic maps",
-    "section": "Practical",
-    "text": "Practical\n\nCyril and Methodius\n\ncyril_methodius_places.csv – names and coordinates of major locations in the journeys of Cyril and Methodius\ndarmc_kingdoms_ad814.geojson – kingdoms of Europe in 814, from DARMC\ndarmc_towns_ad814.geojson – major towns and cities of Europe in 814, from DARMC\n\nNatural Earth Data <https://www.naturalearthdata.com/>\n\n\nMap services\nMap services are pre-compiled map layers distributed over the internet. They are often the most convinient way to get a quick topographic base map. There is a very, very wide selection of map services out there, including generic topographic maps (e.g. ESRI’s series), shaded relief (ESRI World Topo), street maps (e.g. OpenStreetMap), satellite imagery (e.g. Sentinel, Landsat) and specialised remote sensing data (e.g.OpenWeatherMap). The QGIS plugin QuickMapServices offers a very convenient index for publicly-available map services.\nImportant note: base maps from these services are subject to copyright and almost always come with licensing conditions. You should ensure you have permission to reproduce the individual map service before using them in publications!\n\nInstall and enable the QuickMapServices plugin for QGIS.\nUsing Web → QuickMapServices, add the standard OpenStreetMap (OSM) layer to your project and navigate to the area around Bern\n\nQ: What could we use this kind of map for in archaeology?\nQ: Apart from licensing concerns, why else might we not want to rely on map services for base maps?\n\nUsing the search function of QuickMapServices, find layers suitable as a base map for:\n\nA distribution map of prehistoric sites around Bern\nA plan of an medieval site within the city of Bern\nHelping a survey team find their way around the area around Bern\n\n\nUse Project → Import/Export to save an image of your three maps, briefly explaining why you chose the base layer you did.\n\n\nTopographic base maps\nReproduce the following map as closely as you can. It is intended to illustrate the historical context of the journeys of Cyril and Methodius, two 9th century Byzantine monks credited with introducing Christianity to the Slavic world and devising the Cyrillic alphabet (or technically it’s funky-looking predecessor, Glagolitic).\nYou will need the ‘Cyril and Methodius’ datasets and supplementary data from Natural Earth.\n\n\n\nThe Eastern Mediterranean, ca. AD 860: the journeys of Cyril and Methodius. ⓒ Joe Roe\n\n\nSave an image of your reproduced map to your portfolio.\n\nQ: How could this map be improved?\n\n\n\nRelief maps\nA relief map is a special class of elevation map that is very widely used as both a base map and an illustrative, topographic map. They represent (raster) elevation maps They can look really nice—or they can look awful—it takes practice!\n\nDownload SRTM elevation data for Switzerland from <http://dwtkns.com/srtm/>\nAdd it to you project along with river, lake, ocean, and country border data from Natural Earth. Style the vector layers appropriately.\nStyle the DEM layer with single band pseudocolor symbology and the built in ‘spectral’ colour ramp\nChange the mode to ‘equal interval’ and experiment with adding more classes.\nChange the interpolation to ‘discrete’ and again experiment with different number of classes.\n\nQ: What is the difference between continuous and discrete interpolation in this context?\n\n\nSave an image of a map using the ‘spectral’ ramp for your portfolio.\n\nCreate a new color ramp for the DEM layer, using one of the options for topography in the ‘cpt-city’ catalogue.\nAdjust the min/max values and classes to best show the underlying topography.\nDuplicate the DEM layer and change its symbology to ‘hillshade’\n\nQ: What to the ‘altitude’, ‘azimuth’, and ‘z-factor’ options do?\n\nUnder transparency, adjust the blend mode (try ‘multiple’) and opacity of the layer until it blends well with the underlying terrain colours.\nDisable the underlying DEM layer so that just the hillshade is visible.\n\nQ: What could this type of base map be used for?\n\n\nSave an image of your shaded relief map for your portfolio."
-  },
-  {
-    "objectID": "bibliography.html",
-    "href": "bibliography.html",
-    "title": "Bibliography & Further Reading",
-    "section": "",
-    "text": "GIS in Archaeology HS 2020, Martin Hinz’s video tutorials\nA Gentle Introduction to GIS, from the QGIS documentation\nQGIS User Guide"
-  },
-  {
-    "objectID": "bibliography.html#bibliography",
-    "href": "bibliography.html#bibliography",
-    "title": "Bibliography & Further Reading",
-    "section": "Bibliography",
-    "text": "Bibliography\n\nConolly, J., & Lake, M. (2006). Geographical Information Systems in Archaeology (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459\n\nAvailable online via Universitätsbibliothek Bern\n\nMenke, K. (2022). Discover QGIS 3.x (second edition). Locate Press. ISBN 9780986805257.\nParcak, S. H. (2009). Satellite Remote Sensing for Archaeology. Routledge. ISBN 9780415448789."
-  },
-  {
-    "objectID": "data_management.html",
-    "href": "data_management.html",
-    "title": "Data management",
-    "section": "",
-    "text": "By the end of this session, you should:\n\nUnderstand how to organise GIS projects efficiently and why this is important\nBe familiar with common geospatial data formats on how to import them into QGIS\nBe able to perform basic data selection and manipulation in QGIS"
-  },
-  {
-    "objectID": "data_management.html#prerequisities",
-    "href": "data_management.html#prerequisities",
-    "title": "Data management",
-    "section": "Prerequisities",
-    "text": "Prerequisities\nReading:\n\nShapefile must die!, an ‘opinionated’ guide to common geospatial data formats\nHart EM, Barmby P, LeBauer D, Michonneau F, Mount S, Mulrooney P, et al. (2016) Ten Simple Rules for Digital Data Storage. PLoS Computational Biology 12(10): e1005097. https://doi.org/10.1371/journal.pcbi.1005097"
-  },
-  {
-    "objectID": "data_management.html#practical",
-    "href": "data_management.html#practical",
-    "title": "Data management",
-    "section": "Practical",
-    "text": "Practical\n\nData\n\nAcheulean sites:\n\nacheulean.csv – comma-seperated values (CSV)\nacheulean.tsv – tab-seperated values (TSV)\nacheulean.txt – delimited text, e.g. as exported from Microsoft Access\nacheulean_utm36s.csv – coordinates have been converted from latitude/longitude to WGS84 / UTM Zone 36S\n\nc14_dates.csv – radiocarbon dates from Switzerland\nfundstellen_bern.zip – sites in the Canton of Bern\n\n\n\nFile management\nGood data management starts before you open your GIS! Like most GIS and statistical software, QGIS does not work with a single file. It uses ‘projects’ (.qgz files or .qgs in older versions) to separate different working environments, which may incorporate many different files containing geospatial data, layer and style definitions, and output in various formats. QGIS does not impose a structure on these files: it is up to you to keep them organised.\nThere isn’t a single way to organise files. Above all, the most important thing is that your file structure is consistent and predictable – to you and to others.\n\nStart a new project in QGIS and save it in a new directory\n\nUnder Project → Properties, in the General tab, ensure that save paths is set to ‘relative’ (this is the default)\nQ: What is the difference between ‘relative’ and ‘absolute’ file paths?\n\nCreate a basic directory structure for your project. Bear in mind it will include:\n\nData files, project files, and output files (e.g. maps)\nBase map data\nData from different regions\nData in different file formats\nNB.: You don’t have to leave QGIS to do this. Look for the ‘Project Home’ node in the browser pane.\n\nCopy acheulean.csv to an appropriate place within your project and add it your map.\nSave your project, close QGIS, move or rename your project directory, then open it in QGIS again.\nChange save paths to ‘absolute’ and repeat the last step.\n\nQ: What happened?\n\nSet save paths back to the default, ‘relative’.\n\nQ: Why is it better to use relative paths?\n\n\nUse this project to organise all the data you will work with over the course of this practical. In your portfolio, include your finished file structure, after you have completed the rest of the practical.\n\n\nData sources\nThere are a lot of file formats that can be used as data sources within a GIS. From a GIS user’s point of view, we can group them into three categories: delimited text files, file- or directory-based formats, and database-based formats.\n\nDelimited text files\nPlain text files are the most common and portable way to store tabular data (‘spreadsheets’) in a scientific context. The are not a true geospatial format, because they do not contain information on the coordinate reference system, but they are widely used to distribute geospatial data, especially point geometries.\n\nCopy acheulean.csv, acheulean.tsv, acheulean.txt and acheulean_utm36s.csv to your project.\nAdd all four files to your map\n\nEnsure that they are all imported correctly, i.e. they should result in exactly the same points with exactly the same attributes being added to your map.\nQ: When might you prefer delimited text files over geospatial formats?\n\n\n\n\nFile/directory-based geospatial formats\nThe majority of commonly used formats fall into this category, where geospatial data (geometries, attributes, and CRS) is bundled together in either a single file, or a collection of files contained within a single directory. Adding any of these formats to a project in QGIS is generally straightforward, as is converting between them, so the choice is not so relevent in day-to-day work. However, it is important to consider which format is the best for long-term storage and exchange.\n\nFill in the table below for your portfolio.\n\n\n\n\n\nFormat\nFile extension\nVector or raster?\nOpen format?\n\n\n\n\nShapefile\n\n\n\n\n\nGeoJSON\n\n\n\n\n\nKML\n\n\n\n\n\nAutocad DXF\n\n\n\n\n\nGeopackage\n\n\n\n\n\nFlatGeobuf\n\n\n\n\n\nGPX\n\n\n\n\n\nGeodatabase\n\n\n\n\n\nGeoTIFF\n\n\n\n\n\nASCII Grid\n\n\n\n\n\n\n\nCopy fundstellen_bern.csv to your project and add it to your map.\nExport fundstellen_bern.csv to each of the formats below, copying the exported file to your project:\n\nESRI shapefile\nGeoPackage\nComma Seperated Value (CSV)\nQ: What are the advantages and disadvantages of each of these formats?\n\n\n\n\nDatabase-based geospatial formats\nWhen geospatial data gets more complex, it is common to incorporate them within a relational database system (RDMS). Some of the file-based formats above (e.g. GeoPackage, Geodatabase) are in fact databases saved as a file (or files). Most general-purpose database software (e.g. MySQL/MariaDB, PostgreSQL, SQLite) also have extensions for representing geospatial data – usually in the form of a special “geometry” column. The latter can be used to connect to data sources in a remote location. Otherwise, they work much like any other format.\n\n\n\nAttribute data\nApart from the geospatial data needed to put points (or lines, or polygons) on a map, geospatial formats usually come with “attributes”; that is, a table of data associated with the geometries. This is what we have been using for data-dependent symbologies, for example. QGIS has many features for selecting, filtering and manipulating these attributes.\n\nCopy c14_dates.csv to your project.\nConvert it to a suitable geospatial format, add this to your map, and remove the CSV.\nView the attribute table of the layer.\n\nQ: What data types are used in this attribute table?\n\nUsing select features by value, export dates from the ‘radon’ and ‘radonb’ databases as a new layer and add it to your project.\nUsing the filter tool, filter this layer to only show dates which fit the following conditions:\n\nHave an error (std) of less than 50\nAre from samples of charcoal, “collagen, bone” or “plant remains”\nAre from the Bronze Age\nQ: How many dates fit all these criteria?\n\nEdit the attribute table to correct the lab codes from ‘Rome-’. They should be ‘R-’.\nUsing the field calculator, update the ‘site_type’ field to use uppercase letters.\nUsing the field calculator, create a new column with the difference between the uncalibrated and calibrated ages.\n\nRemember to include your finished file structure from the first part of this practical in your portfolio."
-  },
-  {
-    "objectID": "movement_models.html",
-    "href": "movement_models.html",
-    "title": "Modelling movement",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "review.html",
-    "href": "review.html",
-    "title": "Review",
-    "section": "",
-    "text": "Hello world."
-  },
-  {
-    "objectID": "layout.html",
-    "href": "layout.html",
-    "title": "Map layout",
-    "section": "",
-    "text": "In this session we look at adding various “finishing touches” to maps and preparing them for publication."
-  },
-  {
-    "objectID": "layout.html#objectives",
-    "href": "layout.html#objectives",
-    "title": "Map layout",
-    "section": "Objectives",
-    "text": "Objectives\nBy the end of this session, you should:\n\nBe able to customise the display of labels in QGIS\nBe able to use the QGIS map composer to add annotations, scales and legends to a map\nProduce a ‘publication-ready’ map"
-  },
-  {
-    "objectID": "layout.html#prerequisites",
-    "href": "layout.html#prerequisites",
-    "title": "Map layout",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nNone."
-  },
-  {
-    "objectID": "layout.html#practical",
-    "href": "layout.html#practical",
-    "title": "Map layout",
-    "section": "Practical",
-    "text": "Practical\n\nData\n\nSee Session 1\n\n\n\nLabelling features\nWe will reuse the ‘acheulean’ dataset from session 1.\n\nAdd acheulean.csv and base map layers to your map, and style them accordingly\n\nMake sure to include a) cities, b) rivers, and c) countries in your base map\n\nLabel the point layer with site names\nAdjust the formatting of your labels so that they look good on your screen\nAdjust the placement of the labels so that they look good on your screen\nLabel the cities, rivers, and countries in your past map, and style them accordingly.\n\nQ: How can you visually communicate that some labels (e.g. site names) are more important than others?\n\nAdjust the placement of the labels of your base map so that they look good on your screen\n\nQ: How are the placement options different for point, line, and polygon layers?\n\n\nExport an image of your labelled map for your portfolio.\n\n\nDealing with overplotting\nYou now probably have a very busy map – a common problem! There are a few strategies we can use, though it can be tricky to overcome completely. Often you will have to settle for getting labels ‘as good as possible’ in QGIS, and manually adjust them later in other software. Try to:\n\nAdjust the placement and rendering of labels in your layer\n\nQ: What rendering options are there for reducing duplication of labels in different types of layer?\n\nUse the Export selected features… tool to reduce the number of features on the screen and/or selectively label them\n\nQ: What factors might influence your choice of whether to show e.g. cities?\n\nUse buffer, mask or shadow formatting to increase the visibility of labels against features\n\nExport an image of your map, with overplotting reduced as much as possible, for your portfolio.\n\n\nComposing a print layout\nUntil now we have worked with maps as they appear within QGIS, exporting them as images ‘on the fly’. In practice, publication-quality maps require additional elements (annotations, etc.) and should be exported at a specific print size – even if only ‘printed’ digitally (e.g. to a PDF). In QGIS, these are handled in the map composer.\n\nUse Project → New print layout… to create a new print layout and open the map composer\nUnder page properties, change the page size to A5 landscape\n\nQ: In practice, what would determine how big your printed map should be?\n\nAdd map to the page, making it fill the full page, and use the move item content tool to adjust the position and scale\n\nQ: You can have more than one map on a page: when might this be useful?\n\nExport your map as an image and as a PDF\n\nQ: What is the difference between\n\nGo back to the main QGIS window and adjust the font size of the feature labels until they look good on the printed layout\n\nQ: Why does the text look different in QGIS, compared to the exported page?\n\n\nInclude your map, exported as an image, in your portfolio.\n\n\nAnnotating a print layout\n\nAdd a north arrow to your map\n\nQ: When is a north arrow helpful?\n\nAdd a text annotation (e.g. its author’s name) to your map\nAdd a dynamic text annotation (e.g. the date) to your map\n\nExport your annotated map for your portfolio.\n\n\nScales, grids, and legends\n\nFix your print layout to a numeric scale, e.g. 20000000.\nEnsuring that you have set the project CRS appropriately, add a scale bar in kilometers to your map\nAdd a grid in latitude/longitude degrees to your map\n\nQ: What information does a grid give the reader of the map, that a scale bar doesn’t?\n\nAdjust the styling of the scale bar and grid.\nRemove the labels from the sites layer and instead use categorised symbology to give each site a different colour and symbol.\nAdd a legend to your print layout and style it accordingly.\n\nQ: Why use a legend instead of labelling features directly?\n\n\nExport your annotated map for your portfolio."
   }
 ]
