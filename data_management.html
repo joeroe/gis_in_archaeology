@@ -289,7 +289,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisities" id="toc-prerequisities" class="nav-link active" data-scroll-target="#prerequisities">Prerequisities</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisities" id="toc-prerequisities" class="nav-link" data-scroll-target="#prerequisities">Prerequisities</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#file-management" id="toc-file-management" class="nav-link" data-scroll-target="#file-management">File management</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data sources</a></li>
+  <li><a href="#attribute-data" id="toc-attribute-data" class="nav-link" data-scroll-target="#attribute-data">Attribute data</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/data_management.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -312,14 +320,206 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this session, you should:</p>
+<ul>
+<li>Understand how to organise GIS projects efficiently and why this is important</li>
+<li>Be familiar with common geospatial data formats on how to import them into QGIS</li>
+<li>Be able to perform basic data selection and manipulation in QGIS</li>
+</ul>
+</section>
 <section id="prerequisities" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisities">Prerequisities</h2>
+<p>Reading:</p>
 <ul>
 <li><em><a href="http://switchfromshapefile.org/">Shapefile must die!</a></em>, an ‘opinionated’ guide to common geospatial data formats</li>
 <li>Hart EM, Barmby P, LeBauer D, Michonneau F, Mount S, Mulrooney P, et al.&nbsp;(2016) <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005097">Ten Simple Rules for Digital Data Storage</a>. <em>PLoS Computational Biology</em> 12(10): e1005097. <a href="https://doi.org/10.1371/journal.pcbi.1005097" class="uri">https://doi.org/10.1371/journal.pcbi.1005097</a></li>
 </ul>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li>Acheulean sites:
+<ul>
+<li><a href="acheulean.csv">acheulean.csv</a> – comma-seperated values (CSV)</li>
+<li><a href="acheulean.tsv">acheulean.tsv</a> – tab-seperated values (TSV)</li>
+<li><a href="acheulean.txt">acheulean.txt</a> – delimited text, e.g.&nbsp;as exported from Microsoft Access</li>
+<li><a href="acheulean_utm36s.csv">acheulean_utm36s.csv</a> – coordinates have been converted from latitude/longitude to <code>WGS84 / UTM Zone 36S</code></li>
+</ul></li>
+<li><a href="c14_dates.csv">c14_dates.csv</a> – radiocarbon dates from Switzerland</li>
+<li><a href="fundstellen_bern.zip">fundstellen_bern.zip</a> – sites in the Canton of Bern</li>
+</ul>
+</section>
+<section id="file-management" class="level3">
+<h3 class="anchored" data-anchor-id="file-management">File management</h3>
+<p>Good data management starts before you open your GIS! Like most GIS and statistical software, QGIS does not work with a single file. It uses ‘projects’ (<code>.qgz</code> files or <code>.qgs</code> in older versions) to separate different working environments, which may incorporate many different files containing geospatial data, layer and style definitions, and output in various formats. QGIS does not impose a structure on these files: it is up to you to keep them organised.</p>
+<p>There isn’t a single way to organise files. Above all, the most important thing is that your file structure is <em>consistent</em> and <em>predictable</em> – to you and to others.</p>
+<ol type="1">
+<li>Start a <strong>new project</strong> in QGIS and save it in a new directory
+<ul>
+<li>Under <code>Project → Properties</code>, in the <code>General</code> tab, ensure that <strong>save paths</strong> is set to ‘relative’ (this is the default)</li>
+<li><em>Q:</em> What is the difference between ‘relative’ and ‘absolute’ file paths?</li>
+</ul></li>
+<li>Create a <strong>basic directory structure</strong> for your project. Bear in mind it will include:
+<ul>
+<li>Data files, project files, and output files (e.g.&nbsp;maps)</li>
+<li>Base map data</li>
+<li>Data from different regions</li>
+<li>Data in different file formats</li>
+<li><em>NB.</em>: You don’t have to leave QGIS to do this. Look for the ‘Project Home’ node in the browser pane.</li>
+</ul></li>
+<li>Copy <code>acheulean.csv</code> to an appropriate place within your project and add it your map.</li>
+<li>Save your project, close QGIS, <strong>move or rename</strong> your project directory, then open it in QGIS again.</li>
+<li>Change <strong>save paths</strong> to ‘absolute’ and repeat the last step.
+<ul>
+<li><em>Q:</em> What happened?</li>
+</ul></li>
+<li>Set <strong>save paths</strong> back to the default, ‘relative’.
+<ul>
+<li><em>Q:</em> Why is it better to use relative paths?</li>
+</ul></li>
+</ol>
+<p>Use this project to organise all the data you will work with over the course of this practical. In your portfolio, include your finished file structure, <em>after</em> you have completed the rest of the practical.</p>
+</section>
+<section id="data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources">Data sources</h3>
+<p>There are a <em>lot</em> of file formats that can be used as data sources within a GIS. From a GIS user’s point of view, we can group them into three categories: delimited text files, file- or directory-based formats, and database-based formats.</p>
+<section id="delimited-text-files" class="level4">
+<h4 class="anchored" data-anchor-id="delimited-text-files">Delimited text files</h4>
+<p>Plain text files are the most common and portable way to store tabular data (‘spreadsheets’) in a scientific context. The are not a true geospatial format, because they do not contain information on the coordinate reference system, but they are widely used to distribute geospatial data, especially point geometries.</p>
+<ol type="1">
+<li>Copy <code>acheulean.csv</code>, <code>acheulean.tsv</code>, <code>acheulean.txt</code> and <code>acheulean_utm36s.csv</code> to your project.</li>
+<li>Add all four files to your map
+<ul>
+<li>Ensure that they are all imported correctly, i.e.&nbsp;they should result in exactly the same points with exactly the same attributes being added to your map.</li>
+<li><em>Q:</em> When might you prefer delimited text files over geospatial formats?</li>
+</ul></li>
+</ol>
+</section>
+<section id="filedirectory-based-geospatial-formats" class="level4">
+<h4 class="anchored" data-anchor-id="filedirectory-based-geospatial-formats">File/directory-based geospatial formats</h4>
+<p>The majority of commonly used formats fall into this category, where geospatial data (geometries, attributes, and CRS) is bundled together in either a single file, or a collection of files contained within a single directory. Adding any of these formats to a project in QGIS is generally straightforward, as is converting between them, so the choice is not so relevent in day-to-day work. However, it is important to consider which format is the best for long-term storage and exchange.</p>
+<ol type="1">
+<li>Fill in the table below for your portfolio.</li>
+</ol>
+<hr>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>File extension</th>
+<th>Vector or raster?</th>
+<th>Open format?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shapefile</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>GeoJSON</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>KML</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Autocad DXF</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Geopackage</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FlatGeobuf</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>GPX</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Geodatabase</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>GeoTIFF</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ASCII Grid</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li>Copy <code>fundstellen_bern.csv</code> to your project and add it to your map.</li>
+<li>Export <code>fundstellen_bern.csv</code> to each of the formats below, copying the exported file to your project:
+<ul>
+<li>ESRI shapefile</li>
+<li>GeoPackage</li>
+<li>Comma Seperated Value (CSV)</li>
+<li><em>Q:</em> What are the advantages and disadvantages of each of these formats?</li>
+</ul></li>
+</ol>
+</section>
+<section id="database-based-geospatial-formats" class="level4">
+<h4 class="anchored" data-anchor-id="database-based-geospatial-formats">Database-based geospatial formats</h4>
+<p>When geospatial data gets more complex, it is common to incorporate them within a relational database system (RDMS). Some of the file-based formats above (e.g.&nbsp;GeoPackage, Geodatabase) are in fact databases saved as a file (or files). Most general-purpose database software (e.g.&nbsp;MySQL/MariaDB, PostgreSQL, SQLite) also have extensions for representing geospatial data – usually in the form of a special “geometry” column. The latter can be used to connect to data sources in a remote location. Otherwise, they work much like any other format.</p>
+</section>
+</section>
+<section id="attribute-data" class="level3">
+<h3 class="anchored" data-anchor-id="attribute-data">Attribute data</h3>
+<p>Apart from the geospatial data needed to put points (or lines, or polygons) on a map, geospatial formats usually come with “attributes”; that is, a table of data associated with the geometries. This is what we have been using for data-dependent symbologies, for example. QGIS has many features for selecting, filtering and manipulating these attributes.</p>
+<ol type="1">
+<li>Copy <code>c14_dates.csv</code> to your project.</li>
+<li>Convert it to a suitable geospatial format, add this to your map, and remove the CSV.</li>
+<li>View the <strong>attribute table</strong> of the layer.
+<ul>
+<li><em>Q:</em> What <em>data types</em> are used in this attribute table?</li>
+</ul></li>
+<li>Using <strong>select features by value</strong>, export dates from the ‘radon’ and ‘radonb’ databases as a new layer and add it to your project.</li>
+<li>Using the <strong>filter</strong> tool, filter this layer to only show dates which fit the following conditions:
+<ul>
+<li>Have an error (<code>std</code>) of less than 50</li>
+<li>Are from samples of charcoal, “collagen, bone” or “plant remains”</li>
+<li>Are from the Bronze Age</li>
+<li><em>Q:</em> How many dates fit all these criteria?</li>
+</ul></li>
+<li><strong>Edit</strong> the attribute table to correct the lab codes from ‘Rome-’. They should be ‘R-’.</li>
+<li>Using the <strong>field calculator</strong>, update the ‘site_type’ field to use uppercase letters.</li>
+<li>Using the <strong>field calculator</strong>, create a new column with the difference between the uncalibrated and calibrated ages.</li>
+</ol>
+<p><strong>Remember</strong> to include your finished file structure from the first part of this practical in your portfolio.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
