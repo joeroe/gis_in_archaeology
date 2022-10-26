@@ -12,4 +12,5 @@ title: "Bibliography & Further Reading"
 
 * Conolly, J., & Lake, M. (2006). *Geographical Information Systems in Archaeology* (Cambridge Manuals in Archaeology). Cambridge: Cambridge University Press. doi:10.1017/CBO9780511807459
   * [Available online](https://www.cambridge.org/core/books/geographical-information-systems-in-archaeology/6CCD088D5DF8A32567A0A2B60CACD3A5) via Universitätsbibliothek Bern
-* Menke, K. (2022). *[Discover QGIS 3.x](https://locatepress.com/book/dq32)* (second edition). Locate Press.
+* Menke, K. (2022). *[Discover QGIS 3.x](https://locatepress.com/book/dq32)* (second edition). Locate Press. ISBN 9780986805257.
+* Parcak, S. H. (2009). *Satellite Remote Sensing for Archaeology*. Routledge. ISBN 9780415448789.

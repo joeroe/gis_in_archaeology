@@ -2,4 +2,8 @@
 title: "Obtaining geospatial data"
 ---
 
-Hello world.
+## Prerequisites
+
+Reading:
+
+* Chapter 3 in Parcak, S. H. (2009). *Satellite Remote Sensing for Archaeology*. Routledge. ISBN 9780415448789.
