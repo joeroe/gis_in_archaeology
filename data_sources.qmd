@@ -2,8 +2,113 @@
 title: "Obtaining geospatial data"
 ---
 
+This session will cover how to obtain geospatial data from online, public sources.
+
+## Objectives
+
+By the end of this session, you should:
+
+* Be familiar with common sources of public geospatial data for global applications
+* Be aware of the limitations of publicly-available geospatial data, especially for remote sensing applications
+* Be able to locate, obtain and process public geospatial data for a particular project scope
+
 ## Prerequisites
 
 Reading:
 
 * Chapter 3 in Parcak, S. H. (2009). *Satellite Remote Sensing for Archaeology*. Routledge. ISBN 9780415448789.
+
+## Practical
+
+First, some caveats.
+
+It is impossible for us to cover the full range of geospatial data sources used in archaeology, since this depends greatly on the particular region and application.
+For this practical, we will focus on sources of data that cover the whole globe, as the 'common denominator', but it is important to bear in mind that these may not be the 'best' data sources for a given problem.
+For Europe especially, archaeologists often work primarily, or exclusively, with national data provided by government agencies.
+These are usually more varied and detailed than datasets covering the whole globe.
+Geospatial data published by the Swiss federal government, for example, are catalogued in the ['INSPIRE' portal](https://www.geo.admin.ch/en/geo-information-switzerland/geodata-index-inspire.html).
+But for many other parts of the world, or in analyses that span multiple countries, there are some common sources of data.
+
+Similarly, we focus here on open, publicly available datasets, for reasons of both practicality and scientific transparency.
+More detailed and high quality commerical datasets are available are available.
+For example, many companies sell satellite imagery at sub-metre resolution, whereas the best available public imagery is 10 m.
+Here we must be careful of the '**Google Earth effect**': we're all accustomed to seeing very high resolution, high quality imagery in off-the-shelf (and usually free) software, so we might expect to be able to use it for our own purposes.
+But this is because the companies that make these applications have licensed commercial imagery.
+Generally speaking, the raw versions of these images are not available publicly, and you would not be able to use them in a publication, for example, without obtaining a license to do so yourself.
+
+### Preparation
+
+We'll be assembling data for a project on the island of [Islay](https://en.wikipedia.org/wiki/Islay) (pronounced *Ai-luh*), part of the Hebrides archipelago off the west coast of Scotland.
+The prehistoric landscape of Islay was comprehensively documented by the 'Southern Hebrides Mesolithic Project' (1988–98, see Mithen 2000), which included several pioneering applications of GIS in archaeology.
+
+Before you start collecting data, it's a good idea to define precisely what your region of interest is.
+You will use this narrow down your search queries and to limit the amount of files you have to download.
+It's worth spending a bit of time defining a region here – it's a pain to find out afterwards that you didn't get everything you needed!
+Tools like Google Earth—which, as mentioned above, is first and foremost a *browser* for previewing geospatial data, rather than a source of it—can come in handy here, since we don't yet have any data to base this on.
+
+1. Create a new project for Islay, with an appropriate directory structure. Use this for all the data you obtain in this practical.
+2. Open **Google Earth** and navigate to Islay
+3. Using the **add polygon** tool, define a rectangular study region by drawing four corners around Islay, leaving plenty of space around the island.
+    * **Q:** Why is it useful to have a rectangular study region? Why not use the boundaries of the island exactly?
+4. Export the polygon from Google Earth as a **KML** file then, in QGIS, convert it to a **shapefile** and add it to your project.
+5. In QGIS, under `View -> Panels`, enable the **vertex editor** panel. Then, select the layer with your rectangular region, turn on editing mode, and select the **vertex tool**. Right click on the study region polygon to display its exact coordinates in the vertex editor.
+6. In the **vertex editor**, adjust the corners of your study region so that it is an exact rectangle.
+    * It's usually helpful to choose 'round' coordinates for the study region boundaries, since you will sometimes have to enter them by hand.
+7. Save your edits the layer. This will be your broad study region.
+8. Using 'land' data from Natural Earth, create a layer containing just the island of Islay itself, and add this to your project.
+9. Make a quick map showing your study region, with appropriate base layers, and export it for your portfolio.
+
+Natural Earth island region.
+
+### Vector topographic data
+
+By now you're already very familiar with [Natural Earth](https://www.naturalearthdata.com/) as a source of free, public domain base map data, but for this project we are also going to need more detailed data.
+
+1. Obtain [GSHHG](http://www.soest.hawaii.edu/pwessel/gshhg/) data for the coastline.
+    * **Q**: GSHHG contains many different layers. We want the highest resolution layer showing the coastline Islay: which one is it?
+    * Only include one coastline layer in your project.
+2. Obtain [HydroSHEDS](https://www.hydrosheds.org/) data for rivers.
+3. Make a quick map showing the detailed coastline and rivers on Islay, and export it for your portfolio.
+
+### DEMs
+
+DEMs are the basis of many types of geospatial analysis and visualisations, and there are many available.
+[OpenTopography](https://www.opentopography.org/) is a helpful resource for locating the best DEM for a given area.
+At the moment, the best 'all rounder' is NASADEM, available at 1 arc second resolution for the whole globe.
+It is a refinement of the SRTM DEM we have used in previous practicals produced by NASA.
+We will also obtain a lower resolution (90m) SRTM layer that includes bathymetry.
+
+1. Using OpenTopography, obtain NASADEM digital elevation data for the study region.
+2. Using OpenTopography, obtain SRTM 'Global Bathymetry and Topography' data for the study region.
+3. Back in QGIS, use the **merge raster** tool to combine the seperate 'tiles' you have downloaded into a single file for each DEM.
+    * Remember to name the merged file something sensible!
+4. Use the **clip raster by extent** tool to limit the DEM to just the study region.
+5. Make a quick map showing the bathymetry (SRTM) and topography (NASADEM) around Islay, and export it for your portfolio.
+
+### Satellite imagery
+
+Like DEMs, there are many sources of satellite imagery.
+Sentinel-2 imagery is a good all-round option with global coverage; it can be accessed through the [Copernicus Open Access Hub](https://scihub.copernicus.eu/).
+We might also be interested in historic imagery.
+For this Landsat is a good option, since the Landsat programme has been running continuously since 1972; it can be obtained from the USGS [EarthExplorer](https://earthexplorer.usgs.gov/) portal.
+You will need to **register an account** to use both.
+
+1. Obtain **Sentinel 2 (S2A)** imagery for Islay from Copernicus.
+    * You need to define your study region by right clicking on the map *first*, then use the search to search for 'S2A'
+    * Try to find imagery from a day without *too* many clouds.
+2. Obtain **Landsat Legacy** imagery for Islay from EarthExplorer
+    * You can upload the shapefile of your study region in the first step for a precise search.
+    * Try browsing around to find the earliest image of Islay that you can.
+3. Merge and clip the imagery to the study region.
+4. Make two quick maps comparing the two sets of imagery, and export it for your portfolio.
+
+### Climate data
+
+Contemporary and (pre)historic climate data is now also readily available on a global scale.
+In particular, the so-called [bioclimatic variables](https://www.worldclim.org/data/bioclim.html) are a set of generic climate statistics widely used in ecological and archaeological modelling.
+
+1. Obtain contemporary bioclimatic data from [WorldClim](https://www.worldclim.org/).
+2. Obtain palaeo-bioclimatic data from [PaleoClim](http://www.paleoclim.org/)
+    * Include all relevent layers for the Islay Mesolithic (13–7 ka)
+3. Back in QGIS, use the **vector clip** tool to clip these layers to the study region
+4. Make some quick maps of **annual precipitation** on Islay now and during the Mesolithic, and export them for your portfolio
