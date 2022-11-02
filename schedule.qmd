@@ -13,7 +13,7 @@ title: "Schedule"
 | **Geospatial data**          |
 | 43   | [Data management](data_management.qmd) | [{{< fa link >}} Shapefile must die!](http://switchfromshapefile.org/)<br />[{{< fa file-lines >}} Hart et al. 2016](https://doi.org/10.1371/journal.pcbi.1005097) |
 | 44   | [Sources of geospatial data](data_sources.qmd) | [{{< fa book >}} Parcak 2009, ch. 3](bibliography.qmd) |
-| 45   | [Georeferencing & digitising](digitising.qmd) | --- |
+| 45   | [Georeferencing & digitising](digitising.qmd) | [{{< fa circle-play >}}  Georeferencing a scanned map](https://tube.switch.ch/videos/ced6a6f9)<br />[{{< fa circle-play >}}  Digitising objects from georeferenced maps](https://tube.switch.ch/videos/51fb9bf6) |
 | 46   | [Field data collection](field_data.qmd) | --- |
 | **Spatial analysis**         |
 | 47   | [Interpolation & density estimation](interpolation.qmd) | --- |

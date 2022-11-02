@@ -2,4 +2,10 @@
 title: "Georeferencing & digitising"
 ---
 
-Hello world.
+Much valuable geospatial data remains in analogue format, e.g. printed maps or lists of coordinates.
+This session will cover the processes of georeferencing (assigning explicit geographic coordinates to scanned images) and digitising (creating vector geospatial layers from images and other reference material).
+
+## Prerequisites
+
+* [Georeferencing a scanned map](https://tube.switch.ch/videos/ced6a6f9) (Video, Martin Hinz)
+* [Digitising objects from georeferenced maps](https://tube.switch.ch/videos/51fb9bf6) (Video, Martin Hinz)
