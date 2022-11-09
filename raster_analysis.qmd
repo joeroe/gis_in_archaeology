@@ -2,4 +2,4 @@
 title: "Raster analysis"
 ---
 
-Hello world.
+In this session we will look at a variety of common raster analysis techniques applied to elevation data, including calculations of terrain slope and aspect, hydrology and visibility.

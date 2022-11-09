@@ -2,4 +2,4 @@
 title: "Interpolation & density estimation"
 ---
 
-Hello world.
+In this session we will begin looking at spatial analysis, starting with techniques for the interpolation and density estimate of point pattern data.

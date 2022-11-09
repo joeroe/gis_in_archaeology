@@ -2,4 +2,4 @@
 title: "Predictive modelling"
 ---
 
-Hello world.
+In this session we will look at predictive modelling (perhaps better called 'site location modelling').

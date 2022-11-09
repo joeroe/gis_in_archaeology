@@ -2,4 +2,4 @@
 title: "Modelling movement"
 ---
 
-Hello world.
+In this session we will look at terrain-based models of human movement, including least cost path analysis and site catchment analysis.
