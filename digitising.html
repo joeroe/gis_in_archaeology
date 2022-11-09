@@ -290,6 +290,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#georeferencing" id="toc-georeferencing" class="nav-link" data-scroll-target="#georeferencing">Georeferencing</a></li>
+  <li><a href="#digitising" id="toc-digitising" class="nav-link" data-scroll-target="#digitising">Digitising</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/digitising.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -319,8 +325,103 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://tube.switch.ch/videos/ced6a6f9">Georeferencing a scanned map</a> (Video, Martin Hinz)</li>
 <li><a href="https://tube.switch.ch/videos/51fb9bf6">Digitising objects from georeferenced maps</a> (Video, Martin Hinz)</li>
 </ul>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<p>We will georeference and digitise two datasets from Islay that will be useful in our later modelling work: the location of sites, and a reconstruction of the past coastline.</p>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li><a href="islay/islay_sites.jpg">islay_sites.jpg</a> – map of Mesolithic and later prehistoric sites on Islay (<a href="bibliography.html#mithen2000">Mithen et al.&nbsp;2000</a>, fig.&nbsp;4.2.15)</li>
+<li>Maps of reconstructed past coastlines of Islay (<a href="bibliography.html#mithen2000">Mithen et al.&nbsp;2000</a>, fig.&nbsp;3.4.14):
+<ul>
+<li><a href="islay/islay_coast_7000bp.jpg">islay_coast_7000bp.jpg</a></li>
+<li><a href="islay/islay_coast_9000bp.jpg">islay_coast_9000bp.jpg</a></li>
+<li><a href="islay/islay_coast_11000bp.jpg">islay_coast_11000bp.jpg</a></li>
+<li><a href="islay/islay_coast_13000bp.jpg">islay_coast_13000bp.jpg</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="georeferencing" class="level3">
+<h3 class="anchored" data-anchor-id="georeferencing">Georeferencing</h3>
+<p>Georeferencing is the process of assigning a coordinate reference system (CRS) and geographic coordinates to an image that does not have them, e.g.&nbsp;a scanned paper map. It involves two stages: first defining <strong>control points</strong> (points on the map with known locations) and then defining the <strong>transformation</strong> used to fit the source map to the desired coordinate reference system. There are in turn two basic ways to define control points: by using known coordinates (e.g.&nbsp;from a grid, landmark, or cross-referencing with a table) or by matching features with another, already digitised, map of the same area. We will try both in this practical.</p>
+<ol type="1">
+<li>Add the map images to your Islay project and open it in QGIS.</li>
+<li>Change the <strong>Project CRS</strong> to <code>OSGB36 / British National Grid</code> (EPSG:27700)
+<ul>
+<li>This is the projection used in the two Islay maps.</li>
+</ul></li>
+<li>Open the <strong>Georeferencer</strong> (<code>Layer → Georeferencer</code>)</li>
+<li>Use the <code>Open Raster...</code> button to add <strong>islay_sites.jpg</strong> to the Georeferencer.</li>
+</ol>
+<p>Luckily, this map has some grid references included in the frame of the map. These reference the British National Grid and are in the format NRXXYY, where ‘NR’ is a map sheet and XX and YY are the easting and northing coordinates in kilometres. We can look up the geographic coordinates of the corners of these grid squares, for example at https://britishnationalgrid.uk/. It’s not explicitly stated, but let’s assume that the origin (lower left corner) of the map is at grid reference NR1540.</p>
+<ol start="5" type="1">
+<li>In a browser, open https://britishnationalgrid.uk/ and navigate to Islay</li>
+<li>Under ‘grid reference’, change ‘six-figure’ to ‘four-figure’.</li>
+<li>Back in the Georeferencer, select the <code>Add Point</code> tool and click on one of the corners of the grid squares. Then input its X and Y coordinates.
+<ul>
+<li>Refer back to the website from steps 5–6 to find these coordinates.</li>
+</ul></li>
+<li>Repeat step 7 until you have at least three control points.
+<ul>
+<li><strong>Q:</strong> What is the advantage of picking more than three points?</li>
+</ul></li>
+<li>Open the <code>Transformation Settings</code> window and tick ‘create world file only’
+<ul>
+<li>This means the image will not be ‘warped’, just have coordinates attached to it. We can do this because the source and target CRSes are the same (British National Grid).</li>
+</ul></li>
+<li>Click <code>Start Georeferencing</code>. If all goes well, you should now see a georeferenced version of the map in the main QGIS window.</li>
+</ol>
+<p>Now we will georeference the maps of the Islay coastline. Unfortunately these don’t have grid references, but since they’re of the same place, we can piggy-back off the work we’ve already done.</p>
+<ol start="11" type="1">
+<li>As before, load one of the coastline maps into the Georeferencer.
+<ul>
+<li>When asked, you do not need to save the control points from the previous steps.</li>
+</ul></li>
+<li>Pick a place on the coastline and add a control point, but this time, instead of entering coordinates, click the <code>From Map Canvas</code> button and click on the corresponding point on the map you have just georeferenced.</li>
+<li>Repeat step 12 until you have at least three coordinates.</li>
+<li>Repeat steps 9–10 and inspect the georeferenced map.
+<ul>
+<li>If it doesn’t fit well to the other maps, you may have to add or remove control points.</li>
+<li>Generally you need more control points to get an accurate result when georeferencing this way – three is rarely sufficient.</li>
+</ul></li>
+<li>Repeat steps 11–14 for the remaining coastline maps.</li>
+</ol>
+<p>Export quick maps of your georeferenced images for your portfolio.</p>
+</section>
+<section id="digitising" class="level3">
+<h3 class="anchored" data-anchor-id="digitising">Digitising</h3>
+<p>Now we have the image georeferenced and displayed in QGIS like other layers, but if we are going to make full use of them, we need to turn them into vector data.</p>
+<ol start="16" type="1">
+<li>Create a new geopackage layer that we will use for the site data (<code>Layer → Create Layer</code>)
+<ul>
+<li>Pick a sensible database filename and table name; they can be the same.</li>
+<li>The ‘geometry type’ should be ‘point’</li>
+<li>The CRS should be <code>OSGB36 / British National Grid</code> (EPSG:27700)</li>
+<li><strong>Add a field</strong> to contain the period assigned to the site; pick a sensible name and use ‘Text (string)’ type</li>
+</ul></li>
+<li><strong>Edit</strong> your new layer and use the <code>Add Point Feature</code> tool to create a point for each site.
+<ul>
+<li>You will be asked to fill in the period field you created; do so.</li>
+<li>Remember to <strong>save</strong> the edits to your layer often and, when you are finished,</li>
+</ul></li>
+<li>Create a new geopackage layer that we will use for the coast data (<code>Layer → Create Layer</code>)
+<ul>
+<li>Pick a sensible database filename and table name; you can save all four layers in the same geopackage database if you wish.</li>
+<li>The ‘geometry type’ should be ‘polygon’</li>
+<li>The CRS should be <code>OSGB36 / British National Grid</code> (EPSG:27700)</li>
+</ul></li>
+<li>Digitise the coastline maps using the <code>Add Polygon Feature</code> tools.
+<ul>
+<li>For the lakes, you will need to turn on the <strong>advanced digitising toolbar</strong> and use the ‘add ring’ tool.</li>
+<li>The coastline is the same across many images, so you can save time by copying polygons between layers and using the <code>reshape features</code> tool to change them.</li>
+<li>On the 13000 BP map, make a seperate polygon for the ice sheet.</li>
+</ul></li>
+</ol>
+<p>Export quick maps of your digitised layers for your portfolio.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
