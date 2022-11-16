@@ -2,4 +2,44 @@
 title: "Field data collection"
 ---
 
-Hello world.
+In this session we will look at taking GIS into the field with [QField](https://qfield.org/).
+
+## Objectives
+
+By the end of this session, you should:
+
+* Be able to set up a data structure and forms for field data collection in QGIS
+* Be able to use QField to map and describe features in the field
+* Thought critically about the potential applications and limitations of mobile GIS for archaeology
+
+## Prerequisites
+
+None.
+
+## Practical
+
+QField is, essentially, a mobile-friendly user interface for QGIS with some extra tools for field data collection.
+It lets you transfer a [QGIS project](data_management.qmd) to a mobile device (typically a tablet) and use it as an interface for field mapping and documentation.
+In doing so, it can take advantage of QGIS' in-built form builder, which is capable of creating complex custom data entry interfaces.
+
+### Data
+
+* [qfield_project](qfield_project.zip) – demo QField project
+
+### Setting up a project
+
+The first step in using QField is to set up a project for it to use in the desktop edition of QGIS.
+Since we can't go to Islay, we'll create a demo project to document some features near the university (`qfield_project.zip`).
+
+### Field data collection
+
+We'll now go outside and collect some data!
+
+### Applications
+
+For your portfolio for this session, write a brief (ca. 250–500 word) critical reflection on the potential applications of mobile GIS in archaeology.
+Think about:
+
+* What types of archaeological fieldwork could mobile GIS be used for?
+* What are the advantages of mobile GIS over conventional paper documentation?
+* Are there technical or conceptual limitations to the use of mobile GIS in archaeology?
