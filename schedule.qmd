@@ -16,8 +16,8 @@ title: "Schedule"
 | 45   | [Georeferencing & digitising](digitising.qmd) | [{{< fa circle-play >}}  Georeferencing a scanned map](https://tube.switch.ch/videos/ced6a6f9)<br />[{{< fa circle-play >}}  Digitising objects from georeferenced maps](https://tube.switch.ch/videos/51fb9bf6) |
 | 46   | [Field data collection](field_data.qmd) | --- |
 | **Spatial analysis**         |
-| 47   | [Interpolation & density estimation](interpolation.qmd) | --- |
-| 48   | [Raster analysis](raster_analysis.qmd) | --- |
-| 49   | [Modelling movement](movement_models.qmd) | --- |
-| 50   | [Predictive modelling](predictive_models.qmd) | --- |
-| 51   | [Review](review.qmd) | --- |
+| 47   | [Interpolation & density estimation](interpolation.qmd) | [{{< fa circle-play >}} Heatmaps](https://tube.switch.ch/videos/94a4f92e)<br />[{{< fa circle-play >}} Interpolation](https://tube.switch.ch/videos/426a1e41) (0:00 to 9:20) |
+| 48   | --- | --- |
+| 49   | [Raster analysis](raster_analysis.qmd) | --- |
+| 50   | [Modelling movement](movement_models.qmd) | --- |
+| 51   | [Predictive modelling](predictive_models.qmd) | --- |

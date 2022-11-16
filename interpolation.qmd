@@ -3,3 +3,8 @@ title: "Interpolation & density estimation"
 ---
 
 In this session we will begin looking at spatial analysis, starting with techniques for the interpolation and density estimate of point pattern data.
+
+## Prerequisites
+
+* [Heatmaps](https://tube.switch.ch/videos/94a4f92e) (Video, Martin Hinz)
+* [Interpolation](https://tube.switch.ch/videos/426a1e41) (Video, Martin Hinz) – 0:00 to 9:20
