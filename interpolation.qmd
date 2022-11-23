@@ -29,12 +29,13 @@ Let's suppose we were interested in how many sites were found in the coastal (<5
     * Set the 'Interval' to `50`.
     * Under 'advanced parameters', set 'additional command-line parameters' to `-p`. This generates polygons instead of lines (the default).
 3. The resulting layer is not labelled by elevation zone, so add a field with this now.
-4. Use the **Count Points in Polygon** tool (under `Vector → Analysis`) to count the number of points in each area.
-5. Use the **attribute table** to inspect the result, then adjust the symbology of the layer to show it visually.
+    * This is easier if you first merge all the polygons over 100 m a.s.l. into one.
+5. Use the **Count Points in Polygon** tool (under `Vector → Analysis`) to count the number of points in each area.
+6. Use the **attribute table** to inspect the result, then adjust the symbology of the layer to show it visually.
     * **Q:** What does this tell us about site location patterns on Islay?
-6. Let's calculate the *density* of sites in each area also. Using the **field calculator** (accessed via the attribute table), create a new field to calculate the number of sites per m^2.
+7. Let's calculate the *density* of sites in each area also. Using the **field calculator** (accessed via the attribute table), create a new field to calculate the number of sites per m^2.
     * Ensure the 'output field type' is set to `Decimal number (real)`
-    * Use the expression `@NUMPOINTS / $area`, adjusting `@NUMPOINTS` if you named the field containing the site counts something different.
+    * Use the expression `"NUMPOINTS" / $area`, adjusting `"NUMPOINTS"` if you named the field containing the site counts something different.
     * **Q:** Why is density more informative than an absolute count here?
 
 Include a map showing site density by elevation zone in your portfolio.
