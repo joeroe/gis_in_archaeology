@@ -17,6 +17,7 @@ Data generated in the previous session on [Georeferencing & Digitising](digitisi
 
 * `nasadem_islay` – NASADEM for the island of Islay 
 * `islay_sites` – point layer of sites on Islay 
+  * [islay_sites.gpkg](islay/data/islay_sites.gpkg) – the same layer with added site names and artefact counts
 
 ## Areal statistics
 
@@ -25,7 +26,7 @@ This assumes that we know the area we are interested in advance.
 Let's suppose we were interested in how many sites were found in the coastal (<50 m a.s.l.), lowland (50–100 m a.s.l.) and highland (100+ m a.s.l.) zones of Islay.
 
 1. First we need to generate polygons for the elevation zones we are interested. We will do this using `nasadem_islay` – make sure you have this in your project.
-2. Use `Raster → Contour` to generate contours from `nasadem_islay`.
+2. Use `Raster → Extraction → Contour` to generate contours from `nasadem_islay`.
     * Set the 'Interval' to `50`.
     * Under 'advanced parameters', set 'additional command-line parameters' to `-p`. This generates polygons instead of lines (the default).
 3. The resulting layer is not labelled by elevation zone, so add a field with this now.
@@ -95,6 +96,7 @@ It can be used for nominal or continuous data.
     * Select the period field as the 'Field to use for a burn-in value'.
     * Select 'georeferenced units' as the raster size unit, then set both width and height to 100 (meters).
 2. Repeat step 1 with a field containing the number of artefacts.
+    * You will need to **download `islay_sites.gpkg`** for this – your version does not have the artefact counts!
 
 Include maps of your nearest neighbour interpolations in your portfolio.
 
