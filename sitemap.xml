@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/raster_analysis.html</loc>
-    <lastmod>2022-11-16T12:17:59.038Z</lastmod>
+    <loc>https://github.com/joeroe/gis_in_archaeology/introduction.html</loc>
+    <lastmod>2022-11-23T13:15:30.373Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/joeroe/gis_in_archaeology/information.html</loc>
-    <lastmod>2022-11-16T12:17:59.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/index.html</loc>
-    <lastmod>2022-11-16T12:18:00.078Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/schedule.html</loc>
-    <lastmod>2022-11-16T12:18:00.430Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/predictive_models.html</loc>
-    <lastmod>2022-11-16T12:18:00.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/topographic_maps.html</loc>
-    <lastmod>2022-11-16T12:18:01.126Z</lastmod>
+    <lastmod>2022-11-23T13:15:30.560Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/joeroe/gis_in_archaeology/field_data.html</loc>
-    <lastmod>2022-11-16T12:18:01.482Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/bibliography.html</loc>
-    <lastmod>2022-11-16T12:18:01.778Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/digitising.html</loc>
-    <lastmod>2022-11-16T12:18:02.162Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/movement_models.html</loc>
-    <lastmod>2022-11-16T12:18:02.462Z</lastmod>
+    <lastmod>2022-11-23T13:15:30.723Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/joeroe/gis_in_archaeology/data_sources.html</loc>
-    <lastmod>2022-11-16T12:18:02.878Z</lastmod>
+    <lastmod>2022-11-23T13:15:30.936Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/layout.html</loc>
-    <lastmod>2022-11-16T12:18:03.246Z</lastmod>
+    <loc>https://github.com/joeroe/gis_in_archaeology/digitising.html</loc>
+    <lastmod>2022-11-23T13:15:31.123Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/introduction.html</loc>
-    <lastmod>2022-11-16T12:18:03.582Z</lastmod>
+    <loc>https://github.com/joeroe/gis_in_archaeology/index.html</loc>
+    <lastmod>2022-11-23T13:15:31.283Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/interpolation.html</loc>
-    <lastmod>2022-11-16T12:18:03.882Z</lastmod>
+    <loc>https://github.com/joeroe/gis_in_archaeology/predictive_models.html</loc>
+    <lastmod>2022-11-23T13:15:31.430Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/data_management.html</loc>
-    <lastmod>2022-11-16T12:18:04.326Z</lastmod>
+    <loc>https://github.com/joeroe/gis_in_archaeology/raster_analysis.html</loc>
+    <lastmod>2022-11-23T13:15:31.570Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/joeroe/gis_in_archaeology/design.html</loc>
-    <lastmod>2022-11-16T12:18:04.682Z</lastmod>
+    <lastmod>2022-11-23T13:15:31.760Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/joeroe/gis_in_archaeology/review.html</loc>
-    <lastmod>2022-11-16T12:18:04.982Z</lastmod>
+    <loc>https://github.com/joeroe/gis_in_archaeology/interpolation.html</loc>
+    <lastmod>2022-11-23T13:15:31.960Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/joeroe/gis_in_archaeology/theme_maps.html</loc>
-    <lastmod>2022-11-16T12:18:05.346Z</lastmod>
+    <lastmod>2022-11-23T13:15:32.137Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/assignments.html</loc>
+    <lastmod>2022-11-23T13:15:32.290Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/schedule.html</loc>
+    <lastmod>2022-11-23T13:15:32.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/topographic_maps.html</loc>
+    <lastmod>2022-11-23T13:15:32.697Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/bibliography.html</loc>
+    <lastmod>2022-11-23T13:15:32.850Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/data_management.html</loc>
+    <lastmod>2022-11-23T13:15:33.057Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/movement_models.html</loc>
+    <lastmod>2022-11-23T13:15:33.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/review.html</loc>
+    <lastmod>2022-11-23T13:15:33.357Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/joeroe/gis_in_archaeology/layout.html</loc>
+    <lastmod>2022-11-23T13:15:33.533Z</lastmod>
   </url>
 </urlset>

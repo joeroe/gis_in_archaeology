@@ -296,6 +296,15 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  </ul></li>
+  <li><a href="#areal-statistics" id="toc-areal-statistics" class="nav-link" data-scroll-target="#areal-statistics">Areal statistics</a>
+  <ul class="collapse">
+  <li><a href="#kernel-density-estimation-heatmaps" id="toc-kernel-density-estimation-heatmaps" class="nav-link" data-scroll-target="#kernel-density-estimation-heatmaps">Kernel Density Estimation (‘heatmaps’)</a></li>
+  <li><a href="#interpolation" id="toc-interpolation" class="nav-link" data-scroll-target="#interpolation">Interpolation</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/interpolation.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -326,8 +335,114 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://tube.switch.ch/videos/94a4f92e">Heatmaps</a> (Video, Martin Hinz)</li>
 <li><a href="https://tube.switch.ch/videos/426a1e41">Interpolation</a> (Video, Martin Hinz) – 0:00 to 9:20</li>
 </ul>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>Data generated in the previous session on <a href="./digitising.html">Georeferencing &amp; Digitising</a>:</p>
+<ul>
+<li><code>nasadem_islay</code> – NASADEM for the island of Islay</li>
+<li><code>islay_sites</code> – point layer of sites on Islay</li>
+</ul>
+</section>
+</section>
+<section id="areal-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="areal-statistics">Areal statistics</h2>
+<p>One very simply way of aggregating point data into an area is to simply count the number of points in the area. This assumes that we know the area we are interested in advance. Let’s suppose we were interested in how many sites were found in the coastal (&lt;50 m a.s.l.), lowland (50–100 m a.s.l.) and highland (100+ m a.s.l.) zones of Islay.</p>
+<ol type="1">
+<li>First we need to generate polygons for the elevation zones we are interested. We will do this using <code>nasadem_islay</code> – make sure you have this in your project.</li>
+<li>Use <code>Raster → Contour</code> to generate contours from <code>nasadem_islay</code>.
+<ul>
+<li>Set the ‘Interval’ to <code>50</code>.</li>
+<li>Under ‘advanced parameters’, set ‘additional command-line parameters’ to <code>-p</code>. This generates polygons instead of lines (the default).</li>
+</ul></li>
+<li>The resulting layer is not labelled by elevation zone, so add a field with this now.</li>
+<li>Use the <strong>Count Points in Polygon</strong> tool (under <code>Vector → Analysis</code>) to count the number of points in each area.</li>
+<li>Use the <strong>attribute table</strong> to inspect the result, then adjust the symbology of the layer to show it visually.
+<ul>
+<li><strong>Q:</strong> What does this tell us about site location patterns on Islay?</li>
+</ul></li>
+<li>Let’s calculate the <em>density</em> of sites in each area also. Using the <strong>field calculator</strong> (accessed via the attribute table), create a new field to calculate the number of sites per m^2.
+<ul>
+<li>Ensure the ‘output field type’ is set to <code>Decimal number (real)</code></li>
+<li>Use the expression <code>@NUMPOINTS / $area</code>, adjusting <code>@NUMPOINTS</code> if you named the field containing the site counts something different.</li>
+<li><strong>Q:</strong> Why is density more informative than an absolute count here?</li>
+</ul></li>
+</ol>
+<p>Include a map showing site density by elevation zone in your portfolio.</p>
+<section id="kernel-density-estimation-heatmaps" class="level3">
+<h3 class="anchored" data-anchor-id="kernel-density-estimation-heatmaps">Kernel Density Estimation (‘heatmaps’)</h3>
+<p>Kernel Density Estimation (KDE) is a method for calculating the density of points across a space. More formally, it assumes that these points are manifestations of a continuous <em>density function</em> across that space, and attempts to estimate this underlying ‘hidden field’ by moving a regular-sized window (the ‘kernel’) over it and counting the points within it. In more practical terms, the resulting ‘heatmaps’ show where there are more things and where there are less things, in a way that is easier to take in at a glance than a cloud of points. They are very useful both as a visualisation and analysis tool, especially when you’re dealing with a lof points.</p>
+<p>One major caveat is that <strong>KDE is highly sensitive to the choice of kernel radius</strong>. There are several algorithms for choosing a kernel radius more objectively – but unfortunately none of them are implemented in QGIS! We must therefore bear in mind that generating heatmaps in QGIS is first and foremost a visualisation and exploratory tool. For more rigorous density analyses, it is probably better to switch to something like R.</p>
+<ol type="1">
+<li>Open the processing toolbox and find the <strong>heatmap</strong> tool, under ‘interpolation’.</li>
+<li>Select <code>islay_sites</code> as the point layer. Leave the other options blank and click run.</li>
+<li>Inspect the resulting map. Does it tell us anything meaningful about the density of sites? Repeat step 2, varying the value of radius, until you find something you are happy with.
+<ul>
+<li><strong>Q:</strong> How does the choice of radius affect the resulting heatmap?</li>
+</ul></li>
+<li>Generate three more heatmaps, one for each of the period categories in this dataset.
+<ul>
+<li>You can do this by generating new layers, or using the ‘Selected features only’ option of the Heatmap tool</li>
+<li>Use the same radius for each</li>
+<li><strong>Q:</strong> Can we see any differences in site densities between periods?</li>
+</ul></li>
+</ol>
+<p>Include the three heatmaps generated in step 4 in your portfolio.</p>
+</section>
+<section id="interpolation" class="level3">
+<h3 class="anchored" data-anchor-id="interpolation">Interpolation</h3>
+<p>What if we are not interested just in where points are, but some quality about them? Interpolation is the process of taking a nominal (i.e.&nbsp;a description) or continuous variable (i.e.&nbsp;a number) recorded in specific locations and using this to estimate its value across a whole space. There are many techniques for doing this. We will look at three of the most common: Thiessen polygons (better known as Voronoi polygons outside of archaeology), Nearest Neighbour interpolation, and Inverse Distance Weighted (IDW) interpolation. Notably, we will not look at <em>kriging</em> (because it is not natively implemented in QGIS), though this is also amongst the most common.</p>
+<section id="thiessen-polygons" class="level4">
+<h4 class="anchored" data-anchor-id="thiessen-polygons">Thiessen polygons</h4>
+<p>Thiessen polygons simply consider each place on the map as ‘belonging’ the point closest to it. They are what you get if you draw lines exactly in the middle of each pair of points, then join them up into polygons. They can be used to roughly interpolate nominal or continuous data.</p>
+<ol type="1">
+<li>Generate Thiessen polygons for <code>islay_sites</code> using the <strong>Voronoi polygons</strong> tool.
+<ul>
+<li>Vary the value of ‘buffer %’ until the resulting polygons cover the entire island.</li>
+</ul></li>
+<li><strong>Clip</strong> the resulting polygons to the island of Islay.</li>
+<li>Alter the symbology to colour the polygons by period.
+<ul>
+<li><strong>Q:</strong> Why aren’t Thiessen polygons very informative for Islay?</li>
+</ul></li>
+</ol>
+<p>Include a map of your Thiessen polygons in your portfolio.</p>
+</section>
+<section id="nearest-neighbour" class="level4">
+<h4 class="anchored" data-anchor-id="nearest-neighbour">Nearest Neighbour</h4>
+<p>Nearest Neighbour (NN) is the simplest form of raster-based interpolation. Essentially it is the Thiessen polygons, transferred onto a raster – which is in fact how you calculate it in QGIS (other software provides dedicated raster NN tools). It can be used for nominal or continuous data.</p>
+<ol type="1">
+<li>Use the <strong>Rasterize</strong> tool (<code>Raster → Conversion</code>) to convert your Thiessen polygons to a raster.
+<ul>
+<li>Select the period field as the ‘Field to use for a burn-in value’.</li>
+<li>Select ‘georeferenced units’ as the raster size unit, then set both width and height to 100 (meters).</li>
+</ul></li>
+<li>Repeat step 1 with a field containing the number of artefacts.</li>
+</ol>
+<p>Include maps of your nearest neighbour interpolations in your portfolio.</p>
+</section>
+<section id="idw" class="level4">
+<h4 class="anchored" data-anchor-id="idw">IDW</h4>
+<p>Inverse distance weighted (IDW) is a more sophisticated method appropriate for continuous data. It also produces a raster, but varies the output value according to the distance to the nearest point.</p>
+<ol type="1">
+<li>Use the <strong>IDW Interpolation</strong> tool (in the <strong>Processing Toolbox</strong>) on the islay_sites data.
+<ul>
+<li>Select artefact count as the ‘Interpolation attribute’</li>
+<li>Select the study area (island of Islay) as the extent.</li>
+<li>Choose a sensible output raster size (e.g.&nbsp;1000x1000).</li>
+</ul></li>
+<li>Repeat step 1 separately for each period.
+<ul>
+<li><strong>Q:</strong> Compare the result of this map to the density analysis above. What extra information does it provide?</li>
+</ul></li>
+</ol>
+<p>Include maps of your IDW interpolations in your portfolio.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
