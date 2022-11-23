@@ -357,7 +357,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Set the ‘Interval’ to <code>50</code>.</li>
 <li>Under ‘advanced parameters’, set ‘additional command-line parameters’ to <code>-p</code>. This generates polygons instead of lines (the default).</li>
 </ul></li>
-<li>The resulting layer is not labelled by elevation zone, so add a field with this now.</li>
+<li>The resulting layer is not labelled by elevation zone, so add a field with this now.
+<ul>
+<li>This is easier if you first merge all the polygons over 100 m a.s.l. into one.</li>
+</ul></li>
 <li>Use the <strong>Count Points in Polygon</strong> tool (under <code>Vector → Analysis</code>) to count the number of points in each area.</li>
 <li>Use the <strong>attribute table</strong> to inspect the result, then adjust the symbology of the layer to show it visually.
 <ul>
@@ -366,7 +369,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Let’s calculate the <em>density</em> of sites in each area also. Using the <strong>field calculator</strong> (accessed via the attribute table), create a new field to calculate the number of sites per m^2.
 <ul>
 <li>Ensure the ‘output field type’ is set to <code>Decimal number (real)</code></li>
-<li>Use the expression <code>@NUMPOINTS / $area</code>, adjusting <code>@NUMPOINTS</code> if you named the field containing the site counts something different.</li>
+<li>Use the expression <code>"NUMPOINTS" / $area</code>, adjusting <code>"NUMPOINTS"</code> if you named the field containing the site counts something different.</li>
 <li><strong>Q:</strong> Why is density more informative than an absolute count here?</li>
 </ul></li>
 </ol>
