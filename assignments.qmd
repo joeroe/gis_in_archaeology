@@ -1,0 +1,44 @@
+---
+title: "Assignments"
+---
+
+Your learning on this course will evaluated via two assignments: a practical portfolio (50%) and an individual project (50%).
+
+Both assignments should be handed in electronically on or before **19 February 2023**.
+Please contact the course instructor if you want an extension for any reason.
+
+## Practical portfolio
+
+Your practical portfolio is a summary of the work you did through the practical sessions.
+It is intended to evaluate your **knowledge and understanding** of the course content.
+
+### Format
+
+Please submit a single file (this can be an archive, e.g. `.zip`) containing your portfolio.
+It should include all the maps and other outputs you were asked to include in the practical sessions, as well as answers to the questions (marked **Q:**).
+Please ensure that it is clear which parts belong to which session.
+You are welcome to include additional relevent material, but this will not contribute to your grade.
+
+### Assessment
+
+Each element of your portfolio will be assessed on the basis of whether it shows a satisfactory knowledge and understanding of the material presented in that session.
+Your grade will be calculated from the proportion of elements assessed as satisfactory, and will constitute 50% of the course grade.
+Written feedback will be provided on any elements that were assessed as unsatisfactory.
+
+## Individual project
+
+Your individual project is intended to assess your ability to **communicate and apply** the skills you have acquired during the course.
+
+Your aim is to produce a **publication-quality map** of an archaeological phenomenon.
+That could be a site, a landscape, a regional study, or something else – as long as it communicates something about the past.
+Your map should include:
+
+* Original **data collection**, e.g. 
+  * Please do not re-use any data used in the course practicals
+* Thought
+
+Additionally, 
+
+### Format
+
+### Assessment

@@ -36,13 +36,4 @@ It is expected that you will also work on these practical assignments outside of
 ## Evaluation
 
 Students will be evaluated on their knowledge of course content and their ability to communicate and apply their understanding via a practical portfolio (50%) and an individual project (50%).
-
-### Practical portfolio (50%)
-
-Work produced in each practical session will be compiled into a portfolio assignment to be submitted at the end of the course.
-The practical portfolio will evaluate students' knowledge and understanding of the course content.
-
-### Individual project (50%)
-
-The individual project will assess students' ability to communicate and apply the skills acquired during the course by producing a publication-quality map with archaeological data. 
-Details to follow.
+More details can be found under [assignments](assignments.qmd).

@@ -16,6 +16,7 @@ website:
         text: "Information"
       - schedule.qmd
       - sidebar:tutorials
+        #- assignments.qmd
       - bibliography.qmd
 
   sidebar:

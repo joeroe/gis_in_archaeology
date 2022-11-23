@@ -8,3 +8,105 @@ In this session we will begin looking at spatial analysis, starting with techniq
 
 * [Heatmaps](https://tube.switch.ch/videos/94a4f92e) (Video, Martin Hinz)
 * [Interpolation](https://tube.switch.ch/videos/426a1e41) (Video, Martin Hinz) – 0:00 to 9:20
+
+## Practical
+
+### Data
+
+Data generated in the previous session on [Georeferencing & Digitising](digitising.qmd):
+
+* `nasadem_islay` – NASADEM for the island of Islay 
+* `islay_sites` – point layer of sites on Islay 
+
+## Areal statistics
+
+One very simply way of aggregating point data into an area is to simply count the number of points in the area.
+This assumes that we know the area we are interested in advance.
+Let's suppose we were interested in how many sites were found in the coastal (<50 m a.s.l.), lowland (50–100 m a.s.l.) and highland (100+ m a.s.l.) zones of Islay.
+
+1. First we need to generate polygons for the elevation zones we are interested. We will do this using `nasadem_islay` – make sure you have this in your project.
+2. Use `Raster → Contour` to generate contours from `nasadem_islay`.
+    * Set the 'Interval' to `50`.
+    * Under 'advanced parameters', set 'additional command-line parameters' to `-p`. This generates polygons instead of lines (the default).
+3. The resulting layer is not labelled by elevation zone, so add a field with this now.
+4. Use the **Count Points in Polygon** tool (under `Vector → Analysis`) to count the number of points in each area.
+5. Use the **attribute table** to inspect the result, then adjust the symbology of the layer to show it visually.
+    * **Q:** What does this tell us about site location patterns on Islay?
+6. Let's calculate the *density* of sites in each area also. Using the **field calculator** (accessed via the attribute table), create a new field to calculate the number of sites per m^2.
+    * Ensure the 'output field type' is set to `Decimal number (real)`
+    * Use the expression `@NUMPOINTS / $area`, adjusting `@NUMPOINTS` if you named the field containing the site counts something different.
+    * **Q:** Why is density more informative than an absolute count here?
+
+Include a map showing site density by elevation zone in your portfolio.
+
+### Kernel Density Estimation ('heatmaps')
+
+Kernel Density Estimation (KDE) is a method for calculating the density of points across a space.
+More formally, it assumes that these points are manifestations of a continuous *density function* across that space, and attempts to estimate this underlying 'hidden field' by moving a regular-sized window (the 'kernel') over it and counting the points within it.
+In more practical terms, the resulting 'heatmaps' show where there are more things and where there are less things, in a way that is easier to take in at a glance than a cloud of points.
+They are very useful both as a visualisation and analysis tool, especially when you're dealing with a lof points.
+
+One major caveat is that **KDE is highly sensitive to the choice of kernel radius**.
+There are several algorithms for choosing a kernel radius more objectively – but unfortunately none of them are implemented in QGIS!
+We must therefore bear in mind that generating heatmaps in QGIS is first and foremost a visualisation and exploratory tool.
+For more rigorous density analyses, it is probably better to switch to something like R.
+
+1. Open the processing toolbox and find the **heatmap** tool, under 'interpolation'.
+2. Select `islay_sites` as the point layer. Leave the other options blank and click run.
+3. Inspect the resulting map. Does it tell us anything meaningful about the density of sites? Repeat step 2, varying the value of radius, until you find something you are happy with.
+    * **Q:** How does the choice of radius affect the resulting heatmap?
+4. Generate three more heatmaps, one for each of the period categories in this dataset.
+    * You can do this by generating new layers, or using the 'Selected features only' option of the Heatmap tool
+    * Use the same radius for each
+    * **Q:** Can we see any differences in site densities between periods?
+
+Include the three heatmaps generated in step 4 in your portfolio.
+
+### Interpolation
+
+What if we are not interested just in where points are, but some quality about them?
+Interpolation is the process of taking a nominal (i.e. a description) or continuous variable (i.e. a number) recorded in specific locations and using this to estimate its value across a whole space.
+There are many techniques for doing this.
+We will look at three of the most common: Thiessen polygons (better known as Voronoi polygons outside of archaeology), Nearest Neighbour interpolation, and Inverse Distance Weighted (IDW) interpolation.
+Notably, we will not look at *kriging* (because it is not natively implemented in QGIS), though this is also amongst the most common.
+
+#### Thiessen polygons
+
+Thiessen polygons simply consider each place on the map as 'belonging' the point closest to it.
+They are what you get if you draw lines exactly in the middle of each pair of points, then join them up into polygons.
+They can be used to roughly interpolate nominal or continuous data.
+
+1. Generate Thiessen polygons for `islay_sites` using the **Voronoi polygons** tool.
+    * Vary the value of 'buffer %' until the resulting polygons cover the entire island.
+2. **Clip** the resulting polygons to the island of Islay.
+3. Alter the symbology to colour the polygons by period.
+    * **Q:** Why aren't Thiessen polygons very informative for Islay?
+
+Include a map of your Thiessen polygons in your portfolio.
+
+#### Nearest Neighbour
+
+Nearest Neighbour (NN) is the simplest form of raster-based interpolation.
+Essentially it is the Thiessen polygons, transferred onto a raster – which is in fact how you calculate it in QGIS (other software provides dedicated raster NN tools).
+It can be used for nominal or continuous data.
+
+1. Use the **Rasterize** tool (`Raster → Conversion`) to convert your Thiessen polygons to a raster.
+    * Select the period field as the 'Field to use for a burn-in value'.
+    * Select 'georeferenced units' as the raster size unit, then set both width and height to 100 (meters).
+2. Repeat step 1 with a field containing the number of artefacts.
+
+Include maps of your nearest neighbour interpolations in your portfolio.
+
+#### IDW
+
+Inverse distance weighted (IDW) is a more sophisticated method appropriate for continuous data.
+It also produces a raster, but varies the output value according to the distance to the nearest point.
+
+1. Use the **IDW Interpolation** tool (in the **Processing Toolbox**) on the islay_sites data.
+    * Select artefact count as the 'Interpolation attribute'
+    * Select the study area (island of Islay) as the extent.
+    * Choose a sensible output raster size (e.g. 1000x1000).
+2. Repeat step 1 separately for each period.
+    * **Q:** Compare the result of this map to the density analysis above. What extra information does it provide?
+
+Include maps of your IDW interpolations in your portfolio.
