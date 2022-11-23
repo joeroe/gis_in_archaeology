@@ -343,7 +343,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Data generated in the previous session on <a href="./digitising.html">Georeferencing &amp; Digitising</a>:</p>
 <ul>
 <li><code>nasadem_islay</code> – NASADEM for the island of Islay</li>
-<li><code>islay_sites</code> – point layer of sites on Islay</li>
+<li><code>islay_sites</code> – point layer of sites on Islay
+<ul>
+<li><a href="islay/data/islay_sites.gpkg">islay_sites.gpkg</a> – the same layer with added site names and artefact counts</li>
+</ul></li>
 </ul>
 </section>
 </section>
@@ -352,7 +355,7 @@ ul.task-list li input[type="checkbox"] {
 <p>One very simply way of aggregating point data into an area is to simply count the number of points in the area. This assumes that we know the area we are interested in advance. Let’s suppose we were interested in how many sites were found in the coastal (&lt;50 m a.s.l.), lowland (50–100 m a.s.l.) and highland (100+ m a.s.l.) zones of Islay.</p>
 <ol type="1">
 <li>First we need to generate polygons for the elevation zones we are interested. We will do this using <code>nasadem_islay</code> – make sure you have this in your project.</li>
-<li>Use <code>Raster → Contour</code> to generate contours from <code>nasadem_islay</code>.
+<li>Use <code>Raster → Extraction → Contour</code> to generate contours from <code>nasadem_islay</code>.
 <ul>
 <li>Set the ‘Interval’ to <code>50</code>.</li>
 <li>Under ‘advanced parameters’, set ‘additional command-line parameters’ to <code>-p</code>. This generates polygons instead of lines (the default).</li>
@@ -422,7 +425,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Select the period field as the ‘Field to use for a burn-in value’.</li>
 <li>Select ‘georeferenced units’ as the raster size unit, then set both width and height to 100 (meters).</li>
 </ul></li>
-<li>Repeat step 1 with a field containing the number of artefacts.</li>
+<li>Repeat step 1 with a field containing the number of artefacts.
+<ul>
+<li>You will need to <strong>download <code>islay_sites.gpkg</code></strong> for this – your version does not have the artefact counts!</li>
+</ul></li>
 </ol>
 <p>Include maps of your nearest neighbour interpolations in your portfolio.</p>
 </section>
