@@ -93,7 +93,8 @@ Essentially it is the Thiessen polygons, transferred onto a raster – which is 
 It can be used for nominal or continuous data.
 
 1. Use the **Rasterize** tool (`Raster → Conversion`) to convert your Thiessen polygons to a raster.
-    * Select the period field as the 'Field to use for a burn-in value'.
+    * Since rasters can only contain numeric data, you will need to create a new field that encodes the period as a number (e.g. `Mesolithic`→`1`, `Mesolithic & Later Prehistoric`→`2`, ...)
+    * Select the numeric-period field as the 'Field to use for a burn-in value'.
     * Select 'georeferenced units' as the raster size unit, then set both width and height to 100 (meters).
 2. Repeat step 1 with a field containing the number of artefacts.
     * You will need to **download `islay_sites.gpkg`** for this – your version does not have the artefact counts!
