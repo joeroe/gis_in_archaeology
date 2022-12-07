@@ -5,7 +5,7 @@ title: "Assignments"
 Your learning on this course will evaluated via two assignments: a practical portfolio (50%) and an individual project (50%).
 
 Both assignments should be handed in electronically on or before **19 February 2023**.
-Please contact the course instructor if you want an extension for any reason.
+Please contact the course instructor if you require an extension.
 
 ## Practical portfolio
 
@@ -33,12 +33,31 @@ Your aim is to produce a **publication-quality map** of an archaeological phenom
 That could be a site, a landscape, a regional study, or something else – as long as it communicates something about the past.
 Your map should include:
 
-* Original **data collection**, e.g. 
-  * Please do not re-use any data used in the course practicals
-* Thought
+1. An element of **original geospatial data collection or compilation**
+    * e.g. find or site data digitised from a book, digitised paper maps, data extracted from online databases, remote sensing, data recorded in the field.
+    * Do not re-use any data already used in the course practicals
+2. An effective and thoughtfully-designed **base map** 
+    * Consider carefully the *message* you are trying to communicate with your map...
+    * ...and its *intended audience*.
+    * Care should be taken to ensure the exported map is rendered appropriately at the chosen size (see "Format" below)
+3. **Spatial analysis**
+    * This can be of the archaeological data (e.g. interpolation, intervisibility, movement analysis, predictive modelling) or of a relevent topographic feature (e.g. landform analysis, hydrology, remote sensing).
 
-Additionally, 
+It should be accompanied by a **brief text** (max. 1500 words) that explains your choices in producing the map.
+This should include:
+
+* A statement of the archaeological context and purpose of the map
+* Information on where the data comes from and what steps you took to process it
+* A justification for the design choices taken
+* An explanation of any spatial analyses performed
 
 ### Format
 
+Please submit your map as a **single PDF file**.
+This does not need to be printed, so it may be beneficial to use a larger paper size (e.g. A0–A3).
+Your explanatory text may be submitted in any reasonable digital format.
+
 ### Assessment
+
+Your map will be assessed on the basis of whether it meets the criteria asked for above as well as the general effectiveness and attractiveness of the cartography.
+Written feedback will be provided and the grade for this element will constitute 50% of your course grade.
