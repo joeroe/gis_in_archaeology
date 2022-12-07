@@ -3,3 +3,111 @@ title: "Raster analysis"
 ---
 
 In this session we will look at a variety of common raster analysis techniques applied to elevation data, including calculations of terrain slope and aspect, hydrology and visibility.
+
+## Prerequisites
+
+None.
+
+## Practical
+
+### Data
+
+Data on Islay from [obtaining geospatial data](data_sources.qmd):
+
+* [nasadem_islay.tif](islay/data/nasadem_islay.tif) – NASADEM elevation data
+* [islay_coastlines.gpkg](islay/data/islay_coastlines.gpkg) – digitised palaeo-coastlines and ice sheet
+
+### Raster calculations
+
+The **Raster Calculator** is a powerful tool that manipulate the values of a raster layer mathematically.
+It supports arithmetic operations (adding, subtracting, multiplying, etc.), a limited set of mathematical functions (min, max, abs), boolean logic (AND, OR), and conditional logic (IF).
+These are the building blocks of many forms of raster analysis which, for ease of use, have their own dedicated tool in QGIS.
+But compared to these 'out of the box' tools, a great benefit of the raster calculator is its flexibility.
+Suppose, for example, we are interested investigating what effect sea level change and glacialisation would have had on site visibility on Islay.
+The raster calculator allows us to take an input (present-day) DEM and quickly build models of the past landscape using our own assumptions.
+
+1. If it isn't already, **reproject** (`Raster → Projections → Warp (Reproject)...`) `nasadem_islay` to a *projected* coordinate system
+    * Raster analysis tends to give inaccurate results with unprojected data, so from this point we will use the projected version of `nasadem_islay` for all analyses
+    * `EPSG:27700` is an appropriate projected coordinate system for this region
+    * Select 'bilinear' as the **resampling method** (this is usually a good choice for DEMs)
+    * **Q:** What is the difference between a projected and unprojected coordinate system?
+2. **Rasterize** (`Raster → Conversion`) the `islay_coastline` layers for 13000BP and 7000BP (the beginning and end of the Islay Mesolithic).
+    * Make sure the rasters are in a projected CRS
+    * Set the extent and resolution of the rasters to match `nasadem_islay`
+    * The resulting rasters should be coded as 0=sea and 1=land (you will need to unset 'Nodata value')
+3. **Rasterize** the `islay_coastline` ice sheet layer for 13000 BP (as in step 2)
+    * Let's assume the ice sheet had a uniform thickness of 500 m – set this as the 'burn-in value'
+4. Use the **raster calculator** to generate two new DEMs for 7000 BP and 13000 BP that reflect sea level change.
+    * You can do this by multiplying `nasadem_islay` (the projected version) by your sea rasters, e.g. `"nasadem_islay@1" * "sea7000bp@1"` (adjust the layer names accordingly).
+    * **Q:** Why are there now large 'cliffs' along the coastline? Is this a problem for viewshed analysis?
+5. Use the **raster calculator** to add the ice sheet to the 13000 BP.
+    * You can do this by simply adding the `nasadem_islay` and ice sheet rasters.
+
+Finally, we should consider that today the island is mostly deforested, but in the Post-Glacial it was probably colonised by pine forest ([Johnstone & Mykura 1989](https://earthwise.bgs.ac.uk/index.php/Pleistocene_and_Recent,_Northern_Highlands_of_Scotland)).
+We could make the assumption that lower-lying areas were cleared of trees, but perhaps higher elevations (where there are no known sites) were still covered with mature pine (≈36 m high).
+
+6. Use the **raster calculator** to create a *new layer* that models a tree-covered landscape in 7000 BP.
+    * You can use an expression like this: 
+      `if ("dem7000bp@1" > 80, "dem7000bp@1" + 36, dem7000bp@1")`.
+    * **Q:** In your own words, what does the expression above do?
+
+Include maps of your landscape models for 13000 BP, 7000 BP, and 7000 BP with trees, in your portfolio.
+
+### Landform analysis
+
+QGIS comes with a variety of built-in tools to calculate more complex derivitives of an elevation model, comparing each cell of a raster to its neighbours in order to characterise the shape of the land.
+We won't use these in the visibility analysis, but they'll come in useful later when we look at [predictive modelling](predictive_models.qmd).
+These include:
+
+* **Aspect** – which direction the terrain is facing
+* **Slope** - how steep the terrain is
+* **Roughness**, **TRI** & **TPI** – various measures of how uneven the terrain is
+
+These are found under `Raster → Analysis`.
+For the most part these are 'one-click' tools, but some of the additional options can be tweaked.
+
+7. Calculate the **aspect** of `nasadem_islay` (projected, present-day).
+8. Calculate the **slope** of `nasadem_islay` (projected, present-day).
+9. Calculate the **roughness** of `nasadem_islay` (projected, present-day).
+
+In your portfolio, include maps showing each of these derived rasters, and a short text (c. 250 words) described what they tell us about the island's landscape.
+
+<!--
+### Hydrological analysis
+--->
+
+### Visibility
+
+Visibility was the first widely-used application of GIS in archaeology and remains popular.
+This is probably because of its (apparent) simplicity: all you need is a set of site locations and a DEM.
+Unfortunately, this technical simplicity hides a great deal of practical and theoretical complexity ([Wheatley & Gillings 2000](https://eprints.soton.ac.uk/12483/)) when applied to the way humans actually perceive landscapes.
+Nevertheless, it remains a useful tool.
+
+10. Using the **Viewshed** tool in the **Processing ToolBox**, calculate a viewshed from a point of your choice on Islay.
+    * **Q:** What happens if you vary the *observer height* and *target height*? What do these mean?
+
+For more complex visibility analysis than a single viewshed, we will need a plugin.
+Let's take a look at *intervisibility* between multiple sites, for example.
+
+11. Install "Visibility Analysis" plugin from the **Plugin Manager**.
+    * This adds a new set of tools in the **processing toolbox**, under 'visibility analysis'
+12. Use the **create viewpoints** tool to generate set of observation points representing *Mesolithic* sites on Islay.
+    * You could do this using the **Filter** tool or the **Select features by value...** tool
+    * You can leave all other options default (or feel free to adjust them)
+13. Using the **Viewshed** tool from *the plugin*, generate the *multiple viewshed* of all sites in 7000 BP (without trees).
+    * After selecting your generated observation layer and DEM as input, you can leave all other options default.
+    * **Q:** What do darker and ligher areas on this map indicate?
+14. Generate the **intervisibility network** between all sites at 7000 BP (without trees).
+    * Again, there is no need to change the default options (but feel free to).
+15. Repeat steps 13–14 for two scenarios: a) 7000 BP with trees; and b) 13000 BP (with ice sheet).
+    * **Q:** Describe the differences between the scenarios (if any).
+
+Include maps summarising intervisibility in all three scenarios (7000 BP without trees, 7000 BP with trees, 13000 BP) in your portfolio.
+
+The **cumulative viewshed** is a way to look at visibility across an entire landscape: it calculates the visibility of every raster cell from every other raster cell, then adds them up.
+
+16. Use the **visibility index** tool to calculate the cumulative viewshed over Islay
+    * This may take some time to process.
+    * **Q:** What do darker and lighter areas in a cumulative viewshed indicate?
+
+Include a map with each cumulative viewshed in your portfolio.
