@@ -14,7 +14,7 @@ None.
 
 Data on Islay from [obtaining geospatial data](data_sources.qmd):
 
-* [nasadem_islay.tif](islay/data/nasadem_islay.tif) – NASADEM elevation data
+* [nasadem_islay.tif](islay/data/dem/nasadem_islay.tif) – NASADEM elevation data
 * [islay_coastlines.gpkg](islay/data/islay_coastlines.gpkg) – digitised palaeo-coastlines and ice sheet
 
 ### Raster calculations
