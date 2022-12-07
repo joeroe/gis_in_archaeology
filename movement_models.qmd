@@ -3,3 +3,7 @@ title: "Modelling movement"
 ---
 
 In this session we will look at terrain-based models of human movement, including least cost path analysis and site catchment analysis.
+
+## Prerequisites
+
+* Verhagen, P., Nuninger, L., Groenhuijzen, M.R. (2019). Modelling of Pathways and Movement Networks in Archaeology: An Overview of Current Approaches. In: Verhagen, P., Joyce, J., Groenhuijzen, M. (eds) *Finding the Limits of the Limes*. Springer. <https://doi.org/10.1007/978-3-030-04576-0_11>

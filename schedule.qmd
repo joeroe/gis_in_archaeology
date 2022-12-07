@@ -19,5 +19,5 @@ title: "Schedule"
 | 47   | [Interpolation & density estimation](interpolation.qmd) | [{{< fa circle-play >}} Heatmaps](https://tube.switch.ch/videos/94a4f92e)<br />[{{< fa circle-play >}} Interpolation](https://tube.switch.ch/videos/426a1e41) (0:00 to 9:20) |
 | 48   | --- | --- |
 | 49   | [Raster analysis](raster_analysis.qmd) | --- |
-| 50   | [Modelling movement](movement_models.qmd) | --- |
+| 50   | [Modelling movement](movement_models.qmd) | [{{< fa book >}} Verhagen et al. 2019](https://doi.org/10.1007/978-3-030-04576-0_11) |
 | 51   | [Predictive modelling](predictive_models.qmd) | --- |
