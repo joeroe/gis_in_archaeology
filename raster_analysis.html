@@ -163,6 +163,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="./assignments.html">
+ <span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./bibliography.html">
  <span class="menu-text">Bibliography &amp; Further Reading</span></a>
   </li>  
@@ -291,7 +295,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#raster-calculations" id="toc-raster-calculations" class="nav-link" data-scroll-target="#raster-calculations">Raster calculations</a></li>
+  <li><a href="#landform-analysis" id="toc-landform-analysis" class="nav-link" data-scroll-target="#landform-analysis">Landform analysis</a></li>
+  <li><a href="#visibility" id="toc-visibility" class="nav-link" data-scroll-target="#visibility">Visibility</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/raster_analysis.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -314,8 +331,128 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>In this session we will look at a variety of common raster analysis techniques applied to elevation data, including calculations of terrain slope and aspect, hydrology and visibility.</p>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>None.</p>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>Data on Islay from <a href="./data_sources.html">obtaining geospatial data</a>:</p>
+<ul>
+<li><a href="islay/data/nasadem_islay.tif">nasadem_islay.tif</a> – NASADEM elevation data</li>
+<li><a href="islay/data/islay_coastlines.gpkg">islay_coastlines.gpkg</a> – digitised palaeo-coastlines and ice sheet</li>
+</ul>
+</section>
+<section id="raster-calculations" class="level3">
+<h3 class="anchored" data-anchor-id="raster-calculations">Raster calculations</h3>
+<p>The <strong>Raster Calculator</strong> is a powerful tool that manipulate the values of a raster layer mathematically. It supports arithmetic operations (adding, subtracting, multiplying, etc.), a limited set of mathematical functions (min, max, abs), boolean logic (AND, OR), and conditional logic (IF). These are the building blocks of many forms of raster analysis which, for ease of use, have their own dedicated tool in QGIS. But compared to these ‘out of the box’ tools, a great benefit of the raster calculator is its flexibility. Suppose, for example, we are interested investigating what effect sea level change and glacialisation would have had on site visibility on Islay. The raster calculator allows us to take an input (present-day) DEM and quickly build models of the past landscape using our own assumptions.</p>
+<ol type="1">
+<li>If it isn’t already, <strong>reproject</strong> (<code>Raster → Projections → Warp (Reproject)...</code>) <code>nasadem_islay</code> to a <em>projected</em> coordinate system
+<ul>
+<li>Raster analysis tends to give inaccurate results with unprojected data, so from this point we will use the projected version of <code>nasadem_islay</code> for all analyses</li>
+<li><code>EPSG:27700</code> is an appropriate projected coordinate system for this region</li>
+<li>Select ‘bilinear’ as the <strong>resampling method</strong> (this is usually a good choice for DEMs)</li>
+<li><strong>Q:</strong> What is the difference between a projected and unprojected coordinate system?</li>
+</ul></li>
+<li><strong>Rasterize</strong> (<code>Raster → Conversion</code>) the <code>islay_coastline</code> layers for 13000BP and 7000BP (the beginning and end of the Islay Mesolithic).
+<ul>
+<li>Make sure the rasters are in a projected CRS</li>
+<li>Set the extent and resolution of the rasters to match <code>nasadem_islay</code></li>
+<li>The resulting rasters should be coded as 0=sea and 1=land (you will need to unset ‘Nodata value’)</li>
+</ul></li>
+<li><strong>Rasterize</strong> the <code>islay_coastline</code> ice sheet layer for 13000 BP (as in step 2)
+<ul>
+<li>Let’s assume the ice sheet had a uniform thickness of 500 m – set this as the ‘burn-in value’</li>
+</ul></li>
+<li>Use the <strong>raster calculator</strong> to generate two new DEMs for 7000 BP and 13000 BP that reflect sea level change.
+<ul>
+<li>You can do this by multiplying <code>nasadem_islay</code> (the projected version) by your sea rasters, e.g.&nbsp;<code>"nasadem_islay@1" * "sea7000bp@1"</code> (adjust the layer names accordingly).</li>
+<li><strong>Q:</strong> Why are there now large ‘cliffs’ along the coastline? Is this a problem for viewshed analysis?</li>
+</ul></li>
+<li>Use the <strong>raster calculator</strong> to add the ice sheet to the 13000 BP.
+<ul>
+<li>You can do this by simply adding the <code>nasadem_islay</code> and ice sheet rasters.</li>
+</ul></li>
+</ol>
+<p>Finally, we should consider that today the island is mostly deforested, but in the Post-Glacial it was probably colonised by pine forest (<a href="https://earthwise.bgs.ac.uk/index.php/Pleistocene_and_Recent,_Northern_Highlands_of_Scotland">Johnstone &amp; Mykura 1989</a>). We could make the assumption that lower-lying areas were cleared of trees, but perhaps higher elevations (where there are no known sites) were still covered with mature pine (≈36 m high).</p>
+<ol start="6" type="1">
+<li>Use the <strong>raster calculator</strong> to create a <em>new layer</em> that models a tree-covered landscape in 7000 BP.
+<ul>
+<li>You can use an expression like this: <code>if ("dem7000bp@1" &gt; 80, "dem7000bp@1" + 36, dem7000bp@1")</code>.</li>
+<li><strong>Q:</strong> In your own words, what does the expression above do?</li>
+</ul></li>
+</ol>
+<p>Include maps of your landscape models for 13000 BP, 7000 BP, and 7000 BP with trees, in your portfolio.</p>
+</section>
+<section id="landform-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="landform-analysis">Landform analysis</h3>
+<p>QGIS comes with a variety of built-in tools to calculate more complex derivitives of an elevation model, comparing each cell of a raster to its neighbours in order to characterise the shape of the land. We won’t use these in the visibility analysis, but they’ll come in useful later when we look at <a href="./predictive_models.html">predictive modelling</a>. These include:</p>
+<ul>
+<li><strong>Aspect</strong> – which direction the terrain is facing</li>
+<li><strong>Slope</strong> - how steep the terrain is</li>
+<li><strong>Roughness</strong>, <strong>TRI</strong> &amp; <strong>TPI</strong> – various measures of how uneven the terrain is</li>
+</ul>
+<p>These are found under <code>Raster → Analysis</code>. For the most part these are ‘one-click’ tools, but some of the additional options can be tweaked.</p>
+<ol start="7" type="1">
+<li>Calculate the <strong>aspect</strong> of <code>nasadem_islay</code> (projected, present-day).</li>
+<li>Calculate the <strong>slope</strong> of <code>nasadem_islay</code> (projected, present-day).</li>
+<li>Calculate the <strong>roughness</strong> of <code>nasadem_islay</code> (projected, present-day).</li>
+</ol>
+<p>In your portfolio, include maps showing each of these derived rasters, and a short text (c.&nbsp;250 words) described what they tell us about the island’s landscape.</p>
+<!--
+### Hydrological analysis
+--->
+</section>
+<section id="visibility" class="level3">
+<h3 class="anchored" data-anchor-id="visibility">Visibility</h3>
+<p>Visibility was the first widely-used application of GIS in archaeology and remains popular. This is probably because of its (apparent) simplicity: all you need is a set of site locations and a DEM. Unfortunately, this technical simplicity hides a great deal of practical and theoretical complexity (<a href="https://eprints.soton.ac.uk/12483/">Wheatley &amp; Gillings 2000</a>) when applied to the way humans actually perceive landscapes. Nevertheless, it remains a useful tool.</p>
+<ol start="10" type="1">
+<li>Using the <strong>Viewshed</strong> tool in the <strong>Processing ToolBox</strong>, calculate a viewshed from a point of your choice on Islay.
+<ul>
+<li><strong>Q:</strong> What happens if you vary the <em>observer height</em> and <em>target height</em>? What do these mean?</li>
+</ul></li>
+</ol>
+<p>For more complex visibility analysis than a single viewshed, we will need a plugin. Let’s take a look at <em>intervisibility</em> between multiple sites, for example.</p>
+<ol start="11" type="1">
+<li>Install “Visibility Analysis” plugin from the <strong>Plugin Manager</strong>.
+<ul>
+<li>This adds a new set of tools in the <strong>processing toolbox</strong>, under ‘visibility analysis’</li>
+</ul></li>
+<li>Use the <strong>create viewpoints</strong> tool to generate set of observation points representing <em>Mesolithic</em> sites on Islay.
+<ul>
+<li>You could do this using the <strong>Filter</strong> tool or the <strong>Select features by value…</strong> tool</li>
+<li>You can leave all other options default (or feel free to adjust them)</li>
+</ul></li>
+<li>Using the <strong>Viewshed</strong> tool from <em>the plugin</em>, generate the <em>multiple viewshed</em> of all sites in 7000 BP (without trees).
+<ul>
+<li>After selecting your generated observation layer and DEM as input, you can leave all other options default.</li>
+<li><strong>Q:</strong> What do darker and ligher areas on this map indicate?</li>
+</ul></li>
+<li>Generate the <strong>intervisibility network</strong> between all sites at 7000 BP (without trees).
+<ul>
+<li>Again, there is no need to change the default options (but feel free to).</li>
+</ul></li>
+<li>Repeat steps 13–14 for two scenarios: a) 7000 BP with trees; and b) 13000 BP (with ice sheet).
+<ul>
+<li><strong>Q:</strong> Describe the differences between the scenarios (if any).</li>
+</ul></li>
+</ol>
+<p>Include maps summarising intervisibility in all three scenarios (7000 BP without trees, 7000 BP with trees, 13000 BP) in your portfolio.</p>
+<p>The <strong>cumulative viewshed</strong> is a way to look at visibility across an entire landscape: it calculates the visibility of every raster cell from every other raster cell, then adds them up.</p>
+<ol start="16" type="1">
+<li>Use the <strong>visibility index</strong> tool to calculate the cumulative viewshed over Islay
+<ul>
+<li>This may take some time to process.</li>
+<li><strong>Q:</strong> What do darker and lighter areas in a cumulative viewshed indicate?</li>
+</ul></li>
+</ol>
+<p>Include a map with each cumulative viewshed in your portfolio.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
