@@ -207,7 +207,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\n Conolly & Lake, ch. 2\n\n\n40\nTopographic maps\n Styling vector layers as basemap Styling DEM as a basemap\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n Shapefile must die! Hart et al. 2016\n\n\n44\nSources of geospatial data\n Parcak 2009, ch. 3\n\n\n45\nGeoreferencing & digitising\n Georeferencing a scanned map Digitising objects from georeferenced maps\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n Heatmaps Interpolation (0:00 to 9:20)\n\n\n48\n—\n—\n\n\n49\nRaster analysis\n—\n\n\n50\nModelling movement\n Verhagen et al. 2019\n\n\n51\nPredictive modelling\n—"
+    "text": "Week\nTopic\nPrerequisites\n\n\n\n\n38\nIntroduction\n—\n\n\nMaking maps\n\n\n\n\n39\nThematic maps\n Conolly & Lake, ch. 2\n\n\n40\nTopographic maps\n Styling vector layers as basemap Styling DEM as a basemap\n\n\n41\nMap layout\n—\n\n\n42\nMap design\n—\n\n\nGeospatial data\n\n\n\n\n43\nData management\n Shapefile must die! Hart et al. 2016\n\n\n44\nSources of geospatial data\n Parcak 2009, ch. 3\n\n\n45\nGeoreferencing & digitising\n Georeferencing a scanned map Digitising objects from georeferenced maps\n\n\n46\nField data collection\n—\n\n\nSpatial analysis\n\n\n\n\n47\nInterpolation & density estimation\n Heatmaps Interpolation (0:00 to 9:20)\n\n\n48\n—\n—\n\n\n49\nRaster analysis\n—\n\n\n50\nModelling movement\n Verhagen et al. 2019\n\n\n51\nReview & assignment workshop\nPrepare a short presentation"
   },
   {
     "objectID": "data_sources.html",
@@ -303,9 +303,23 @@
   {
     "objectID": "review.html",
     "href": "review.html",
-    "title": "Review",
+    "title": "Course review & assignment workshop",
     "section": "",
-    "text": "Hello world."
+    "text": "In our final session we will review what you have learned on the course and prepare for your final assignments."
+  },
+  {
+    "objectID": "review.html#prerequisites",
+    "href": "review.html#prerequisites",
+    "title": "Course review & assignment workshop",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nPlease prepare a short presentation (c. 5 minutes) of what you intend to map for the individual project component of your assignment. Consider:\n\nWhat ‘archaeological phenomenon’ will I map?\nWhere will I get the data I need?\nWhat form of spatial analysis will I apply?\n\nNone of this is binding at this stage – but the more you can flesh out your ideas, the more helpful the feedback will be!"
+  },
+  {
+    "objectID": "review.html#workshop",
+    "href": "review.html#workshop",
+    "title": "Course review & assignment workshop",
+    "section": "Workshop",
+    "text": "Workshop\n\nPresentations of individual projects\n\nInstructor & peer feedback\nDiscussion of anticipated challenges\n\nOpen questions about any outstanding elements of the practical portfolio\nOpen questions about the assignment format, deadlines, etc."
   },
   {
     "objectID": "raster_analysis.html",
