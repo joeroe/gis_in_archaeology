@@ -7,3 +7,90 @@ In this session we will look at terrain-based models of human movement, includin
 ## Prerequisites
 
 * Verhagen, P., Nuninger, L., Groenhuijzen, M.R. (2019). Modelling of Pathways and Movement Networks in Archaeology: An Overview of Current Approaches. In: Verhagen, P., Joyce, J., Groenhuijzen, M. (eds) *Finding the Limits of the Limes*. Springer. <https://doi.org/10.1007/978-3-030-04576-0_11>
+
+## Practical
+
+### Data
+
+From previous practicals:
+
+* A DEM of Islay
+  * This can be a modern DEM, or one you have modelled for a past time period.
+  * e.g. [nasadem_islay_7000bp.tif](islay/data/dem/nasadem_islay_7000bp.tif)
+* [islay_sites.gpkg](islay/data/islay_sites.gpkg) – Mesolithic and Later Prehistoric sites on Islay
+
+### Calculating a cost surface
+
+The first step in any movement analysis is to calculate a cost surface – a raster describing how much it would 'cost' to move through each cell of a landscape.
+Cost surfaces are calculated using a 'cost function'.
+There are [many cost functions](https://intarch.ac.uk/journal/issue36/herzog_index.html) to choose from and a large literature on how this effects subsequent movement modelling.
+The majority, but not all, derive the cost of movement from surface slope calculated from a DEM, under the basic assumption that people prefer to walk on flat ground.
+We will opt for one of the simplest, the 'ox-cart function': 
+
+$1 + (s/c)^2$
+
+Where $s$ is the slope *percentage* and $c$ is a 'critical slope' value beyond which moving is heavily penalised (we will use 10 for this).
+
+1. Load or prepare a suitable DEM raster for Islay
+    * It must use a projected coordinate system, e.g. `EPSG:27700`
+    * The sea **must be marked as 'NoData'** (i.e. it should not be visible when you view the raster in QGIS). If necessary you can do this using the **Clip Raster by Mask Layer...** tool (`Raster` → `Extraction`), using a ocean/coast vector as your mask layer and assigning the 'NoData' value `-32768` (the lowest possible 16-bit integer).
+2. Calculate the **percentage slope** for this DEM using the **Slope** tool (`Raster` → `Analysis`)
+    * Ensure 'Slope expressed as percent instead of degrees' is ticked.
+    * **Q:** Our subsequent models will be based *solely on slope*. Is this a good representation of human movement? What other factors could be important?
+3. Use the **Raster Calculator** to calculate a cost surface using the ox-cart function.
+    * Your expression should be something like `1 + ("slope@1"/10)^2` (replacing `slope` with the name of your layer)
+    * You will probably need to adjust the 'Min' and 'Max' values in the symbology to display it in a meaningful way
+    * **Q:** What has happened to the 'NoData' areas (i.e. the sea)? What effect will this have on models of movement on this surface?
+
+Include a quick map showing your cost surface in your portfolio.
+
+### Modelling least-cost paths
+
+A least-cost path is the optimal route between two points considering a given cost surface.
+This could represent any number of things—a route taken, a road, a river—depending on the cost surface.
+
+QGIS doesn't support least-cost path analysis natively, but it can through plugins and extensions.
+For more complex analyses, GRASS and SAGA—two other open source GIS which can, if installed, be used throught QGIS—offer the fullest features.
+But the 'Least-Cost Path' plugin for QGIS offers a quick and simple way to calculate the least-cost path between a start point and end point(s), so we'll start with that.
+
+<!--
+QGIS doesn't support least cost path analysis natively, but it can interface with GRASS, an older open source GIS that does.
+Some tools for least cost path analysis can also be found in QGIS plugins and in SAGA (another open source GIS that can interface with QGIS), but we'll stick with GRASS.
+
+
+4. Verify that GRASS is installed on your system and detected by QGIS.
+    * If it is correctly installed and set up, you should see GRASS tools in the **processing toolbox**.
+-->
+
+4. Install the **Least-Cost Path** plugin in QGIS.
+5. The Least-Cost Path plugin cannot handle layers with negative values in. Use the **raster calculator** to remove any negative values from your cost surface raster.
+    * You can use the expression `MAX ( 0, "oxcost@1" )` to set them to zero.
+    * Because these cells are marked as NoData, this won't actually have an effect on the analysis (yet).
+6. Reproject `islay_sites` to the same CRS as your DEM/cost surface rasters.
+7. **Duplicate** this reprojeced layer, ensuring that the two versions have different names.
+    * We will use this to manage *start* and *end* points.
+8. Select *one* site in the start layer and *one or more* site in the end layer. 
+9. Use the **Least Cost Path** tool in the processing toolbox to calculate the least-cost path between two sites.
+    * Set 'cost raster layer' to your cost surface.
+    * Set 'cost raster band' to the only available option (Band1).
+    * Choose the start and end point vector layers you prepared – ensuring the CRSs match.
+    * Ensure 'selected features only' is checked.
+10. Repeat steps 7–9 with a few other sets of sites.
+    * **Q:** What does this tell us about how topography might have affected prehistoric movement across Islay?
+Include a map of calculated least-cost paths in your portfolio.
+
+11. Use the **Fill NoData cells** tool in the processing toolbox (*not* 'Fill nodata') to replace the sea in your cost surface with a) zero and b) a very high number (e.g. `999`).
+    * These represent 'easy seafaring' and 'hard seafaring' scenarios respectively.
+12. Repeat steps 7–9 a few times for each 'seafaring' scenario.
+    * **Q:** Which do you think is more realistic?
+
+Include a map of calculated least-cost paths for the two scenarios in your portfolio.
+
+<!--
+### Calculating an accumulated cost surface (cost–distance)
+
+### Modelling site catchment
+
+* Simple catchment (buffer)
+* Cost-surface catchment
+--->
