@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -300,6 +301,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical">Practical</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#calculating-a-cost-surface" id="toc-calculating-a-cost-surface" class="nav-link" data-scroll-target="#calculating-a-cost-surface">Calculating a cost surface</a></li>
+  <li><a href="#modelling-least-cost-paths" id="toc-modelling-least-cost-paths" class="nav-link" data-scroll-target="#modelling-least-cost-paths">Modelling least-cost paths</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/gis_in_archaeology/blob/main/movement_models.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/gis_in_archaeology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -329,8 +336,103 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Verhagen, P., Nuninger, L., Groenhuijzen, M.R. (2019). Modelling of Pathways and Movement Networks in Archaeology: An Overview of Current Approaches. In: Verhagen, P., Joyce, J., Groenhuijzen, M. (eds) <em>Finding the Limits of the Limes</em>. Springer. <a href="https://doi.org/10.1007/978-3-030-04576-0_11" class="uri">https://doi.org/10.1007/978-3-030-04576-0_11</a></li>
 </ul>
+</section>
+<section id="practical" class="level2">
+<h2 class="anchored" data-anchor-id="practical">Practical</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>From previous practicals:</p>
+<ul>
+<li>A DEM of Islay
+<ul>
+<li>This can be a modern DEM, or one you have modelled for a past time period.</li>
+<li>e.g.&nbsp;<a href="islay/data/dem/nasadem_islay_7000bp.tif">nasadem_islay_7000bp.tif</a></li>
+</ul></li>
+<li><a href="islay/data/islay_sites.gpkg">islay_sites.gpkg</a> – Mesolithic and Later Prehistoric sites on Islay</li>
+</ul>
+</section>
+<section id="calculating-a-cost-surface" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-a-cost-surface">Calculating a cost surface</h3>
+<p>The first step in any movement analysis is to calculate a cost surface – a raster describing how much it would ‘cost’ to move through each cell of a landscape. Cost surfaces are calculated using a ‘cost function’. There are <a href="https://intarch.ac.uk/journal/issue36/herzog_index.html">many cost functions</a> to choose from and a large literature on how this effects subsequent movement modelling. The majority, but not all, derive the cost of movement from surface slope calculated from a DEM, under the basic assumption that people prefer to walk on flat ground. We will opt for one of the simplest, the ‘ox-cart function’:</p>
+<p><span class="math inline">\(1 + (s/c)^2\)</span></p>
+<p>Where <span class="math inline">\(s\)</span> is the slope <em>percentage</em> and <span class="math inline">\(c\)</span> is a ‘critical slope’ value beyond which moving is heavily penalised (we will use 10 for this).</p>
+<ol type="1">
+<li>Load or prepare a suitable DEM raster for Islay
+<ul>
+<li>It must use a projected coordinate system, e.g.&nbsp;<code>EPSG:27700</code></li>
+<li>The sea <strong>must be marked as ‘NoData’</strong> (i.e.&nbsp;it should not be visible when you view the raster in QGIS). If necessary you can do this using the <strong>Clip Raster by Mask Layer…</strong> tool (<code>Raster</code> → <code>Extraction</code>), using a ocean/coast vector as your mask layer and assigning the ‘NoData’ value <code>-32768</code> (the lowest possible 16-bit integer).</li>
+</ul></li>
+<li>Calculate the <strong>percentage slope</strong> for this DEM using the <strong>Slope</strong> tool (<code>Raster</code> → <code>Analysis</code>)
+<ul>
+<li>Ensure ‘Slope expressed as percent instead of degrees’ is ticked.</li>
+<li><strong>Q:</strong> Our subsequent models will be based <em>solely on slope</em>. Is this a good representation of human movement? What other factors could be important?</li>
+</ul></li>
+<li>Use the <strong>Raster Calculator</strong> to calculate a cost surface using the ox-cart function.
+<ul>
+<li>Your expression should be something like <code>1 + ("slope@1"/10)^2</code> (replacing <code>slope</code> with the name of your layer)</li>
+<li>You will probably need to adjust the ‘Min’ and ‘Max’ values in the symbology to display it in a meaningful way</li>
+<li><strong>Q:</strong> What has happened to the ‘NoData’ areas (i.e.&nbsp;the sea)? What effect will this have on models of movement on this surface?</li>
+</ul></li>
+</ol>
+<p>Include a quick map showing your cost surface in your portfolio.</p>
+</section>
+<section id="modelling-least-cost-paths" class="level3">
+<h3 class="anchored" data-anchor-id="modelling-least-cost-paths">Modelling least-cost paths</h3>
+<p>A least-cost path is the optimal route between two points considering a given cost surface. This could represent any number of things—a route taken, a road, a river—depending on the cost surface.</p>
+<p>QGIS doesn’t support least-cost path analysis natively, but it can through plugins and extensions. For more complex analyses, GRASS and SAGA—two other open source GIS which can, if installed, be used throught QGIS—offer the fullest features. But the ‘Least-Cost Path’ plugin for QGIS offers a quick and simple way to calculate the least-cost path between a start point and end point(s), so we’ll start with that.</p>
+<!--
+QGIS doesn't support least cost path analysis natively, but it can interface with GRASS, an older open source GIS that does.
+Some tools for least cost path analysis can also be found in QGIS plugins and in SAGA (another open source GIS that can interface with QGIS), but we'll stick with GRASS.
 
 
+4. Verify that GRASS is installed on your system and detected by QGIS.
+    * If it is correctly installed and set up, you should see GRASS tools in the **processing toolbox**.
+-->
+<ol start="4" type="1">
+<li>Install the <strong>Least-Cost Path</strong> plugin in QGIS.</li>
+<li>The Least-Cost Path plugin cannot handle layers with negative values in. Use the <strong>raster calculator</strong> to remove any negative values from your cost surface raster.
+<ul>
+<li>You can use the expression <code>MAX ( 0, "oxcost@1" )</code> to set them to zero.</li>
+<li>Because these cells are marked as NoData, this won’t actually have an effect on the analysis (yet).</li>
+</ul></li>
+<li>Reproject <code>islay_sites</code> to the same CRS as your DEM/cost surface rasters.</li>
+<li><strong>Duplicate</strong> this reprojeced layer, ensuring that the two versions have different names.
+<ul>
+<li>We will use this to manage <em>start</em> and <em>end</em> points.</li>
+</ul></li>
+<li>Select <em>one</em> site in the start layer and <em>one or more</em> site in the end layer.</li>
+<li>Use the <strong>Least Cost Path</strong> tool in the processing toolbox to calculate the least-cost path between two sites.
+<ul>
+<li>Set ‘cost raster layer’ to your cost surface.</li>
+<li>Set ‘cost raster band’ to the only available option (Band1).</li>
+<li>Choose the start and end point vector layers you prepared – ensuring the CRSs match.</li>
+<li>Ensure ‘selected features only’ is checked.</li>
+</ul></li>
+<li>Repeat steps 7–9 with a few other sets of sites.
+<ul>
+<li><strong>Q:</strong> What does this tell us about how topography might have affected prehistoric movement across Islay? Include a map of calculated least-cost paths in your portfolio.</li>
+</ul></li>
+<li>Use the <strong>Fill NoData cells</strong> tool in the processing toolbox (<em>not</em> ‘Fill nodata’) to replace the sea in your cost surface with a) zero and b) a very high number (e.g.&nbsp;<code>999</code>).
+<ul>
+<li>These represent ‘easy seafaring’ and ‘hard seafaring’ scenarios respectively.</li>
+</ul></li>
+<li>Repeat steps 7–9 a few times for each ‘seafaring’ scenario.
+<ul>
+<li><strong>Q:</strong> Which do you think is more realistic?</li>
+</ul></li>
+</ol>
+<p>Include a map of calculated least-cost paths for the two scenarios in your portfolio.</p>
+<!--
+### Calculating an accumulated cost surface (cost–distance)
+
+### Modelling site catchment
+
+* Simple catchment (buffer)
+* Cost-surface catchment
+--->
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
