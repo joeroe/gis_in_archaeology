@@ -1,5 +1,24 @@
 ---
-title: "Review"
+title: "Course review & assignment workshop"
 ---
 
-Hello world.
+In our final session we will review what you have learned on the course and prepare for your [final assignments](assignments.qmd).
+
+## Prerequisites
+
+Please prepare a short presentation (c. 5 minutes) of what you intend to map for the individual project component of your assignment.
+Consider:
+
+1. What 'archaeological phenomenon' will I map?
+2. Where will I get the data I need?
+3. What form of spatial analysis will I apply?
+
+None of this is binding at this stage – but the more you can flesh out your ideas, the more helpful the feedback will be!
+
+## Workshop
+
+1. Presentations of individual projects
+    * Instructor & peer feedback
+    * Discussion of anticipated challenges
+2. Open questions about any outstanding elements of the practical portfolio
+3. Open questions about the assignment format, deadlines, etc.

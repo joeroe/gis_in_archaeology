@@ -43,7 +43,6 @@ website:
             - interpolation.qmd
             - raster_analysis.qmd
             - movement_models.qmd
-            - predictive_models.qmd
         - review.qmd
 
 format:
